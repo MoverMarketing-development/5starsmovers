@@ -1,24 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Figtree } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  variable: "--font-label",
 });
 
 export const metadata: Metadata = {
-  title: "5 Star Movers | Minneapolis & Twin Cities Metro Movers",
+  title: "5 Star Movers | Premium Moving Services in Minnesota",
   description:
-    "Minnesota's most trusted local movers. Expert residential, commercial, and long distance moving services in the Twin Cities metro. Licensed, insured, upfront pricing. Call (651) 243-1993.",
+    "Editorial-style moving homepage for 5 Star Movers with premium service messaging, transparent pricing, and Minneapolis moving expertise.",
 };
 
 export default function RootLayout({
@@ -29,7 +32,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", geistSans.variable, geistMono.variable, "font-sans", figtree.variable)}
+      className={cn(
+        "h-full dark antialiased font-sans",
+        inter.variable,
+        plusJakartaSans.variable,
+        workSans.variable
+      )}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

@@ -11,7 +11,7 @@ const steps: { step: string; icon: IconData; title: string; description: string 
     icon: PhoneCheckIcon,
     title: "Request a Free Quote",
     description:
-      "Call us at (651) 243-1993 or fill out our online form. We'll provide an upfront quote with no hidden fees — completely free.",
+      "Call us at (651) 243-1993 or fill out our online form. We will provide an upfront quote with no hidden fees completely free.",
   },
   {
     step: "02",
@@ -32,14 +32,13 @@ const steps: { step: string; icon: IconData; title: string; description: string 
     icon: StarIcon,
     title: "Settle In & Enjoy",
     description:
-      "We unload, place, and reassemble your items. All that's left is enjoying your new space — stress-free.",
+      "We unload, place, and reassemble your items. All that&apos;s left is enjoying your new space stress-free.",
   },
 ];
 
 export default function HowItWorks() {
   return (
     <section className="py-24 bg-[#343a40] relative overflow-hidden">
-      {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
           className="absolute inset-0"
@@ -49,35 +48,29 @@ export default function HowItWorks() {
           }}
         />
       </div>
-      {/* Teal accent */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#006e63] rounded-full opacity-10 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
-        {/* Section header */}
         <div className="text-center mb-16">
           <span className="inline-block text-[#ffd700] font-semibold text-sm tracking-widest uppercase mb-3">
             Simple Process
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Moving with Us is{" "}
-            <span className="text-[#ffd700]">Easy as 1-2-3</span>
+            Moving with Us is <span className="text-[#ffd700]">Easy as 1-2-3</span>
           </h2>
           <p className="text-white/60 text-lg max-w-xl mx-auto">
-            We've designed our process to be as straightforward and stress-free as possible.
+            We have designed our process to be as straightforward and stress-free as possible.
           </p>
         </div>
 
-        {/* Steps */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4">
           {steps.map((step, index) => (
             <div key={step.step} className="relative">
-              {/* Connector line */}
               {index < steps.length - 1 && (
                 <div className="hidden lg:block absolute top-10 left-[calc(100%-1rem)] w-[calc(100%-3.5rem)] h-px border-t-2 border-dashed border-white/20 z-0" />
               )}
 
               <div className="relative z-10 text-center lg:text-left">
-                {/* Step number + icon */}
                 <div className="relative inline-flex items-center justify-center mb-6">
                   <div className="w-20 h-20 rounded-2xl bg-white/10 border border-white/10 flex items-center justify-center">
                     <Icon icon={step.icon} size={28} color="#ffd700" />
@@ -94,7 +87,6 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        {/* CTA */}
         <div className="text-center mt-14">
           <a
             href="#"

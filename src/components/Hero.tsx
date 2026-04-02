@@ -5,16 +5,11 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-[#343a40]">
-      {/* Geometric background shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Large teal circle - top right */}
         <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-[#006e63] opacity-20" />
-        {/* Small teal circle - bottom left */}
         <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-[#006e63] opacity-10" />
-        {/* Gold accent rectangle */}
         <div className="absolute top-1/2 right-[8%] -translate-y-1/2 w-1 h-48 bg-[#ffd700] opacity-40 rounded-full" />
         <div className="absolute top-1/2 right-[9.5%] -translate-y-1/2 w-1 h-28 bg-[#ffd700] opacity-20 rounded-full" />
-        {/* Diagonal grid lines */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -26,20 +21,16 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
-          {/* Left — Text content */}
           <div>
-            {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-1.5 mb-8">
               <div className="flex gap-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Icon key={i} icon={StarIcon} size={13} color="#ffd700" />
                 ))}
               </div>
-              <span className="text-white/80 text-sm font-medium">Minnesota's Most Trusted Movers</span>
+              <span className="text-white/80 text-sm font-medium">Minnesota&apos;s Most Trusted Movers</span>
             </div>
 
-            {/* Headline */}
             <h1 className="text-5xl sm:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
               Moving Made
               <br />
@@ -48,13 +39,11 @@ export default function Hero() {
               <span className="text-white/80 text-4xl sm:text-5xl xl:text-6xl">Across Minnesota.</span>
             </h1>
 
-            {/* Description */}
             <p className="text-lg text-white/60 leading-relaxed mb-10 max-w-xl">
-              Moving can be stressful, but with 5-Star Movers, it doesn't have to be. Expert movers,
-              upfront pricing, and top-tier customer service — every time.
+              Moving can be stressful, but with 5-Star Movers, it doesn&apos;t have to be. Expert
+              movers, upfront pricing, and top-tier customer service every time.
             </p>
 
-            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <Button
                 size="lg"
@@ -71,14 +60,8 @@ export default function Hero() {
               </a>
             </div>
 
-            {/* Trust indicators */}
             <div className="flex flex-wrap gap-x-6 gap-y-2.5">
-              {[
-                "Licensed & Insured",
-                "Upfront Pricing",
-                "Expert Handling",
-                "Hassle-Free Moves",
-              ].map((item) => (
+              {["Licensed & Insured", "Upfront Pricing", "Expert Handling", "Hassle-Free Moves"].map((item) => (
                 <div key={item} className="flex items-center gap-2">
                   <Icon icon={CheckmarkCircle01Icon} size={17} color="#ffd700" />
                   <span className="text-white/70 text-sm font-medium">{item}</span>
@@ -87,11 +70,8 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — Visual card */}
           <div className="hidden lg:flex flex-col gap-4">
-            {/* Main card */}
             <div className="relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm overflow-hidden">
-              {/* Card teal accent */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#006e63] to-[#ffd700] rounded-t-3xl" />
 
               <div className="flex items-center gap-4 mb-7">
@@ -104,12 +84,11 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mb-7">
                 {[
                   { n: "10+", l: "Years" },
                   { n: "5K+", l: "Moves" },
-                  { n: "5.0★", l: "Rating" },
+                  { n: "5.0*", l: "Rating" },
                 ].map((s) => (
                   <div key={s.l} className="bg-white/5 rounded-xl p-3 text-center">
                     <div className="text-[#ffd700] font-bold text-xl">{s.n}</div>
@@ -118,7 +97,6 @@ export default function Hero() {
                 ))}
               </div>
 
-              {/* Services tags */}
               <div className="flex flex-wrap gap-2">
                 {["Residential", "Commercial", "Long Distance", "Specialty", "Packing", "Storage"].map((tag) => (
                   <span key={tag} className="text-xs bg-white/8 border border-white/10 text-white/60 rounded-full px-3 py-1">
@@ -128,7 +106,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Bottom row cards */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-[#006e63]/20 border border-[#006e63]/30 rounded-2xl p-5">
                 <div className="text-[#ffd700] font-black text-3xl mb-1">100%</div>

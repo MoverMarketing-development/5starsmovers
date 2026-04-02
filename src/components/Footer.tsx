@@ -28,10 +28,8 @@ const aboutLinks = [
 export default function Footer() {
   return (
     <footer className="bg-[#343a40] text-white">
-      {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-5">
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#ffd700]">
@@ -43,11 +41,11 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6">
-              Minnesota's most trusted local movers. We handle residential and commercial moves with
-              care, efficiency, and professionalism across the Twin Cities metro and all of Minnesota.
+              Minnesota&apos;s most trusted local movers. We handle residential and commercial moves
+              with care, efficiency, and professionalism across the Twin Cities metro and all of
+              Minnesota.
             </p>
 
-            {/* Social links */}
             <div className="flex gap-3">
               <a
                 href="https://www.facebook.com/5StarMoversOfMN"
@@ -74,7 +72,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
           <div>
             <h4 className="font-bold text-white text-base mb-5 tracking-tight">Moving Services</h4>
             <ul className="space-y-2.5">
@@ -88,7 +85,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* About */}
           <div>
             <h4 className="font-bold text-white text-base mb-5 tracking-tight">Company</h4>
             <ul className="space-y-2.5">
@@ -102,7 +98,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-bold text-white text-base mb-5 tracking-tight">Get in Touch</h4>
             <ul className="space-y-4">
@@ -123,7 +118,8 @@ export default function Footer() {
                   <div>
                     <div className="text-white/40 text-xs uppercase tracking-wider mb-0.5">Address</div>
                     <span className="text-white/70 text-sm leading-relaxed">
-                      6325 Cambridge St, #1<br />
+                      6325 Cambridge St, #1
+                      <br />
                       St Louis Park, MN 55416
                     </span>
                   </div>
@@ -135,7 +131,9 @@ export default function Footer() {
                   <div>
                     <div className="text-white/40 text-xs uppercase tracking-wider mb-0.5">Service Area</div>
                     <span className="text-white/70 text-sm">
-                      Minneapolis & Twin Cities<br />Metro — Statewide
+                      Minneapolis & Twin Cities
+                      <br />
+                      Metro - Statewide
                     </span>
                   </div>
                 </div>
@@ -154,15 +152,18 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} 5 Star Movers. All rights reserved.
+            Copyright {new Date().getFullYear()} 5 Star Movers. All rights reserved.
           </p>
           <div className="flex gap-5">
-            <a href="#" className="text-white/40 hover:text-white/70 text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-white/40 hover:text-white/70 text-sm transition-colors">Terms of Service</a>
+            <a href="#" className="text-white/40 hover:text-white/70 text-sm transition-colors">
+              Privacy Policy
+            </a>
+            <a href="#" className="text-white/40 hover:text-white/70 text-sm transition-colors">
+              Terms of Service
+            </a>
           </div>
         </div>
       </div>

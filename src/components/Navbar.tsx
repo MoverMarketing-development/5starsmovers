@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { StarIcon, PhoneCheckIcon } from "@hugeicons/core-free-icons";
 import { Icon } from "@/components/ui/Icon";
@@ -28,18 +29,15 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#343a40]/95 backdrop-blur-sm border-b border-white/10">
-      {/* Top bar */}
       <div className="bg-[#006e63] py-1.5 px-4 text-center text-sm font-semibold text-white">
         <a href="tel:6512431993" className="inline-flex items-center gap-2 hover:underline">
           <Icon icon={PhoneCheckIcon} size={16} />
-          Call us today: (651) 243-1993 — Free Quotes, Upfront Pricing
+          Call us today: (651) 243-1993 - Free Quotes, Upfront Pricing
         </a>
       </div>
 
-      {/* Main nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
-        <a href="/" className="flex items-center gap-2 group">
+        <Link href="/" className="flex items-center gap-2 group">
           <div className="flex items-center justify-center w-9 h-9 rounded-full bg-[#ffd700]">
             <Icon icon={StarIcon} size={18} color="#343a40" />
           </div>
@@ -47,11 +45,9 @@ export default function Navbar() {
             <span className="block text-white font-bold text-lg tracking-tight leading-none">5 Star</span>
             <span className="block text-[#ffd700] text-xs font-semibold tracking-widest uppercase leading-none">Movers</span>
           </div>
-        </a>
+        </Link>
 
-        {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-1">
-          {/* About Us dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("about")}
@@ -72,7 +68,6 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Services dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setActiveDropdown("services")}
@@ -101,7 +96,6 @@ export default function Navbar() {
           </a>
         </nav>
 
-        {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
           <a href="tel:6512431993" className="text-white/80 hover:text-white text-sm font-medium transition-colors flex items-center gap-1.5">
             <Icon icon={PhoneCheckIcon} size={16} color="#ffd700" />
@@ -115,7 +109,6 @@ export default function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile menu button */}
         <button
           className="lg:hidden text-white p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -129,7 +122,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-[#343a40] border-t border-white/10 px-4 py-4 space-y-1">
           <a href="#" className="block py-2 text-white/90 font-medium">About Us</a>

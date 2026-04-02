@@ -7,11 +7,9 @@ export default function CTASection() {
     <section className="py-20 bg-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="relative bg-gradient-to-br from-[#343a40] to-[#006e63] rounded-3xl p-10 sm:p-14 overflow-hidden text-center">
-          {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#ffd700] rounded-full opacity-10 blur-3xl pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full opacity-5 blur-2xl pointer-events-none" />
 
-          {/* Stars */}
           <div className="flex justify-center gap-1 mb-5">
             {[...Array(5)].map((_, i) => (
               <Icon key={i} icon={StarIcon} size={24} color="#ffd700" />
@@ -19,12 +17,12 @@ export default function CTASection() {
           </div>
 
           <h2 className="relative z-10 text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Ready to Move? Let's Make{" "}
+            Ready to Move? Let&apos;s Make{" "}
             <span className="text-[#ffd700]">It Happen.</span>
           </h2>
           <p className="relative z-10 text-white/70 text-lg mb-10 max-w-xl mx-auto">
             Get a free, no-obligation quote today. Upfront pricing, expert movers, and a hassle-free
-            experience — that's the 5 Star promise.
+            experience. That&apos;s the 5 Star promise.
           </p>
 
           <div className="relative z-10 flex flex-col sm:flex-row gap-4 justify-center">
