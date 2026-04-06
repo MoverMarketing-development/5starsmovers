@@ -137,6 +137,7 @@ const navItems = [
   { label: "Home", homeHref: "#home", fallbackHref: "/" },
   { label: "Reviews", homeHref: "#awards", fallbackHref: "/#awards" },
   { label: "Why Us", homeHref: "#difference", fallbackHref: "/#difference" },
+  { label: "Blog", homeHref: "/blog", fallbackHref: "/blog" },
 ];
 
 const serviceGroups = [
