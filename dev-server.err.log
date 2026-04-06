@@ -37,3 +37,2540 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessHoursStatus[0m [36mfrom[0m [32m"@/components/BusinessHoursStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/components/Footer.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/components/Footer.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessHoursStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessHoursStatus from "@/components/BusinessHoursStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessHoursStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  [90m1 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+  [90m2 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mServiceGridSection[0m [36mfrom[0m [32m"@/components/ServiceGridSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m
+  [90m5 |[0m [36mconst[0m awards = [
+  [90m6 |[0m   { name: [32m"Best Pros In Town"[0m, src: [32m"/awards/badge1.png"[0m },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/services/[slug]/page.tsx:6:1
+Module not found: Can't resolve '@/components/MovingSuppliesSection'
+  [90m4 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+  [90m5 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mMovingSuppliesSection[0m [36mfrom[0m [32m"@/components/MovingSuppliesSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { servicePageMap, servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m8 |[0m
+  [90m9 |[0m [36mtype[0m [33mPageProps[0m = {
+
+Import map: aliased to relative './src/components/MovingSuppliesSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/services/[slug]/page.tsx:6:1
+Module not found: Can't resolve '@/components/MovingSuppliesSection'
+  [90m4 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+  [90m5 |[0m [36mimport[0m [33mFooter[0m [36mfrom[0m [32m"@/components/Footer"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m [33mMovingSuppliesSection[0m [36mfrom[0m [32m"@/components/MovingSuppliesSection"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m [36mimport[0m { servicePageMap, servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m8 |[0m
+  [90m9 |[0m [36mtype[0m [33mPageProps[0m = {
+
+Import map: aliased to relative './src/components/MovingSuppliesSection' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  [90m1 |[0m [36mimport[0m [36mtype[0m { [33mReactNode[0m } [36mfrom[0m [32m"react"[0m;
+  [90m2 |[0m [36mimport[0m [33mLink[0m [36mfrom[0m [32m"next/link"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m [33mBusinessStatus[0m [36mfrom[0m [32m"@/components/BusinessStatus"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mconst[0m footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/services/[slug]/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+  [90m 6 |[0m [36mimport[0m [33mScript[0m [36mfrom[0m [32m"next/script"[0m;
+  [90m 7 |[0m [36mimport[0m { usePathname } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m 8 |[0m [36mimport[0m { areaGroups, areaPages } [36mfrom[0m [32m"@/lib/area-pages"[0m;
+  [90m   |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m 9 |[0m [36mimport[0m { servicePages } [36mfrom[0m [32m"@/lib/service-pages"[0m;
+  [90m10 |[0m
+  [90m11 |[0m [36mtype[0m [33mIconName[0m =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessStatus from "@/components/BusinessStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  1 | import Link from "next/link";
+  2 | import Footer from "@/components/Footer";
+> 3 | import ServiceGridSection from "@/components/ServiceGridSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const awards = [
+  6 |   { name: "Best Pros In Town", src: "/awards/badge1.png" },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+   6 | import Script from "next/script";
+   7 | import { usePathname } from "next/navigation";
+>  8 | import { areaGroups, areaPages } from "@/lib/area-pages";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { servicePages } from "@/lib/service-pages";
+  10 |
+  11 | type IconName =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessStatus from "@/components/BusinessStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  1 | import Link from "next/link";
+  2 | import Footer from "@/components/Footer";
+> 3 | import ServiceGridSection from "@/components/ServiceGridSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const awards = [
+  6 |   { name: "Best Pros In Town", src: "/awards/badge1.png" },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+   6 | import Script from "next/script";
+   7 | import { usePathname } from "next/navigation";
+>  8 | import { areaGroups, areaPages } from "@/lib/area-pages";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { servicePages } from "@/lib/service-pages";
+  10 |
+  11 | type IconName =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Footer.tsx:3:1
+Module not found: Can't resolve '@/components/BusinessStatus'
+  1 | import type { ReactNode } from "react";
+  2 | import Link from "next/link";
+> 3 | import BusinessStatus from "@/components/BusinessStatus";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { servicePages } from "@/lib/service-pages";
+  5 |
+  6 | const footerColumns = [
+
+Import map: aliased to relative './src/components/BusinessStatus' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Footer.tsx
+    ./src/app/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/app/page.tsx:3:1
+Module not found: Can't resolve '@/components/ServiceGridSection'
+  1 | import Link from "next/link";
+  2 | import Footer from "@/components/Footer";
+> 3 | import ServiceGridSection from "@/components/ServiceGridSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 |
+  5 | const awards = [
+  6 |   { name: "Best Pros In Town", src: "/awards/badge1.png" },
+
+Import map: aliased to relative './src/components/ServiceGridSection' inside of [project]/
+
+https://nextjs.org/docs/messages/module-not-found 
+[browser] ./src/components/Navbar.tsx:8:1
+Module not found: Can't resolve '@/lib/area-pages'
+   6 | import Script from "next/script";
+   7 | import { usePathname } from "next/navigation";
+>  8 | import { areaGroups, areaPages } from "@/lib/area-pages";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { servicePages } from "@/lib/service-pages";
+  10 |
+  11 | type IconName =
+
+Import map: aliased to relative './src/lib/area-pages' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./src/components/Navbar.tsx
+    ./src/app/layout.tsx
+
+https://nextjs.org/docs/messages/module-not-found 
+⚠ Fast Refresh had to perform a full reload when ./node_modules/next/dist/client/image-component.js changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[browser] Image with src "/logo.webp" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
+Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/layout.tsx:5:1
+Module not found: Can't resolve '@/components/Navbar'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { cn } [36mfrom[0m [32m"@/lib/utils"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m [33mNavbar[0m [36mfrom[0m [32m"@/components/Navbar"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m
+  [90m7 |[0m [36mconst[0m inter = [33mInter[0m({
+  [90m8 |[0m   subsets: [[32m"latin"[0m],
+
+Import map: aliased to relative './src/components/Navbar' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
