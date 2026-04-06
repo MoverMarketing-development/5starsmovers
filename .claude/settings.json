@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash('~/.nvm/versions/node/v24.14.1/bin/node' ./node_modules/.bin/next build)",
+      "Bash(npm install:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/guillermorodriguez1/Documents/5starsmovers/src/app/blog"
+    ]
+  }
+}
