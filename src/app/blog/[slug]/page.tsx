@@ -114,7 +114,7 @@ export default async function BlogPostPage({ params }: PageProps) {
             Ready to Move?
           </p>
           <h2 className="font-display text-3xl font-extrabold text-white md:text-4xl">
-            Let Minnesota's 5-Star Crew{" "}
+            Let Minnesota&apos;s 5-Star Crew{" "}
             <span className="text-[#ffd700]">Handle It.</span>
           </h2>
           <p className="mt-4 text-white/55 max-w-xl mx-auto">

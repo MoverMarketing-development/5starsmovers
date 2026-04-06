@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { servicePages } from "@/lib/service-pages";
+import Footer from "@/components/Footer";
+import ServiceGridSection from "@/components/ServiceGridSection";
 
 const awards = [
   { name: "Best Pros In Town", src: "/awards/badge1.png" },
@@ -160,34 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="border-t border-white/5 bg-[#121417] py-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mb-14 text-center">
-            <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Service</p>
-            <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">We Serve the Best Work</h2>
-          </div>
-
-          <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {servicePages.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="ambient-shadow group rounded-[1.5rem] border border-white/[0.06] bg-[#1e2124] p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-[#ffdc00]/25"
-              >
-                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#ffdc00]/10 text-[#ffdc00]">
-                  <Icon name={service.icon as IconName} className="h-5 w-5" />
-                </div>
-                <h3 className="font-display text-lg font-extrabold text-white">{service.title}</h3>
-                <p className="mt-3 text-sm leading-[1.5] text-white/[0.58]">{service.description}</p>
-                <div className="mt-6 flex items-center gap-2 font-label text-[11px] font-bold uppercase tracking-[0.24em] text-[#ffdc00]">
-                  Learn more
-                  <Icon name="arrow" className="h-3.5 w-3.5" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ServiceGridSection />
 
       <section id="awards" className="border-t border-white/5 bg-[#121417] py-24">
         <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
@@ -278,72 +252,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/[0.08] bg-[#121417] pb-12 pt-24">
-        <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
-            <div className="lg:col-span-5">
-              <p className="text-lg text-white/[0.78]">To always be informed</p>
-              <h3 className="mt-4 max-w-md font-display text-5xl font-extrabold leading-[1] text-white md:text-6xl">Sign up for our newsletter.</h3>
-              <div className="mt-8 flex flex-col items-start gap-4">
-                <a href="#" className="rounded-xl bg-[#9edfe0] px-9 py-4 text-lg font-bold text-[#121417] transition-all duration-200 hover:scale-[1.015] hover:bg-[#b4ecec]">Subscribe</a>
-                <a href="#" className="rounded-lg bg-[#e24436] px-6 py-4 font-display text-sm font-extrabold uppercase tracking-[0.16em] text-white transition-all duration-200 hover:scale-[1.015] hover:bg-[#f05a4d]">Moving Checklist</a>
-              </div>
-            </div>
-
-            <div className="grid gap-10 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-4">
-              <div>
-                <h4 className="font-display text-lg font-extrabold uppercase tracking-[0.14em] text-white">Services</h4>
-                <ul className="mt-6 space-y-4 text-sm text-white/[0.58]">
-                  {["Loading & Unloading", "Packing Services", "Residential Moving", "Storage"].map((item) => (
-                    <li key={item}><a href="#" className="hover:text-[#ffdc00]">{item}</a></li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-display text-lg font-extrabold uppercase tracking-[0.14em] text-white">Company</h4>
-                <ul className="mt-6 space-y-4 text-sm text-white/[0.58]">
-                  {["About Us", "Pricing", "Reviews", "Contact Us"].map((item) => (
-                    <li key={item}><a href="#" className="hover:text-[#ffdc00]">{item}</a></li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-display text-lg font-extrabold uppercase tracking-[0.14em] text-white">Working Hours</h4>
-                <ul className="mt-6 space-y-4 text-sm text-white/[0.58]">
-                  <li><span className="block font-semibold text-white">Mon - Fri</span>8 AM - 6 PM</li>
-                  <li><span className="block font-semibold text-white">Saturday</span>8 AM - 12 PM</li>
-                  <li><span className="block font-semibold text-white">Sunday</span><span className="text-[#e24436]">Closed</span></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-display text-lg font-extrabold uppercase tracking-[0.14em] text-white">Locations</h4>
-                <ul className="mt-6 space-y-4 text-sm text-white/[0.58]">
-                  {["Minneapolis", "St Louis Park", "Twin Cities"].map((item) => (
-                    <li key={item}><a href="#" className="hover:text-[#ffdc00]">{item}</a></li>
-                  ))}
-                </ul>
-                <div className="mt-6 flex gap-3">
-                  {["f", "ig", "x", "in"].map((item) => (
-                    <a key={item} href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-xs font-bold uppercase text-[#121417] transition-all duration-200 hover:scale-[1.04] hover:bg-[#ffdc00]">
-                      {item}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-20 flex flex-col items-center justify-between gap-6 border-t border-white/5 pt-8 md:flex-row">
-            <Link href="/" className="group flex items-center gap-3 font-display text-2xl font-extrabold text-white transition-colors duration-300 hover:text-[#ffdc00]">
-              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#ffdc00] text-[#121417] transition-transform duration-300 group-hover:scale-110 group-hover:rotate-[-6deg]">
-                <Icon name="truck" className="h-5 w-5" />
-              </span>
-              5 Star Movers
-            </Link>
-            <p className="font-label text-[11px] uppercase tracking-[0.24em] text-white/[0.42]">Copyright 2026 5 Star Movers. The Architectural Anchor in Logistics.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

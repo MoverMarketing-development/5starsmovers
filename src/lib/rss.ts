@@ -34,7 +34,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   });
   const xml = await res.text();
 
-  const parser = new XMLParser({
+  const parserOptions: ConstructorParameters<typeof XMLParser>[0] = {
     ignoreAttributes: false,
     attributeNamePrefix: "@_",
     isArray: (name: string) => name === "item" || name === "media:content",
@@ -48,23 +48,32 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       maxExpandedLength: 500000,
       maxEntityCount: 1000,
     },
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  } as any);
+  };
+  const parser = new XMLParser(parserOptions);
 
   const result = parser.parse(xml);
-  const items = result?.rss?.channel?.item ?? [];
+  const items: Record<string, unknown>[] = result?.rss?.channel?.item ?? [];
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  return items.map((item: any) => {
+  return items.map((item) => {
     // Image: prefer enclosure url, fallback to first media:content
     const enclosure = item["enclosure"];
     const mediaItems: unknown[] = Array.isArray(item["media:content"]) ? item["media:content"] : [];
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const image: string =
-      (typeof enclosure === "object" && enclosure?.["@_url"]) ||
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      ((mediaItems[0] as any)?.["@_url"]) ||
-      "";
+    const firstMedia = mediaItems[0];
+    const enclosureUrl =
+      typeof enclosure === "object" &&
+      enclosure !== null &&
+      "@_url" in enclosure &&
+      typeof enclosure["@_url"] === "string"
+        ? enclosure["@_url"]
+        : "";
+    const firstMediaUrl =
+      typeof firstMedia === "object" &&
+      firstMedia !== null &&
+      "@_url" in firstMedia &&
+      typeof firstMedia["@_url"] === "string"
+        ? firstMedia["@_url"]
+        : "";
+    const image = enclosureUrl || firstMediaUrl;
 
     const rawTagsVal = item["g-custom:tags"];
     const rawTags = typeof rawTagsVal === "string" ? rawTagsVal : "";

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { usePathname } from "next/navigation";
+import { areaGroups, areaPages } from "@/lib/area-pages";
 import { servicePages } from "@/lib/service-pages";
 
 type IconName =
@@ -21,7 +22,8 @@ type IconName =
   | "warehouse"
   | "sparkles"
   | "shield"
-  | "trash";
+  | "trash"
+  | "location";
 
 function Icon({ name, className }: { name: IconName; className?: string }) {
   const shared = {
@@ -128,6 +130,13 @@ function Icon({ name, className }: { name: IconName; className?: string }) {
           <path d="M7 7l1 13h8l1-13" />
         </svg>
       );
+    case "location":
+      return (
+        <svg {...shared}>
+          <path d="M12 21s6-5.33 6-11a6 6 0 1 0-12 0c0 5.67 6 11 6 11Z" />
+          <path d="M12 12.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -161,9 +170,10 @@ const serviceGroups = [
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const [servicesMenuRoute, setServicesMenuRoute] = useState<string | null>(null);
+  const [openMenu, setOpenMenu] = useState<"services" | "areas" | null>(null);
   const trustIndexRef = useRef<HTMLDivElement | null>(null);
-  const servicesOpen = servicesMenuRoute === pathname;
+  const servicesOpen = openMenu === "services";
+  const areasOpen = openMenu === "areas";
 
   useEffect(() => {
     trustIndexRef.current?.setAttribute(
@@ -205,7 +215,7 @@ export default function Navbar() {
           <Link
             href="/"
             className="group flex items-center"
-            onClick={() => setServicesMenuRoute(null)}
+            onClick={() => setOpenMenu(null)}
           >
             <Image
               src="/logo.webp"
@@ -219,15 +229,31 @@ export default function Navbar() {
           <div className="hidden items-center gap-8 font-display text-sm font-bold md:flex">
             <div
               className="relative"
-              onMouseEnter={() => setServicesMenuRoute(pathname)}
+              onMouseEnter={() => setOpenMenu("services")}
             >
               <Link
                 href={isHome ? "#services" : "/#services"}
                 className={`inline-flex items-center gap-2 ${servicesOpen ? "text-white" : "text-white/70 hover:text-white"}`}
-                onClick={() => setServicesMenuRoute(null)}
+                onClick={() => setOpenMenu(null)}
               >
                 Services
                 <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                </svg>
+              </Link>
+            </div>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setOpenMenu("areas")}
+            >
+              <Link
+                href={`/areas/${areaPages[0].slug}`}
+                className={`inline-flex items-center gap-2 ${areasOpen ? "text-white" : "text-white/70 hover:text-white"}`}
+                onClick={() => setOpenMenu(null)}
+              >
+                Areas
+                <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${areasOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
                 </svg>
               </Link>
@@ -261,8 +287,8 @@ export default function Navbar() {
           className={`absolute inset-x-0 top-full hidden transition-all duration-200 md:block ${
             servicesOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
           }`}
-          onMouseEnter={() => setServicesMenuRoute(pathname)}
-          onMouseLeave={() => setServicesMenuRoute(null)}
+          onMouseEnter={() => setOpenMenu("services")}
+          onMouseLeave={() => setOpenMenu(null)}
         >
           <div className="border-y border-[#2f353c] bg-[#1b2027] shadow-[0_24px_80px_rgba(0,0,0,0.38)]">
             <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
@@ -278,7 +304,7 @@ export default function Navbar() {
                 <Link
                   href={isHome ? "#services" : "/#services"}
                   className="text-sm font-semibold text-[#ffdc00] hover:text-[#ffe75a]"
-                  onClick={() => setServicesMenuRoute(null)}
+                  onClick={() => setOpenMenu(null)}
                 >
                   View home section
                 </Link>
@@ -300,7 +326,7 @@ export default function Navbar() {
                           key={service.slug}
                           href={`/services/${service.slug}`}
                           className="group/item rounded-xl px-3 py-2.5 transition-colors hover:bg-[#2a313b]"
-                          onClick={() => setServicesMenuRoute(null)}
+                          onClick={() => setOpenMenu(null)}
                         >
                           <div className="flex items-start justify-between gap-3">
                             <div className="flex items-start gap-3">
@@ -313,6 +339,82 @@ export default function Navbar() {
                                 </div>
                                 <div className="mt-0.5 text-xs leading-[1.45] text-white/[0.46]">
                                   {service.description}
+                                </div>
+                              </div>
+                            </div>
+                            <span className="pt-0.5 text-[#ffdc00] opacity-0 transition-opacity group-hover/item:opacity-100">
+                              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m13 6 6 6-6 6" />
+                              </svg>
+                            </span>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`absolute inset-x-0 top-full hidden transition-all duration-200 md:block ${
+            areasOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          }`}
+          onMouseEnter={() => setOpenMenu("areas")}
+          onMouseLeave={() => setOpenMenu(null)}
+        >
+          <div className="border-y border-[#2f353c] bg-[#1b2027] shadow-[0_24px_80px_rgba(0,0,0,0.38)]">
+            <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
+              <div className="mb-5 flex items-end justify-between gap-6 border-b border-white/8 pb-5">
+                <div>
+                  <div className="font-label text-[11px] font-bold uppercase tracking-[0.32em] text-[#ffdc00]">
+                    Service Areas
+                  </div>
+                  <h3 className="mt-3 font-display text-2xl font-extrabold text-white">
+                    Explore all {areaPages.length} cities
+                  </h3>
+                </div>
+                <Link
+                  href={`/areas/${areaPages[0].slug}`}
+                  className="text-sm font-semibold text-[#ffdc00] hover:text-[#ffe75a]"
+                  onClick={() => setOpenMenu(null)}
+                >
+                  Open first area page
+                </Link>
+              </div>
+
+              <div className="grid gap-4 xl:grid-cols-4">
+                {areaGroups.map((group) => (
+                  <div key={group.title} className="rounded-[1.4rem] border border-[#303844] bg-[#20262e] p-4">
+                    <div className="font-display text-base font-extrabold text-white">
+                      {group.title}
+                    </div>
+                    <p className="mt-1 text-xs leading-[1.5] text-white/[0.5]">
+                      {group.description}
+                    </p>
+
+                    <div className="mt-4 grid gap-1.5">
+                      {group.items.map((area) => (
+                        <Link
+                          key={area.slug}
+                          href={`/areas/${area.slug}`}
+                          className="group/item rounded-xl px-3 py-2.5 transition-colors hover:bg-[#2a313b]"
+                          onClick={() => setOpenMenu(null)}
+                        >
+                          <div className="flex items-start justify-between gap-3">
+                            <div className="flex items-start gap-3">
+                              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-[#3a4450] bg-[#161b22] text-[#ffdc00] transition-colors group-hover/item:border-[#ffdc00]/30 group-hover/item:bg-[#1d232c]">
+                                <Icon name="location" className="h-4.5 w-4.5" />
+                              </div>
+                              <div>
+                                <div className="text-sm font-semibold text-white/78 transition-colors group-hover/item:text-white">
+                                  {area.city}
+                                </div>
+                                <div className="mt-0.5 text-xs leading-[1.45] text-white/[0.46]">
+                                  {area.state}
                                 </div>
                               </div>
                             </div>
