@@ -10,26 +10,6 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
-function ImageCornerAccent({ side, theme = "dark" }: { side: "left" | "right"; theme?: "dark" | "light" }) {
-  const basePosition = side === "left" ? "-left-5 -top-5" : "-right-5 -top-5";
-  const stroke = theme === "dark" ? "#f4f0e8" : "#121417";
-
-  return (
-    <div className={`pointer-events-none absolute ${basePosition} z-20 h-20 w-20`}>
-      <svg
-        viewBox="0 0 100 100"
-        className={`h-full w-full ${side === "right" ? "-scale-x-100" : ""}`}
-        fill="none"
-        aria-hidden="true"
-      >
-        <path d="M12 12H88V18H18V88H12V12Z" fill={stroke} />
-        <path d="M24 20H84V25H29V84H24V20Z" fill={stroke} opacity="0.88" />
-        <path d="M36 28H80V32H40V80H36V28Z" fill={stroke} opacity="0.72" />
-      </svg>
-    </div>
-  );
-}
-
 function Icon({ name, className }: { name: "star" | "arrow" | "phone" | "home" | "route" | "building" | "box" | "heart" | "package" | "apartment" | "squares" | "warehouse" | "sparkles" | "shield" | "trash"; className?: string }) {
   const shared = { className, fill: "none", stroke: "currentColor", strokeWidth: 1.8, viewBox: "0 0 24 24" };
   switch (name) {
@@ -140,7 +120,7 @@ export default async function ServicePage({ params }: PageProps) {
       <section className="border-b border-white/5 bg-[#111417] py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-[#1b1f23]">
-            <ImageCornerAccent side="left" theme="dark" />
+
             <Image
               src={service.sectionOneImage}
               alt={`${service.title} service photo`}
@@ -164,7 +144,7 @@ export default async function ServicePage({ params }: PageProps) {
             <p className="mt-6 max-w-3xl text-lg leading-[1.5] text-[#121417]/72">{service.sectionTwoBody}</p>
           </div>
           <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-black/5 bg-white shadow-[0_24px_60px_rgba(18,20,23,0.12)]">
-            <ImageCornerAccent side="right" theme="light" />
+
             <Image
               src={service.sectionTwoImage}
               alt={`${service.title} team at work`}

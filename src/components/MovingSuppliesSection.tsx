@@ -1,26 +1,6 @@
 import Image from "next/image";
 import { movingSuppliesIntro, movingSuppliesItems, movingSuppliesSectionImage } from "@/lib/service-pages";
 
-function ImageCornerAccent({ side, theme = "dark" }: { side: "left" | "right"; theme?: "dark" | "light" }) {
-  const basePosition = side === "left" ? "-left-5 -top-5" : "-right-5 -top-5";
-  const stroke = theme === "dark" ? "#f4f0e8" : "#121417";
-
-  return (
-    <div className={`pointer-events-none absolute ${basePosition} z-20 h-20 w-20`}>
-      <svg
-        viewBox="0 0 100 100"
-        className={`h-full w-full ${side === "right" ? "-scale-x-100" : ""}`}
-        fill="none"
-        aria-hidden="true"
-      >
-        <path d="M12 12H88V18H18V88H12V12Z" fill={stroke} />
-        <path d="M24 20H84V25H29V84H24V20Z" fill={stroke} opacity="0.88" />
-        <path d="M36 28H80V32H40V80H36V28Z" fill={stroke} opacity="0.72" />
-      </svg>
-    </div>
-  );
-}
-
 function StarIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
@@ -51,7 +31,6 @@ export default function MovingSuppliesSection() {
           </div>
         </div>
         <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/5 bg-[#121417] shadow-[0_24px_60px_rgba(18,20,23,0.14)]">
-          <ImageCornerAccent side="right" theme="light" />
           <Image
             src={movingSuppliesSectionImage}
             alt="Moving supplies and packing materials"
