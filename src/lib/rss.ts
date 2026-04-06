@@ -17,6 +17,17 @@ function slugFromUrl(url: string): string {
   return url.replace(/\/$/, "").split("/").pop() ?? "";
 }
 
+function decodeHtmlEntities(str: string): string {
+  return str
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&#(\d+);/g, (_, code) => String.fromCharCode(Number(code)));
+}
+
 export async function getBlogPosts(): Promise<BlogPost[]> {
   const res = await fetch(RSS_URL, {
     next: { revalidate: 3600 },
@@ -66,7 +77,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
       slug: slugFromUrl(strVal(item.link) || strVal(item.guid)),
       link: strVal(item.link),
       description: strVal(item.description),
-      content: strVal(item["content:encoded"]),
+      content: decodeHtmlEntities(strVal(item["content:encoded"])),
       image,
       pubDate: strVal(item.pubDate),
       tags,
