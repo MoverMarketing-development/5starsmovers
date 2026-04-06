@@ -175,9 +175,10 @@ export default function Navbar() {
               src="https://cdn.trustindex.io/loader.js"
               strategy="afterInteractive"
             />
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             <div
               className="trustindex-widget mx-auto"
-              src="https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281"
+              {...({ src: "https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281" } as any)}
             />
           </div>
           <a
