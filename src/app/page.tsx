@@ -90,57 +90,14 @@ function Icon({ name, className }: { name: IconName; className?: string }) {
 export default function Home() {
   return (
     <main className="bg-background text-white">
-      <header className="fixed inset-x-0 top-0 z-50">
-        <div className="border-b border-white/5 bg-[#121417] px-4 py-2 text-[13px] md:px-8">
-          <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
-            <p className="hidden text-white/[0.65] md:block">Premium Moving Services in Minnesota</p>
-            <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-3 py-1">
-              <span className="flex text-[#ffdc00]">
-                {[...Array(5)].map((_, index) => (
-                  <Icon key={index} name="star" className="h-3.5 w-3.5" />
-                ))}
-              </span>
-              <span className="font-semibold text-white">199 reviews</span>
-            </div>
-            <a href="tel:6514619202" className="flex items-center gap-2 font-semibold text-white hover:text-[#ffdc00]">
-              <Icon name="phone" className="h-4 w-4 text-[#ffdc00]" />
-              (651) 461-9202
-            </a>
-          </div>
-        </div>
-
-        <nav className="glass-panel border-b border-white/5">
-          <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 md:px-8">
-            <Link href="/" className="group flex items-center">
-              <img
-                src="/logo.webp"
-                alt="5 Star Movers logo"
-                className="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.03]"
-              />
-            </Link>
-
-            <div className="hidden items-center gap-8 font-display text-sm font-bold md:flex">
-              <a href="#home" className="text-[#ffdc00]">Home</a>
-              <a href="#services" className="text-white/70 hover:text-white">Services</a>
-              <a href="#awards" className="text-white/70 hover:text-white">Reviews</a>
-              <a href="#difference" className="text-white/70 hover:text-white">Why Us</a>
-            </div>
-
-            <Link href="/quote" className="cta-sheen inline-flex rounded-full px-5 py-2.5 font-display text-xs font-extrabold uppercase tracking-[0.24em] text-[#121417] transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.02] hover:shadow-[0_18px_40px_rgba(255,220,0,0.24)] hover:brightness-110 active:translate-y-0">
-              Get a Quote
-            </Link>
-          </div>
-        </nav>
-      </header>
-
-      <section id="home" className="relative overflow-hidden pt-20 lg:pt-24">
+      <section id="home" className="relative overflow-hidden">
         <div className="mx-auto grid min-h-[820px] max-w-7xl items-end gap-6 px-4 pb-12 md:px-8 lg:grid-cols-[1fr_1fr] lg:gap-4">
           <div className="pt-0 pb-0">
             <div className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
               <span className="h-px w-10 bg-[#ffdc00]" />
               Moving with Precision
             </div>
-            <h1 className="font-display text-4xl font-extrabold leading-[0.92] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="font-display text-4xl font-extrabold leading-[1] tracking-tight text-white sm:text-5xl lg:text-6xl">
               Seamless Moving
               <br />
               For Your Home
@@ -148,12 +105,12 @@ export default function Home() {
               & Office
               <span className="block text-[#ffdc00]">Boosting Your Comfort</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-white/[0.68]">
+            <p className="mt-6 max-w-xl text-lg leading-[1.5] text-white/[0.68]">
               We do more than move boxes. We anchor your transition with white-glove service, transparent planning, and premium execution from Minneapolis to the rest of Minnesota.
             </p>
 
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link href="/quote" className="cta-sheen inline-flex items-center justify-center gap-2 rounded-md px-7 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_24px_50px_rgba(255,220,0,0.22)] hover:brightness-110 active:translate-y-0">
+              <Link href="/quote" className="cta-sheen inline-flex items-center justify-center gap-2 rounded-md px-7 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">
                 Book Your Move Now
               </Link>
               <a href="#difference" className="group inline-flex items-center gap-3 text-sm font-display font-bold text-white transition-all duration-300 hover:text-[#ffdc00]">
@@ -231,7 +188,7 @@ export default function Home() {
                   <Icon name={service.icon as IconName} className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-lg font-extrabold text-white">{service.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-white/[0.58]">{service.description}</p>
+                <p className="mt-3 text-sm leading-[1.5] text-white/[0.58]">{service.description}</p>
                 <div className="mt-6 flex items-center gap-2 font-label text-[11px] font-bold uppercase tracking-[0.24em] text-[#ffdc00]">
                   Learn more
                   <Icon name="arrow" className="h-3.5 w-3.5" />
@@ -246,7 +203,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Recognition</p>
           <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">Award-Winning Moving Services You Can Trust</h2>
-          <p className="mx-auto mt-6 max-w-4xl text-base leading-8 text-white/[0.62]">
+          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.5] text-white/[0.62]">
             We are proud to be recognized across the Twin Cities for consistent service quality, professional crews, and a moving experience people genuinely recommend.
           </p>
 
@@ -272,11 +229,11 @@ export default function Home() {
                 <span className="accent-line h-px w-12" />
                 The Anchor Difference
               </p>
-              <h2 className="font-display text-4xl font-extrabold leading-tight text-white md:text-5xl">
+              <h2 className="font-display text-4xl font-extrabold leading-[1] text-white md:text-5xl">
                 Why Leading Families Choose <span className="text-[#ffdc00]">5-Star Movers</span>
               </h2>
             </div>
-            <p className="hidden max-w-xs border-l border-[#ffdc00]/20 pl-6 text-sm leading-7 text-white/[0.55] md:block">
+            <p className="hidden max-w-xs border-l border-[#ffdc00]/20 pl-6 text-sm leading-[1.5] text-white/[0.55] md:block">
               Architectural precision in every transition. We do not just move objects; we secure your next chapter.
             </p>
           </div>
@@ -292,7 +249,7 @@ export default function Home() {
                     <Icon name="star" className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-2xl font-extrabold text-white">{card.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-white/[0.58]">{card.description}</p>
+                  <p className="mt-4 text-sm leading-[1.5] text-white/[0.58]">{card.description}</p>
                 </div>
                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#ffdc00] transition-all duration-500 group-hover:w-full" />
               </article>
@@ -303,7 +260,7 @@ export default function Home() {
 
       <section id="quote" className="relative overflow-hidden bg-[#121417] pt-14">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 md:px-8 lg:flex-row lg:items-stretch">
-          <div className="flex flex-1 flex-col justify-center py-6 text-center lg:text-left">
+          <div className="flex flex-1 flex-col justify-center pt-5 pb-14 text-center lg:pt-6 lg:pb-18 lg:text-left">
             <p className="mb-4 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
               <span className="h-px w-10 bg-[#ffdc00]" />
               Start Your Journey
@@ -314,7 +271,7 @@ export default function Home() {
               Contact the Best
               <span className="block text-[#ffdc00]">Local Movers in the Twin Cities!</span>
             </h2>
-            <Link href="/quote" className="cta-sheen mt-8 inline-flex w-fit rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_24px_50px_rgba(255,220,0,0.22)] hover:brightness-110 active:translate-y-0">
+            <Link href="/quote" className="cta-sheen mt-8 inline-flex w-fit rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417]">
               Get Free Moving Quote
             </Link>
             <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-white/[0.58] lg:justify-start">
@@ -336,10 +293,10 @@ export default function Home() {
           <div className="grid gap-14 lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-5">
               <p className="text-lg text-white/[0.78]">To always be informed</p>
-              <h3 className="mt-4 max-w-md font-display text-5xl font-extrabold leading-[1.02] text-white md:text-6xl">Sign up for our newsletter.</h3>
+              <h3 className="mt-4 max-w-md font-display text-5xl font-extrabold leading-[1] text-white md:text-6xl">Sign up for our newsletter.</h3>
               <div className="mt-8 flex flex-col items-start gap-4">
-                <a href="#" className="rounded-xl bg-[#9edfe0] px-9 py-4 text-lg font-bold text-[#121417] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_20px_40px_rgba(158,223,224,0.22)] hover:brightness-105 active:translate-y-0">Subscribe</a>
-                <a href="#" className="rounded-lg bg-[#e24436] px-6 py-4 font-display text-sm font-extrabold uppercase tracking-[0.16em] text-white transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:bg-[#f04f41] hover:shadow-[0_20px_40px_rgba(226,68,54,0.24)] active:translate-y-0">Moving Checklist</a>
+                <a href="#" className="rounded-xl bg-[#9edfe0] px-9 py-4 text-lg font-bold text-[#121417] transition-all duration-200 hover:scale-[1.015] hover:bg-[#b4ecec]">Subscribe</a>
+                <a href="#" className="rounded-lg bg-[#e24436] px-6 py-4 font-display text-sm font-extrabold uppercase tracking-[0.16em] text-white transition-all duration-200 hover:scale-[1.015] hover:bg-[#f05a4d]">Moving Checklist</a>
               </div>
             </div>
 
@@ -377,7 +334,7 @@ export default function Home() {
                 </ul>
                 <div className="mt-6 flex gap-3">
                   {["f", "ig", "x", "in"].map((item) => (
-                    <a key={item} href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-xs font-bold uppercase text-[#121417] transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-[#ffdc00] hover:shadow-[0_16px_30px_rgba(255,220,0,0.18)] active:translate-y-0">
+                    <a key={item} href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-xs font-bold uppercase text-[#121417] transition-all duration-200 hover:scale-[1.04] hover:bg-[#ffdc00]">
                       {item}
                     </a>
                   ))}

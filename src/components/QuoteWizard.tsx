@@ -726,7 +726,7 @@ export default function QuoteWizard() {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   {step < steps.length ? (
                     <button
-                      className="cta-sheen inline-flex cursor-pointer items-center justify-center rounded-full px-7 py-3 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_24px_50px_rgba(255,220,0,0.22)] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-45"
+                      className="cta-sheen inline-flex cursor-pointer items-center justify-center rounded-full px-7 py-3 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] disabled:cursor-not-allowed disabled:opacity-45"
                       disabled={!isStepUnlocked(step + 1)}
                       type="button"
                       onClick={() => goToStep(step + 1)}
@@ -735,7 +735,7 @@ export default function QuoteWizard() {
                     </button>
                   ) : (
                     <button
-                      className="cta-sheen inline-flex cursor-pointer items-center justify-center rounded-full px-7 py-3 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_24px_50px_rgba(255,220,0,0.22)] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-45"
+                      className="cta-sheen inline-flex cursor-pointer items-center justify-center rounded-full px-7 py-3 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] disabled:cursor-not-allowed disabled:opacity-45"
                       disabled={!canContinueFromStep(3)}
                       type="submit"
                     >

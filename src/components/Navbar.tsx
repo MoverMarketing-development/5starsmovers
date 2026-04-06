@@ -1,150 +1,111 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { StarIcon, PhoneCheckIcon } from "@hugeicons/core-free-icons";
-import { Icon } from "@/components/ui/Icon";
-import { Button } from "@/components/ui/button";
+import { usePathname } from "next/navigation";
 
-const services = [
-  "Residential Moving",
-  "Long Distance Moving",
-  "Commercial Moving",
-  "Loading & Unloading",
-  "Senior Moving",
-  "Packing Services",
-  "Apartment Moving",
-  "Moving Supplies",
-  "Storage",
-  "White Glove Moving",
-  "Specialty Moving",
-  "Junk Removal",
+type IconName = "phone" | "star";
+
+function Icon({ name, className }: { name: IconName; className?: string }) {
+  const shared = {
+    className,
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: 1.8,
+    viewBox: "0 0 24 24",
+  };
+
+  switch (name) {
+    case "phone":
+      return (
+        <svg {...shared}>
+          <path d="M5 4h4l1 4-2 2a16 16 0 0 0 6 6l2-2 4 1v4c0 1-1 2-2 2C10.82 21 3 13.18 3 6c0-1 1-2 2-2Z" />
+        </svg>
+      );
+    case "star":
+      return (
+        <svg {...shared}>
+          <path d="m12 3 2.7 5.47 6.04.88-4.37 4.26 1.03 6.02L12 16.77 6.6 19.63l1.03-6.02L3.26 9.35l6.04-.88L12 3Z" />
+        </svg>
+      );
+    default:
+      return null;
+  }
+}
+
+const navItems = [
+  { label: "Home", homeHref: "#home", fallbackHref: "/" },
+  { label: "Services", homeHref: "#services", fallbackHref: "/#services" },
+  { label: "Reviews", homeHref: "#awards", fallbackHref: "/#awards" },
+  { label: "Why Us", homeHref: "#difference", fallbackHref: "/#difference" },
 ];
 
-const about = ["FAQs", "Contact", "Careers"];
-
 export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#343a40]/95 backdrop-blur-sm border-b border-white/10">
-      <div className="bg-[#006e63] py-1.5 px-4 text-center text-sm font-semibold text-white">
-        <a href="tel:6512431993" className="inline-flex items-center gap-2 hover:underline">
-          <Icon icon={PhoneCheckIcon} size={16} />
-          Call us today: (651) 243-1993 - Free Quotes, Upfront Pricing
-        </a>
+    <header className="fixed inset-x-0 top-0 z-50">
+      <div className="border-b border-white/5 bg-[#121417] px-4 py-2 text-[13px]">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 md:px-4">
+          <p className="hidden text-white/[0.65] md:block">
+            Premium Moving Services in Minnesota
+          </p>
+          <div className="flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-3 py-1">
+            <span className="flex text-[#ffdc00]">
+              {[...Array(5)].map((_, index) => (
+                <Icon key={index} name="star" className="h-3.5 w-3.5" />
+              ))}
+            </span>
+            <span className="font-semibold text-white">199 reviews</span>
+          </div>
+          <a
+            href="tel:6514619202"
+            className="flex items-center gap-2 font-semibold text-white hover:text-[#ffdc00]"
+          >
+            <Icon name="phone" className="h-4 w-4 text-[#ffdc00]" />
+            (651) 461-9202
+          </a>
+        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="flex items-center justify-center w-9 h-9 rounded-full bg-[#ffd700]">
-            <Icon icon={StarIcon} size={18} color="#343a40" />
-          </div>
-          <div className="leading-tight">
-            <span className="block text-white font-bold text-lg tracking-tight leading-none">5 Star</span>
-            <span className="block text-[#ffd700] text-xs font-semibold tracking-widest uppercase leading-none">Movers</span>
-          </div>
-        </Link>
+      <nav className="glass-panel border-b border-white/5">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 md:px-8">
+          <Link href="/" className="group flex items-center">
+            <Image
+              src="/logo.webp"
+              alt="5 Star Movers logo"
+              width={192}
+              height={48}
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.03]"
+            />
+          </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
-          <div
-            className="relative"
-            onMouseEnter={() => setActiveDropdown("about")}
-            onMouseLeave={() => setActiveDropdown(null)}
+          <div className="hidden items-center gap-8 font-display text-sm font-bold md:flex">
+            {navItems.map((item) => {
+              const href = isHome ? item.homeHref : item.fallbackHref;
+              const active = isHome && item.label === "Home";
+
+              return (
+                <Link
+                  key={item.label}
+                  href={href}
+                  className={active ? "text-[#ffdc00]" : "text-white/70 hover:text-white"}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+
+          <Link
+            href="/quote"
+            className="cta-sheen inline-flex rounded-full px-5 py-2.5 font-display text-xs font-extrabold uppercase tracking-[0.24em] text-[#121417]"
           >
-            <button className="px-4 py-2 text-white/90 hover:text-[#ffd700] text-sm font-medium transition-colors flex items-center gap-1">
-              About Us
-              <svg className="w-3 h-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-            </button>
-            {activeDropdown === "about" && (
-              <div className="absolute top-full left-0 w-48 bg-white rounded-xl shadow-2xl py-2 mt-1 border border-gray-100">
-                {about.map((item) => (
-                  <a key={item} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#006e63]/10 hover:text-[#006e63] transition-colors font-medium">
-                    {item}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <div
-            className="relative"
-            onMouseEnter={() => setActiveDropdown("services")}
-            onMouseLeave={() => setActiveDropdown(null)}
-          >
-            <button className="px-4 py-2 text-white/90 hover:text-[#ffd700] text-sm font-medium transition-colors flex items-center gap-1">
-              Moving Services
-              <svg className="w-3 h-3 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-            </button>
-            {activeDropdown === "services" && (
-              <div className="absolute top-full left-0 w-56 bg-white rounded-xl shadow-2xl py-2 mt-1 border border-gray-100">
-                {services.map((item) => (
-                  <a key={item} href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-[#006e63]/10 hover:text-[#006e63] transition-colors font-medium">
-                    {item}
-                  </a>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <a href="#" className="px-4 py-2 text-white/90 hover:text-[#ffd700] text-sm font-medium transition-colors">
-            Areas We Serve
-          </a>
-          <a href="#" className="px-4 py-2 text-white/90 hover:text-[#ffd700] text-sm font-medium transition-colors">
-            Blog
-          </a>
-        </nav>
-
-        <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:6512431993" className="text-white/80 hover:text-white text-sm font-medium transition-colors flex items-center gap-1.5">
-            <Icon icon={PhoneCheckIcon} size={16} color="#ffd700" />
-            (651) 243-1993
-          </a>
-          <Button
-            size="sm"
-            className="bg-[#e24436] text-white hover:bg-[#e24436]/90 font-semibold rounded-full px-5"
-          >
-            Get Free Quote
-          </Button>
+            Get a Quote
+          </Link>
         </div>
-
-        <button
-          className="lg:hidden text-white p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-          ) : (
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
-          )}
-        </button>
-      </div>
-
-      {mobileOpen && (
-        <div className="lg:hidden bg-[#343a40] border-t border-white/10 px-4 py-4 space-y-1">
-          <a href="#" className="block py-2 text-white/90 font-medium">About Us</a>
-          <div className="pl-4 space-y-1">
-            {about.map((item) => (
-              <a key={item} href="#" className="block py-1.5 text-white/60 text-sm hover:text-[#ffd700]">{item}</a>
-            ))}
-          </div>
-          <a href="#" className="block py-2 text-white/90 font-medium">Moving Services</a>
-          <div className="pl-4 space-y-1">
-            {services.map((item) => (
-              <a key={item} href="#" className="block py-1.5 text-white/60 text-sm hover:text-[#ffd700]">{item}</a>
-            ))}
-          </div>
-          <a href="#" className="block py-2 text-white/90 font-medium">Areas We Serve</a>
-          <a href="#" className="block py-2 text-white/90 font-medium">Blog</a>
-          <div className="pt-3">
-            <Button className="w-full bg-[#e24436] text-white hover:bg-[#e24436]/90 font-semibold rounded-full">
-              Get Free Quote
-            </Button>
-          </div>
-        </div>
-      )}
+      </nav>
     </header>
   );
 }

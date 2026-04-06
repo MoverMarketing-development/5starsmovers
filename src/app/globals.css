@@ -128,10 +128,19 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground leading-[1.5];
     background-image:
       radial-gradient(circle at top right, rgb(255 220 0 / 0.08), transparent 30%),
       radial-gradient(circle at bottom left, rgb(0 104 94 / 0.2), transparent 26%);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1;
   }
 
   a,
@@ -169,6 +178,15 @@
 
   .cta-sheen {
     background-image: linear-gradient(135deg, #ffdc00 0%, #e5c600 100%);
+    transition:
+      background-image 200ms ease,
+      transform 200ms ease,
+      color 200ms ease;
+  }
+
+  .cta-sheen:hover {
+    background-image: linear-gradient(135deg, #ffe75a 0%, #ffd400 100%);
+    transform: scale(1.015);
   }
 
   .accent-line {
