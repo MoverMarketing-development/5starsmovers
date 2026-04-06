@@ -1,6 +1,7 @@
 "use client";
 
 import { startTransition, useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 type QuoteFormState = {
   fromAddress: string;
@@ -184,9 +185,14 @@ const cardOptionClassName =
   "group cursor-pointer rounded-[1.25rem] border px-5 py-5 text-left transition-all duration-300";
 
 export default function QuoteWizard() {
+  const searchParams = useSearchParams();
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
-  const [formState, setFormState] = useState<QuoteFormState>(initialState);
+  const [formState, setFormState] = useState<QuoteFormState>(() => ({
+    ...initialState,
+    fromAddress: searchParams.get("fromAddress")?.trim() ?? "",
+    toAddress: searchParams.get("toAddress")?.trim() ?? "",
+  }));
   const today = useMemo(() => startOfDay(new Date()), []);
   const minSelectableDate = useMemo(() => addDays(today, 2), [today]);
   const earliestVisibleMonth = useMemo(
@@ -687,10 +693,10 @@ export default function QuoteWizard() {
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              <div className="mb-8 flex items-start justify-between gap-6">
+              <div className="mb-8">
                 <div>
                   <p className="font-label text-[11px] font-bold uppercase tracking-[0.3em] text-[#ffdc00]">
-                    {steps[step - 1].eyebrow}
+                    {steps[step - 1].eyebrow} / {steps.length}
                   </p>
                   <h2 className="mt-4 max-w-2xl font-display text-3xl font-extrabold leading-[1] text-white md:text-4xl">
                     {steps[step - 1].title}
@@ -698,9 +704,6 @@ export default function QuoteWizard() {
                   <p className="mt-4 max-w-2xl text-base leading-[1.5] text-white/58">
                     {steps[step - 1].description}
                   </p>
-                </div>
-                <div className="hidden rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs text-white/50 md:block">
-                  Step {step} of {steps.length}
                 </div>
               </div>
 

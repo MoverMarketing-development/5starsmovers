@@ -1,19 +1,5 @@
 import Link from "next/link";
-
-const serviceCards = [
-  { title: "Residential Moving", description: "Safe and efficient home moves handled with family-first care.", icon: "home" },
-  { title: "Long Distance Moving", description: "Cross-country logistics built for reliable, low-stress delivery.", icon: "route" },
-  { title: "Commercial Moving", description: "Office relocations planned to minimize downtime and disruption.", icon: "building" },
-  { title: "Loading & Unloading", description: "Professional labor for trucks, pods, and storage containers.", icon: "box" },
-  { title: "Senior Moving", description: "Compassionate service tailored for transitions that need extra care.", icon: "heart" },
-  { title: "Packing Services", description: "Full-service wrapping and packing for fragile, valuable items.", icon: "package" },
-  { title: "Apartment Moving", description: "Tight stairs, elevators, and city access handled with precision.", icon: "apartment" },
-  { title: "Moving Supplies", description: "Premium boxes, wraps, and protection delivered when you need them.", icon: "squares" },
-  { title: "Storage", description: "Secure short and long-term storage options that stay easy to access.", icon: "warehouse" },
-  { title: "White Glove", description: "Luxury-level care for valuables, artwork, and specialty pieces.", icon: "sparkles" },
-  { title: "Specialty Moving", description: "Pianos, safes, antiques, and oversized items moved by experts.", icon: "shield" },
-  { title: "Junk Removal", description: "Declutter before or after the move without adding extra stress.", icon: "trash" },
-];
+import { servicePages } from "@/lib/service-pages";
 
 const awards = [
   { name: "Best Pros In Town", src: "/awards/badge1.png" },
@@ -182,8 +168,12 @@ export default function Home() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
-            {serviceCards.map((service) => (
-              <article key={service.title} className="ambient-shadow group rounded-[1.5rem] border border-white/[0.06] bg-[#1e2124] p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-[#ffdc00]/25">
+            {servicePages.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}`}
+                className="ambient-shadow group rounded-[1.5rem] border border-white/[0.06] bg-[#1e2124] p-6 transition-transform duration-300 hover:-translate-y-1 hover:border-[#ffdc00]/25"
+              >
                 <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#ffdc00]/10 text-[#ffdc00]">
                   <Icon name={service.icon as IconName} className="h-5 w-5" />
                 </div>
@@ -193,7 +183,7 @@ export default function Home() {
                   Learn more
                   <Icon name="arrow" className="h-3.5 w-3.5" />
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </div>
