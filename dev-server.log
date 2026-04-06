@@ -135,3 +135,24 @@ Creating turbopack project {
 ✓ Compiled in 115ms
  GET /services/senior-moving 200 in 186ms (next.js: 108ms, generate-params: 7ms, application-code: 78ms)
 ✓ Compiled in 122ms
+ GET / 200 in 712ms (next.js: 113ms, application-code: 599ms)
+✓ Compiled in 115ms
+ GET /quote 200 in 150ms (next.js: 104ms, application-code: 47ms)
+✓ Compiled in 124ms
+✓ Compiled in 120ms
+ GET / 200 in 64ms (next.js: 3ms, application-code: 61ms)
+✓ Compiled in 67ms
+✓ Compiled in 66ms
+✓ Compiled in 88ms
+✓ Compiled in 70ms
+✓ Compiled in 74ms
+✓ Compiled in 72ms
+ GET / 200 in 375ms (next.js: 84ms, application-code: 291ms)
+ GET /quote 200 in 94ms (next.js: 63ms, application-code: 31ms)
+✓ Compiled in 76ms
+✓ Compiled in 186ms
+ GET /quote 200 in 279ms (next.js: 90ms, application-code: 190ms)
+ GET /quote 200 in 83ms (next.js: 4ms, application-code: 80ms)
+ GET /quote 200 in 18ms (next.js: 4ms, application-code: 14ms)
+ GET /quote 200 in 27ms (next.js: 3ms, application-code: 24ms)
+ GET / 200 in 57ms (next.js: 3ms, application-code: 54ms)

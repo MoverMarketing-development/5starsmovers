@@ -2,6 +2,7 @@
 
 import { startTransition, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { servicePages } from "@/lib/service-pages";
 
 type QuoteFormState = {
   fromAddress: string;
@@ -32,19 +33,18 @@ const initialState: QuoteFormState = {
 };
 
 const moveSizes = [
-  "Studio / 1 Bedroom",
-  "2 Bedrooms",
-  "3 Bedrooms",
-  "4+ Bedrooms",
-  "Office / Commercial",
-];
-
-const serviceTypes = [
-  "Local Moving",
-  "Long Distance",
-  "Packing + Moving",
-  "Labor Only",
-  "White Glove",
+  "Studio Apartment",
+  "Room or Less",
+  "1 Bedroom Apartment",
+  "2 Bedroom Apartment",
+  "2 Bedroom House",
+  "3 Bedroom House",
+  "4+ Bedroom House",
+  "5 x 10 Storage Unit",
+  "10 x 10 Storage Unit",
+  "10 x 20 Storage Unit",
+  "Commercial",
+  "Other",
 ];
 
 const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -114,22 +114,109 @@ const steps = [
   {
     id: 2,
     eyebrow: "Step 02",
-    title: "Tell us the move details",
-    description: "Choose your timeline, move size, and service style so the quote feels tailored from the start.",
+    title: "Choose your date and move size",
+    description: "Set the timeline and the size of the move so we can frame the quote around the right crew and scope.",
   },
   {
     id: 3,
     eyebrow: "Step 03",
-    title: "How can we reach you?",
-    description: "Leave your contact details and accept the terms so we can send a polished estimate quickly.",
+    title: "Select the moving service you need",
+    description: "Pick the exact service type so the quote matches the kind of move you are planning.",
   },
   {
     id: 4,
     eyebrow: "Step 04",
+    title: "How can we reach you?",
+    description: "Leave your contact details and accept the terms so we can send a polished estimate quickly.",
+  },
+  {
+    id: 5,
+    eyebrow: "Step 05",
     title: "Review your quote request",
     description: "Check every detail before sending. If anything looks off, go back and correct it first.",
   },
 ];
+
+const serviceTypes = servicePages.map((service) => ({
+  label: service.title,
+  icon: service.icon,
+}));
+
+function OptionIcon({
+  name,
+  className,
+}: {
+  name:
+    | "studio"
+    | "bed"
+    | "house"
+    | "storage"
+    | "commercial"
+    | "other"
+    | "home"
+    | "route"
+    | "building"
+    | "box"
+    | "heart"
+    | "package"
+    | "apartment"
+    | "squares"
+    | "warehouse"
+    | "sparkles"
+    | "shield"
+    | "trash";
+  className?: string;
+}) {
+  const shared = { className, fill: "none", stroke: "currentColor", strokeWidth: 1.8, viewBox: "0 0 24 24" };
+
+  switch (name) {
+    case "studio":
+      return <svg {...shared}><rect x="4" y="5" width="16" height="14" rx="2" /><path d="M8 9h8M8 13h5" /></svg>;
+    case "bed":
+      return <svg {...shared}><path d="M4 12h16v5H4z" /><path d="M6 12V9a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3M4 17v2M20 17v2" /></svg>;
+    case "house":
+      return <svg {...shared}><path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z" /><path d="M9 20v-5h6v5" /></svg>;
+    case "storage":
+      return <svg {...shared}><path d="M4 6h16v4H4zM5 10h14v9H5z" /><path d="M9 14h6M9 17h6" /></svg>;
+    case "commercial":
+      return <svg {...shared}><path d="M4 20V6l8-2 8 2v14" /><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01" /></svg>;
+    case "other":
+      return <svg {...shared}><circle cx="12" cy="12" r="8" /><path d="M12 8v4M12 16h.01" /></svg>;
+    case "home":
+      return <svg {...shared}><path d="M4 10.5 12 4l8 6.5V20H4v-9.5Z" /><path d="M9 20v-5h6v5" /></svg>;
+    case "route":
+      return <svg {...shared}><path d="M6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm12-10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" /><path d="M8 17h3a4 4 0 0 0 4-4V9" /><path d="M15 9h1" /></svg>;
+    case "building":
+      return <svg {...shared}><path d="M4 20V6l8-2 8 2v14" /><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01" /></svg>;
+    case "box":
+      return <svg {...shared}><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z" /><path d="M12 12 4 7.5M12 12l8-4.5M12 12v9" /></svg>;
+    case "heart":
+      return <svg {...shared}><path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z" /></svg>;
+    case "package":
+      return <svg {...shared}><path d="m12 3 8 4.5-8 4.5-8-4.5L12 3Z" /><path d="M4 7.5V16.5L12 21l8-4.5V7.5" /><path d="M12 12v9" /></svg>;
+    case "apartment":
+      return <svg {...shared}><path d="M6 20V5h12v15" /><path d="M9 8h.01M12 8h.01M15 8h.01M9 12h.01M12 12h.01M15 12h.01M11 20v-4h2v4" /></svg>;
+    case "squares":
+      return <svg {...shared}><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" /></svg>;
+    case "warehouse":
+      return <svg {...shared}><path d="m3 10 9-6 9 6v10H3V10Z" /><path d="M7 14h10M7 17h10" /></svg>;
+    case "sparkles":
+      return <svg {...shared}><path d="m12 3 1.4 3.6L17 8l-3.6 1.4L12 13l-1.4-3.6L7 8l3.6-1.4L12 3ZM18.5 14l.82 2.18L21.5 17l-2.18.82L18.5 20l-.82-2.18L15.5 17l2.18-.82L18.5 14ZM6 14l.82 2.18L9 17l-2.18.82L6 20l-.82-2.18L3 17l2.18-.82L6 14Z" /></svg>;
+    case "shield":
+      return <svg {...shared}><path d="M12 3 5 6v5c0 5 3.5 8.5 7 10 3.5-1.5 7-5 7-10V6l-7-3Z" /></svg>;
+    case "trash":
+      return <svg {...shared}><path d="M4 7h16" /><path d="M9 7V4h6v3" /><path d="M7 7l1 13h8l1-13" /></svg>;
+  }
+}
+
+function getMoveSizeIcon(size: string) {
+  if (size.includes("Studio") || size.includes("Room")) return "studio" as const;
+  if (size.includes("Apartment")) return "bed" as const;
+  if (size.includes("House")) return "house" as const;
+  if (size.includes("Storage")) return "storage" as const;
+  if (size === "Commercial") return "commercial" as const;
+  return "other" as const;
+}
 
 function ProgressIcon({ active }: { active: boolean }) {
   return (
@@ -179,7 +266,7 @@ function FieldShell({
 }
 
 const inputClassName =
-  "w-full rounded-[1.1rem] border border-white/10 bg-white/[0.04] px-4 py-4 text-base text-white placeholder:text-white/28 outline-none transition-all duration-300 focus:border-[#ffdc00]/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(255,220,0,0.08)]";
+  "quote-input w-full rounded-[1.1rem] border border-white/10 bg-white/[0.04] px-4 py-4 text-base text-white placeholder:text-white/28 outline-none transition-all duration-300 focus:border-[#ffdc00]/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(255,220,0,0.08)]";
 
 const cardOptionClassName =
   "group cursor-pointer rounded-[1.25rem] border px-5 py-5 text-left transition-all duration-300";
@@ -230,7 +317,11 @@ export default function QuoteWizard() {
     }
 
     if (currentStep === 2) {
-      return formState.moveDate && formState.moveSize && formState.serviceType;
+      return formState.moveDate && formState.moveSize;
+    }
+
+    if (currentStep === 3) {
+      return formState.serviceType;
     }
 
     return (
@@ -246,21 +337,39 @@ export default function QuoteWizard() {
     if (targetStep === 1) return true;
     if (targetStep === 2) return !!canContinueFromStep(1);
     if (targetStep === 3) return !!canContinueFromStep(1) && !!canContinueFromStep(2);
-    if (targetStep === 4) {
-      return !!canContinueFromStep(1) && !!canContinueFromStep(2) && !!canContinueFromStep(3);
-    }
+    if (targetStep === 4) return !!canContinueFromStep(1) && !!canContinueFromStep(2) && !!canContinueFromStep(3);
+    if (targetStep === 5) return !!canContinueFromStep(1) && !!canContinueFromStep(2) && !!canContinueFromStep(3) && !!canContinueFromStep(4);
     return false;
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    if (!canContinueFromStep(3)) {
+    if (!canContinueFromStep(4)) {
       return;
     }
 
     setSubmitted(true);
   }
+
+  function handleFormKeyDown(event: React.KeyboardEvent<HTMLFormElement>) {
+    if (event.key !== "Enter" || event.shiftKey || event.ctrlKey || event.metaKey || event.altKey) {
+      return;
+    }
+
+    const target = event.target as HTMLElement | null;
+    if (target instanceof HTMLTextAreaElement) {
+      return;
+    }
+
+    if (step >= steps.length || !isStepUnlocked(step + 1)) {
+      return;
+    }
+
+    event.preventDefault();
+    goToStep(step + 1);
+  }
+
   const reviewSections = [
     {
       title: "Moving Route",
@@ -274,6 +383,11 @@ export default function QuoteWizard() {
       items: [
         { label: "Preferred Move Date", value: formatDateLabel(formState.moveDate) },
         { label: "Move Size", value: formState.moveSize },
+      ],
+    },
+    {
+      title: "Service Type",
+      items: [
         { label: "Service Type", value: formState.serviceType },
       ],
     },
@@ -441,20 +555,27 @@ export default function QuoteWizard() {
                 type="button"
                 onClick={() => updateField("moveSize", size)}
               >
-                <span className="font-display text-lg font-bold">{size}</span>
+                <span className="flex min-h-11 items-center gap-4">
+                  <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border ${active ? "border-[#ffdc00]/40 bg-[#ffdc00] text-[#121417]" : "border-white/10 bg-white/[0.04] text-[#ffdc00]"}`}>
+                    <OptionIcon name={getMoveSizeIcon(size)} className="h-5 w-5" />
+                  </span>
+                  <span className="font-display text-lg font-bold leading-[1.2]">{size}</span>
+                </span>
               </button>
             );
           })}
         </div>
       </FieldShell>
 
-      <FieldShell label="Service Type" hint="Choose the level of support you want">
+    </div>,
+    <div key="step-3" className="grid gap-6">
+      <FieldShell label="Service Type" hint="Choose the exact moving service you need">
         <div className="grid gap-4 md:grid-cols-2">
           {serviceTypes.map((service) => {
-            const active = formState.serviceType === service;
+            const active = formState.serviceType === service.label;
             return (
               <button
-                key={service}
+                key={service.label}
                 className={[
                   cardOptionClassName,
                   active
@@ -462,16 +583,21 @@ export default function QuoteWizard() {
                     : "border-white/10 bg-white/[0.03] text-white/68 hover:border-white/18 hover:bg-white/[0.05]",
                 ].join(" ")}
                 type="button"
-                onClick={() => updateField("serviceType", service)}
+                onClick={() => updateField("serviceType", service.label)}
               >
-                <span className="font-display text-lg font-bold">{service}</span>
+                <span className="flex min-h-11 items-center gap-4">
+                  <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full border ${active ? "border-[#ffdc00]/40 bg-[#ffdc00] text-[#121417]" : "border-white/10 bg-white/[0.04] text-[#ffdc00]"}`}>
+                    <OptionIcon name={service.icon} className="h-5 w-5" />
+                  </span>
+                  <span className="font-display text-lg font-bold leading-[1.2]">{service.label}</span>
+                </span>
               </button>
             );
           })}
         </div>
       </FieldShell>
     </div>,
-    <div key="step-3" className="grid gap-6">
+    <div key="step-4" className="grid gap-6">
       <div className="grid gap-6 md:grid-cols-2">
         <FieldShell label="First Name">
           <input
@@ -544,7 +670,7 @@ export default function QuoteWizard() {
         </span>
       </label>
     </div>,
-    <div key="step-4" className="grid gap-6">
+    <div key="step-5" className="grid gap-6">
       {reviewSections.map((section) => (
         <div
           key={section.title}
@@ -692,7 +818,7 @@ export default function QuoteWizard() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit}>
+            <form onKeyDown={handleFormKeyDown} onSubmit={handleSubmit}>
               <div className="mb-8">
                 <div>
                   <p className="font-label text-[11px] font-bold uppercase tracking-[0.3em] text-[#ffdc00]">
@@ -739,7 +865,7 @@ export default function QuoteWizard() {
                   ) : (
                     <button
                       className="cta-sheen inline-flex cursor-pointer items-center justify-center rounded-full px-7 py-3 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] disabled:cursor-not-allowed disabled:opacity-45"
-                      disabled={!canContinueFromStep(3)}
+                      disabled={!canContinueFromStep(4)}
                       type="submit"
                     >
                       Send My Request

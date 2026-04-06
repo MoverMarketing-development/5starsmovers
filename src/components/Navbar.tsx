@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -160,7 +160,16 @@ const serviceGroups = [
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [servicesMenuRoute, setServicesMenuRoute] = useState<string | null>(null);
+  const trustIndexRef = useRef<HTMLDivElement | null>(null);
+  const servicesOpen = servicesMenuRoute === pathname;
+
+  useEffect(() => {
+    trustIndexRef.current?.setAttribute(
+      "src",
+      "https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281",
+    );
+  }, []);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
@@ -175,10 +184,9 @@ export default function Navbar() {
               src="https://cdn.trustindex.io/loader.js"
               strategy="afterInteractive"
             />
-            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             <div
+              ref={trustIndexRef}
               className="trustindex-widget mx-auto"
-              {...({ src: "https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281" } as any)}
             />
           </div>
           <a
@@ -193,7 +201,11 @@ export default function Navbar() {
 
       <nav className="glass-panel relative border-b border-white/5">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 md:px-8">
-          <Link href="/" className="group flex items-center">
+          <Link
+            href="/"
+            className="group flex items-center"
+            onClick={() => setServicesMenuRoute(null)}
+          >
             <Image
               src="/logo.webp"
               alt="5 Star Movers logo"
@@ -206,12 +218,12 @@ export default function Navbar() {
           <div className="hidden items-center gap-8 font-display text-sm font-bold md:flex">
             <div
               className="relative"
-              onMouseEnter={() => setServicesOpen(true)}
+              onMouseEnter={() => setServicesMenuRoute(pathname)}
             >
               <Link
                 href={isHome ? "#services" : "/#services"}
                 className={`inline-flex items-center gap-2 ${servicesOpen ? "text-white" : "text-white/70 hover:text-white"}`}
-                onClick={() => setServicesOpen(false)}
+                onClick={() => setServicesMenuRoute(null)}
               >
                 Services
                 <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${servicesOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
@@ -248,8 +260,8 @@ export default function Navbar() {
           className={`absolute inset-x-0 top-full hidden transition-all duration-200 md:block ${
             servicesOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
           }`}
-          onMouseEnter={() => setServicesOpen(true)}
-          onMouseLeave={() => setServicesOpen(false)}
+          onMouseEnter={() => setServicesMenuRoute(pathname)}
+          onMouseLeave={() => setServicesMenuRoute(null)}
         >
           <div className="border-y border-[#2f353c] bg-[#1b2027] shadow-[0_24px_80px_rgba(0,0,0,0.38)]">
             <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
@@ -265,7 +277,7 @@ export default function Navbar() {
                 <Link
                   href={isHome ? "#services" : "/#services"}
                   className="text-sm font-semibold text-[#ffdc00] hover:text-[#ffe75a]"
-                  onClick={() => setServicesOpen(false)}
+                  onClick={() => setServicesMenuRoute(null)}
                 >
                   View home section
                 </Link>
@@ -287,7 +299,7 @@ export default function Navbar() {
                           key={service.slug}
                           href={`/services/${service.slug}`}
                           className="group/item rounded-xl px-3 py-2.5 transition-colors hover:bg-[#2a313b]"
-                          onClick={() => setServicesOpen(false)}
+                          onClick={() => setServicesMenuRoute(null)}
                         >
                           <div className="flex items-start justify-between gap-3">
                             <div className="flex items-start gap-3">
