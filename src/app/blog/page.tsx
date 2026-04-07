@@ -16,24 +16,23 @@ export default async function BlogPage() {
   const [featured, ...rest] = posts;
 
   return (
-    <main className="bg-[#0f1114] min-h-screen text-white">
-      {/* Hero */}
-      <section className="relative overflow-hidden border-b border-white/5 py-20 md:py-28">
+    <main className="min-h-screen bg-[#0f1114] text-white">
+      <section className="relative overflow-hidden border-b border-white/5 py-16 md:py-20 lg:py-28">
         <div className="absolute inset-0">
           <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-[#006e63]/15 blur-3xl" />
-          <div className="absolute right-0 bottom-0 h-64 w-64 rounded-full bg-[#ffd700]/8 blur-3xl" />
+          <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-[#ffd700]/8 blur-3xl" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:text-left">
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#ffd700]">
-            5 Star Movers — Resources
+            5 Star Movers - Resources
           </p>
-          <h1 className="font-display text-5xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl">
+          <h1 className="mx-auto max-w-[10ch] font-display text-4xl font-extrabold leading-[1.02] text-white sm:max-w-[11ch] sm:text-5xl md:max-w-none md:text-6xl lg:mx-0 lg:text-7xl">
             Moving Tips &{" "}
             <span className="text-[#ffd700]">Neighborhood</span>
             <br />
             Guides
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-white/60">
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.65] text-white/60 md:text-lg lg:mx-0">
             Expert advice, local area guides, and everything you need to plan a
             stress-free move across Minnesota.
           </p>
@@ -42,8 +41,7 @@ export default async function BlogPage() {
 
       <TrustBanner />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16">
-        {/* Featured post */}
+      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6">
         {featured && (
           <section className="mb-16">
             <p className="mb-6 text-xs font-bold uppercase tracking-[0.3em] text-[#006e63]">
@@ -53,7 +51,6 @@ export default async function BlogPage() {
               href={`/blog/${featured.slug}`}
               className="group grid overflow-hidden rounded-3xl border border-white/8 bg-white/[0.03] transition-all hover:border-[#ffd700]/30 hover:bg-white/[0.05] lg:grid-cols-[1fr_0.9fr]"
             >
-              {/* Image */}
               <div className="relative aspect-[16/9] overflow-hidden lg:aspect-auto lg:min-h-[420px]">
                 {featured.image ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -65,10 +62,9 @@ export default async function BlogPage() {
                 ) : (
                   <div className="h-full w-full bg-gradient-to-br from-[#006e63]/30 to-[#343a40]" />
                 )}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0f1114]/60 lg:block hidden" />
+                <div className="absolute inset-0 hidden bg-gradient-to-r from-transparent to-[#0f1114]/60 lg:block" />
               </div>
 
-              {/* Content */}
               <div className="flex flex-col justify-center p-8 lg:p-10">
                 <div className="mb-4 flex flex-wrap gap-2">
                   {featured.tags.slice(0, 2).map((tag) => (
@@ -80,11 +76,11 @@ export default async function BlogPage() {
                     </span>
                   ))}
                 </div>
-                <h2 className="font-display text-2xl font-extrabold leading-tight text-white group-hover:text-[#ffd700] transition-colors md:text-3xl">
+                <h2 className="font-display text-2xl font-extrabold leading-tight text-white transition-colors group-hover:text-[#ffd700] md:text-3xl">
                   {featured.title}
                 </h2>
                 {featured.description && (
-                  <p className="mt-4 text-base leading-relaxed text-white/60 line-clamp-3">
+                  <p className="mt-4 line-clamp-3 text-base leading-relaxed text-white/60">
                     {featured.description}
                   </p>
                 )}
@@ -92,7 +88,12 @@ export default async function BlogPage() {
                   <span className="text-sm text-white/40">{formatDate(featured.pubDate)}</span>
                   <span className="flex items-center gap-1.5 text-sm font-semibold text-[#ffd700]">
                     Read article
-                    <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </span>
@@ -102,7 +103,6 @@ export default async function BlogPage() {
           </section>
         )}
 
-        {/* Grid */}
         {rest.length > 0 && (
           <section>
             <p className="mb-8 text-xs font-bold uppercase tracking-[0.3em] text-white/40">
@@ -113,9 +113,8 @@ export default async function BlogPage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03] transition-all hover:border-[#ffd700]/25 hover:bg-white/[0.05] hover:-translate-y-1"
+                  className="group flex flex-col overflow-hidden rounded-2xl border border-white/8 bg-white/[0.03] transition-all hover:-translate-y-1 hover:border-[#ffd700]/25 hover:bg-white/[0.05]"
                 >
-                  {/* Thumbnail */}
                   <div className="relative aspect-[16/9] overflow-hidden">
                     {post.image ? (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -129,24 +128,28 @@ export default async function BlogPage() {
                     )}
                   </div>
 
-                  {/* Content */}
                   <div className="flex flex-1 flex-col p-6">
                     {post.tags.length > 0 && (
                       <span className="mb-3 self-start rounded-full bg-[#006e63]/15 px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-[#006e63]">
                         {post.tags[0]}
                       </span>
                     )}
-                    <h3 className="font-display text-lg font-extrabold leading-snug text-white group-hover:text-[#ffd700] transition-colors line-clamp-2">
+                    <h3 className="line-clamp-2 font-display text-lg font-extrabold leading-snug text-white transition-colors group-hover:text-[#ffd700]">
                       {post.title}
                     </h3>
                     {post.description && (
-                      <p className="mt-2 flex-1 text-sm leading-relaxed text-white/50 line-clamp-2">
+                      <p className="mt-2 flex-1 line-clamp-2 text-sm leading-relaxed text-white/50">
                         {post.description}
                       </p>
                     )}
                     <div className="mt-5 flex items-center justify-between border-t border-white/6 pt-4">
                       <span className="text-xs text-white/35">{formatDate(post.pubDate)}</span>
-                      <svg className="h-4 w-4 text-[#ffd700] opacity-0 transition-all group-hover:opacity-100 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <svg
+                        className="h-4 w-4 text-[#ffd700] opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>

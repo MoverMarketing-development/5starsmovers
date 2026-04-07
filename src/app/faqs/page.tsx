@@ -107,21 +107,21 @@ export default function FaqsPage() {
       <section className="relative overflow-hidden border-b border-white/8 bg-[#121417]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(1,109,99,0.65),transparent_28%),radial-gradient(circle_at_82%_18%,rgba(255,220,0,0.15),transparent_20%),linear-gradient(135deg,#101316_0%,#121417_38%,#032f2b_100%)]" />
         <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:52px_52px]" />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 lg:py-28">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20 lg:py-28">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-            <div className="max-w-3xl">
-              <p className="flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
-                <span className="h-px w-12 bg-[#ffdc00]" />
+            <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:text-left">
+              <p className="flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
+                <span className="hidden h-px w-12 bg-[#ffdc00] sm:block" />
                 FAQ&apos;S
               </p>
               <h1 className="mt-5 font-display text-4xl font-extrabold leading-[0.95] text-white sm:text-5xl lg:text-7xl">
                 Questions,
                 <span className="block text-[#8ef0d9]">clearly answered.</span>
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-[1.65] text-white/72">
+              <p className="mt-6 max-w-2xl text-base leading-[1.65] text-white/72 lg:text-lg">
                 5-Star Movers can help move you and your family in &amp; out of the Minneapolis area.
               </p>
-              <div className="mt-10 flex flex-wrap gap-3">
+              <div className="mt-8 flex flex-wrap justify-center gap-3 lg:mt-10 lg:justify-start">
                 {faqSections.map((section) => (
                   <a
                     key={section.id}
@@ -134,7 +134,7 @@ export default function FaqsPage() {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+            <div className="grid gap-4 text-center sm:grid-cols-3 lg:grid-cols-1 lg:text-left">
               <article className="rounded-[1.6rem] border border-[#0db8aa]/25 bg-[#016d63]/20 p-6 backdrop-blur-sm">
                 <p className="font-label text-[11px] font-bold uppercase tracking-[0.3em] text-[#8ef0d9]">
                   Policy
@@ -165,7 +165,7 @@ export default function FaqsPage() {
       </section>
 
       <section className="border-b border-white/6 bg-[#0d1215] py-8">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-3 px-4 md:px-8">
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-3 px-4 text-center md:px-8 lg:justify-start lg:text-left">
           <span className="font-label text-[11px] font-bold uppercase tracking-[0.32em] text-white/42">
             Quick Links
           </span>
@@ -185,7 +185,7 @@ export default function FaqsPage() {
         </div>
       </section>
 
-      <section className="bg-[#121417] py-20">
+      <section className="bg-[#121417] py-16 md:py-20">
         <div className="mx-auto max-w-7xl space-y-8 px-4 md:px-8">
           {faqSections.map((section, sectionIndex) => (
             <section
@@ -197,8 +197,8 @@ export default function FaqsPage() {
                   : "border-white/8 bg-[#171b1f]"
               }`}
             >
-              <div className="grid gap-8 px-6 py-8 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-10 lg:py-10">
-                <div>
+              <div className="grid gap-8 px-6 py-8 text-center md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-10 lg:py-10 lg:text-left">
+                <div className="mx-auto max-w-xl lg:mx-0">
                   <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
                     {section.eyebrow}
                   </p>
@@ -217,7 +217,7 @@ export default function FaqsPage() {
                       className="group rounded-[1.5rem] border border-white/10 bg-black/10 p-0 open:border-[#ffdc00]/45 open:bg-black/20"
                       open={sectionIndex === 0 && itemIndex === 0}
                     >
-                      <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-5 font-display text-xl font-extrabold text-white marker:content-none">
+                      <summary className="flex cursor-pointer list-none items-center justify-between gap-6 px-6 py-5 text-left font-display text-xl font-extrabold text-white marker:content-none">
                         <span>{item.question}</span>
                         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/12 bg-white/5 text-[#ffdc00] transition-transform duration-200 group-open:rotate-45">
                           <svg
@@ -247,7 +247,7 @@ export default function FaqsPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden border-y border-white/6 bg-[#016d63] py-24">
+      <section className="relative overflow-hidden border-y border-white/6 bg-[#016d63] py-16 md:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,220,0,0.18),transparent_24%),linear-gradient(135deg,rgba(1,109,99,1)_0%,rgba(1,91,82,1)_48%,rgba(8,24,22,1)_100%)]" />
         <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">

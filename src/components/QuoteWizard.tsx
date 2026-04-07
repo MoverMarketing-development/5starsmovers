@@ -711,7 +711,7 @@ export default function QuoteWizard() {
         ].join(" ")}
       >
         {!submitted ? (
-          <aside className="glass-panel ambient-shadow rounded-[2rem] border border-white/10 p-8 lg:p-10">
+          <aside className="glass-panel ambient-shadow hidden rounded-[2rem] border border-white/10 p-8 lg:block lg:p-10">
           <p className="font-label text-[11px] font-bold uppercase tracking-[0.3em] text-[#ffdc00]">
             Quote Journey
           </p>

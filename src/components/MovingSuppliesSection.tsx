@@ -11,12 +11,12 @@ function StarIcon({ className }: { className?: string }) {
 
 export default function MovingSuppliesSection() {
   return (
-    <section className="border-y border-white/5 bg-[#f4f0e8] py-24 text-[#121417]">
+    <section className="border-y border-white/5 bg-[#f4f0e8] py-16 text-[#121417] md:py-20 lg:py-24">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-        <div>
+        <div className="order-1 text-center lg:text-left">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#00685e]">Moving Supplies Available</p>
           <h2 className="mt-4 font-display text-4xl font-extrabold md:text-5xl">Add Protective Materials To Any Move</h2>
-          <p className="mt-5 max-w-3xl text-lg leading-[1.5] text-[#121417]/72">{movingSuppliesIntro}</p>
+          <p className="mt-5 max-w-3xl text-base leading-[1.65] text-[#121417]/72 md:text-lg">{movingSuppliesIntro}</p>
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {movingSuppliesItems.map((item) => (
               <article key={item.title} className="rounded-[1.6rem] border border-black/6 bg-white p-6 shadow-[0_18px_40px_rgba(18,20,23,0.08)]">
@@ -30,7 +30,7 @@ export default function MovingSuppliesSection() {
             ))}
           </div>
         </div>
-        <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/5 bg-[#121417] shadow-[0_24px_60px_rgba(18,20,23,0.14)]">
+        <div className="order-2 relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-black/5 bg-[#121417] shadow-[0_24px_60px_rgba(18,20,23,0.14)]">
           <Image
             src={movingSuppliesSectionImage}
             alt="Moving supplies and packing materials"

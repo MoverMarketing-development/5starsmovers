@@ -186,6 +186,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
   const [openMenu, setOpenMenu] = useState<"services" | "areas" | "about" | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileSection, setMobileSection] = useState<"services" | "areas" | "about" | null>(null);
   const trustIndexRef = useRef<HTMLDivElement | null>(null);
   const previousPathnameRef = useRef(pathname);
   const servicesOpen = openMenu === "services";
@@ -223,9 +225,22 @@ export default function Navbar() {
     return () => window.cancelAnimationFrame(frame);
   }, [pathname]);
 
+  useEffect(() => {
+    if (!mobileMenuOpen) {
+      document.body.style.overflow = "";
+      return;
+    }
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <div className="border-b border-white/5 bg-[#121417] px-4 py-2 text-[13px]">
+      <div className="hidden border-b border-white/5 bg-[#121417] px-4 py-2 text-[13px] md:block">
         <div className="mx-auto grid max-w-7xl items-center gap-4 md:grid-cols-[1fr_auto_1fr] md:px-8">
           <p className="hidden justify-self-start text-white/[0.65] md:block">
             Premium Moving Services in Minnesota
@@ -252,18 +267,22 @@ export default function Navbar() {
       </div>
 
       <nav className="glass-panel relative border-b border-white/5">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 md:px-8">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 md:gap-6 md:px-8 md:py-4">
           <Link
             href="/"
             className="group flex items-center"
-            onClick={() => setOpenMenu(null)}
+            onClick={() => {
+              setOpenMenu(null);
+              setMobileMenuOpen(false);
+              setMobileSection(null);
+            }}
           >
             <Image
               src="/logo.webp"
               alt="5 Star Movers logo"
               width={192}
               height={48}
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-[1.03]"
+              className="h-10 w-auto transition-transform duration-300 group-hover:scale-[1.03] md:h-12"
             />
           </Link>
 
@@ -334,10 +353,175 @@ export default function Navbar() {
 
           <Link
             href="/quote"
-            className="cta-sheen inline-flex rounded-full px-5 py-2.5 font-display text-xs font-extrabold uppercase tracking-[0.24em] text-[#121417]"
+            className="cta-sheen hidden rounded-full px-5 py-2.5 font-display text-xs font-extrabold uppercase tracking-[0.24em] text-[#121417] sm:inline-flex"
           >
             Get a Quote
           </Link>
+
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-white md:hidden"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileMenuOpen}
+            onClick={() => setMobileMenuOpen((current) => !current)}
+          >
+            {mobileMenuOpen ? (
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6 6 18" />
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+
+        <div className={`border-t border-white/5 bg-[#171b20] md:hidden ${mobileMenuOpen ? "block" : "hidden"}`}>
+          <div className="mx-auto max-w-7xl px-4 py-4">
+            <div className="flex flex-col gap-2">
+              <button
+                type="button"
+                className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-left font-display text-sm font-bold text-white"
+                onClick={() => setMobileSection((current) => current === "services" ? null : "services")}
+              >
+                <span>Services</span>
+                <svg className={`h-4 w-4 transition-transform ${mobileSection === "services" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              {mobileSection === "services" ? (
+                <div className="grid gap-2 rounded-2xl border border-white/8 bg-[#1e242b] p-3">
+                  {servicePages.map((service) => (
+                    <Link
+                      key={service.slug}
+                      href={`/services/${service.slug}`}
+                      className="rounded-xl px-3 py-2 text-sm text-white/72 transition-colors hover:bg-white/[0.05] hover:text-white"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileSection(null);
+                      }}
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+
+              <button
+                type="button"
+                className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-left font-display text-sm font-bold text-white"
+                onClick={() => setMobileSection((current) => current === "areas" ? null : "areas")}
+              >
+                <span>Areas</span>
+                <svg className={`h-4 w-4 transition-transform ${mobileSection === "areas" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              {mobileSection === "areas" ? (
+                <div className="grid gap-2 rounded-2xl border border-white/8 bg-[#1e242b] p-3">
+                  <Link
+                    href="/areas"
+                    className="rounded-xl px-3 py-2 text-sm font-semibold text-[#ffdc00] transition-colors hover:bg-white/[0.05]"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileSection(null);
+                    }}
+                  >
+                    View all areas
+                  </Link>
+                  {areaPages.map((area) => (
+                    <Link
+                      key={area.slug}
+                      href={`/areas/${area.slug}`}
+                      className="rounded-xl px-3 py-2 text-sm text-white/72 transition-colors hover:bg-white/[0.05] hover:text-white"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileSection(null);
+                      }}
+                    >
+                      {area.city}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+
+              <button
+                type="button"
+                className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-left font-display text-sm font-bold text-white"
+                onClick={() => setMobileSection((current) => current === "about" ? null : "about")}
+              >
+                <span>About Us</span>
+                <svg className={`h-4 w-4 transition-transform ${mobileSection === "about" ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              {mobileSection === "about" ? (
+                <div className="grid gap-2 rounded-2xl border border-white/8 bg-[#1e242b] p-3">
+                  <Link
+                    href="/about-us"
+                    className="rounded-xl px-3 py-2 text-sm text-white/72 transition-colors hover:bg-white/[0.05] hover:text-white"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileSection(null);
+                    }}
+                  >
+                    About Us
+                  </Link>
+                  {aboutLinks.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="rounded-xl px-3 py-2 text-sm text-white/72 transition-colors hover:bg-white/[0.05] hover:text-white"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileSection(null);
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              ) : null}
+
+              {navItems.map((item) => {
+                const href = isHome ? item.homeHref : item.fallbackHref;
+
+                return (
+                  <Link
+                    key={item.label}
+                    href={href}
+                    className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 font-display text-sm font-bold text-white"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileSection(null);
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+
+              <div className="mt-2 grid gap-3 sm:grid-cols-2">
+                <a
+                  href="tel:6514619202"
+                  className="inline-flex items-center justify-center rounded-full border border-white/10 px-5 py-3 font-display text-xs font-extrabold uppercase tracking-[0.18em] text-white"
+                >
+                  Call (651) 461-9202
+                </a>
+                <Link
+                  href="/quote"
+                  className="cta-sheen inline-flex items-center justify-center rounded-full px-5 py-3 font-display text-xs font-extrabold uppercase tracking-[0.18em] text-[#121417]"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    setMobileSection(null);
+                  }}
+                >
+                  Get a Quote
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div

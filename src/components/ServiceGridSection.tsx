@@ -38,11 +38,13 @@ function Icon({ name, className }: { name: IconName; className?: string }) {
 
 export default function ServiceGridSection() {
   return (
-    <section id="services" className="border-t border-white/5 bg-[#121417] py-24">
+    <section id="services" className="border-t border-white/5 bg-[#121417] py-16 md:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
-        <div className="mb-14 text-center">
+        <div className="mb-10 text-center md:mb-12 lg:mb-14">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Service</p>
-          <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">We Serve the Best Work</h2>
+          <h2 className="mx-auto mt-3 max-w-[12ch] text-balance font-display text-[2.35rem] font-extrabold leading-[1.02] text-white sm:max-w-none sm:text-4xl md:text-5xl">
+            We Serve the Best Work
+          </h2>
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-4">

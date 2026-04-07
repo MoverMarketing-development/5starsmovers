@@ -56,20 +56,20 @@ export default function AreasPage() {
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div>
-              <p className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
-                <span className="accent-line h-px w-12" />
+            <div className="text-center lg:text-left">
+              <p className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
+                <span className="accent-line hidden h-px w-12 sm:block" />
                 Twin Cities Service Area
               </p>
               <h1 className="font-display text-4xl font-extrabold leading-[0.95] text-white sm:text-5xl lg:text-6xl">
                 Areas We Serve
                 <span className="mt-2 block text-[#ffdc00]">Built For A Smoother Move</span>
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-[1.5] text-white/[0.68]">
+              <p className="mt-6 max-w-2xl text-base leading-[1.6] text-white/[0.68] lg:text-lg">
                 Explore the Minneapolis and Twin Cities communities we serve with dedicated moving
                 pages, local route expertise, and real neighborhood familiarity across the metro.
               </p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center lg:justify-start lg:mt-10">
                 <Link
                   href="#areas-grid"
                   className="cta-sheen inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]"
@@ -85,7 +85,7 @@ export default function AreasPage() {
                   (651) 461-9202
                 </a>
               </div>
-              <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/5 pt-6">
+              <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4 border-t border-white/5 pt-6 lg:mt-10 lg:justify-start">
                 {["20 local area pages", "Real city coverage", "Fast quote support"].map((item) => (
                   <div key={item} className="flex items-center gap-2 text-[11px] font-display font-bold uppercase tracking-[0.24em] text-white/[0.72]">
                     <Icon name="star" className="h-3.5 w-3.5 text-[#ffdc00]" />
@@ -150,12 +150,12 @@ export default function AreasPage() {
 
       <TrustBanner />
 
-      <section id="areas-grid" className="border-b border-white/5 bg-[#111417] py-24 text-white">
+      <section id="areas-grid" className="border-b border-white/5 bg-[#111417] py-16 text-white md:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div className="max-w-3xl">
-              <p className="mb-3 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
-                <span className="h-px w-12 bg-[#ffdc00]" />
+          <div className="mb-10 flex flex-col justify-between gap-8 text-center md:mb-12 md:flex-row md:items-end md:text-left lg:mb-16">
+            <div className="mx-auto max-w-3xl md:mx-0">
+              <p className="mb-3 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] md:justify-start">
+                <span className="hidden h-px w-12 bg-[#ffdc00] sm:block" />
                 City Coverage
               </p>
               <h2 className="font-display text-4xl font-extrabold leading-[1.02] md:text-5xl">
@@ -164,13 +164,13 @@ export default function AreasPage() {
             </div>
           </div>
 
-          <div className="space-y-14">
+          <div className="space-y-10 md:space-y-12 lg:space-y-14">
             {areaGroups.map((group) => (
               <div key={group.title}>
-                <div className="mb-7 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+                <div className="mb-7 flex flex-col gap-2 text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
                   <div>
                     <h3 className="font-display text-2xl font-extrabold">{group.title}</h3>
-                    <p className="mt-2 text-sm leading-[1.5] text-white/[0.62]">{group.description}</p>
+                    <p className="mt-2 text-base leading-[1.5] text-white/[0.62]">{group.description}</p>
                   </div>
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#ffdc00]">
                     {group.items.length} areas
@@ -231,12 +231,12 @@ export default function AreasPage() {
         </div>
       </section>
 
-      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-16 md:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <p className="mb-3 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
-                <span className="accent-line h-px w-12" />
+          <div className="mb-10 flex flex-col justify-between gap-8 text-center md:mb-12 md:flex-row md:items-end md:text-left lg:mb-16">
+            <div className="mx-auto max-w-2xl md:mx-0">
+              <p className="mb-3 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] md:justify-start">
+                <span className="accent-line hidden h-px w-12 sm:block" />
                 The Anchor Difference
               </p>
               <h2 className="font-display text-4xl font-extrabold leading-[1] text-white md:text-5xl">
@@ -248,7 +248,7 @@ export default function AreasPage() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 text-center md:grid-cols-3 md:text-left">
             {trustCards.map((card) => (
               <article
                 key={card.number}
@@ -258,11 +258,11 @@ export default function AreasPage() {
                   {card.number}
                 </span>
                 <div className="relative z-10">
-                  <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417]">
+                  <div className="mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417] md:mx-0">
                     <Icon name="star" className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-2xl font-extrabold text-white">{card.title}</h3>
-                  <p className="mt-4 text-sm leading-[1.5] text-white/[0.58]">{card.description}</p>
+                  <p className="mt-4 text-base leading-[1.6] text-white/[0.58]">{card.description}</p>
                 </div>
                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#ffdc00] transition-all duration-500 group-hover:w-full" />
               </article>

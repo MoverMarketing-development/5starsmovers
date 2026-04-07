@@ -80,9 +80,9 @@ export default function Home() {
   return (
     <main className="bg-background text-white">
       <section id="home" className="relative overflow-hidden">
-        <div className="mx-auto grid min-h-[820px] max-w-7xl items-end gap-6 px-4 pb-12 md:px-8 lg:grid-cols-[1fr_1fr] lg:gap-4">
-          <div className="pt-0 pb-0">
-            <div className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+        <div className="mx-auto grid min-h-[auto] max-w-7xl items-end gap-6 px-4 pt-8 pb-12 md:px-8 md:pt-10 lg:min-h-[820px] lg:grid-cols-[1fr_1fr] lg:gap-4 lg:pt-0">
+          <div className="pt-0 pb-0 text-center lg:text-left">
+            <div className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
               <span className="h-px w-10 bg-[#ffdc00]" />
               Moving with Precision
             </div>
@@ -94,23 +94,67 @@ export default function Home() {
               & Office
               <span className="block text-[#ffdc00]">Boosting Your Comfort</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-[1.5] text-white/[0.68]">
+            <p className="mt-6 max-w-xl text-base leading-[1.6] text-white/[0.68] md:text-lg">
               We do more than move boxes. We anchor your transition with white-glove service, transparent planning, and premium execution from Minneapolis to the rest of Minnesota.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link href="/quote" className="cta-sheen inline-flex items-center justify-center gap-2 rounded-md px-7 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">
-                Book Your Move Now
-              </Link>
-              <a href="#difference" className="group inline-flex items-center gap-3 text-sm font-display font-bold text-white transition-all duration-300 hover:text-[#ffdc00]">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#ffdc00] bg-transparent text-[#ffdc00] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ffdc00] group-hover:text-[#121417] group-hover:shadow-[0_12px_28px_rgba(255,220,0,0.2)]">
-                  <Icon name="arrow" className="h-4 w-4" />
-                </span>
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
+                <Link href="/quote" className="cta-sheen inline-flex items-center justify-center gap-2 rounded-md px-7 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">
+                  Book Your Move Now
+                </Link>
+                <a
+                  href="tel:6514619202"
+                  className="inline-flex items-center justify-center rounded-md border border-white/14 px-7 py-4 text-center font-display text-sm font-extrabold uppercase tracking-[0.18em] text-white transition-colors hover:border-[#ffdc00]/40 hover:text-[#ffdc00] sm:hidden"
+                >
+                  Call (651) 461-9202
+                </a>
+                <a href="#difference" className="group inline-flex items-center justify-center gap-3 self-center text-sm font-display font-bold text-white transition-all duration-300 hover:text-[#ffdc00] sm:self-auto">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#ffdc00] bg-transparent text-[#ffdc00] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ffdc00] group-hover:text-[#121417] group-hover:shadow-[0_12px_28px_rgba(255,220,0,0.2)]">
+                    <Icon name="arrow" className="h-4 w-4" />
+                  </span>
                 How We Work
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/5 pt-6">
+            <div className="mt-8 grid gap-4 sm:grid-cols-3 lg:hidden">
+              <div className="glass-panel ambient-shadow rounded-[1.4rem] border border-white/10 px-5 py-4 text-left">
+                <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Our Reviews</p>
+                <div className="mt-3 flex items-center gap-2">
+                  <div className="flex -space-x-2">
+                    {[...Array(3)].map((_, index) => (
+                      <div key={index} className="flex h-8 w-8 items-center justify-center rounded-full border border-[#121417] bg-[#ffdc00]">
+                        <Icon name="star" className="h-3.5 w-3.5 text-[#121417]" />
+                      </div>
+                    ))}
+                  </div>
+                  <span className="text-xs font-bold text-white">+123k happy clients</span>
+                </div>
+              </div>
+              <div className="glass-panel ambient-shadow rounded-[1.4rem] border border-white/10 px-5 py-4 text-left">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ffdc00] text-[#121417]">
+                    <Icon name="truck" className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <p className="text-base font-bold text-white">123+</p>
+                    <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Active Clients</p>
+                  </div>
+                </div>
+              </div>
+              <div className="glass-panel ambient-shadow rounded-[1.4rem] border border-white/10 px-5 py-4 text-left">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ffdc00] text-[#121417]">
+                    <Icon name="shield" className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <p className="text-base font-bold text-white">69+</p>
+                    <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Skilled Experts</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-4 border-t border-white/5 pt-6 lg:justify-start">
               {["Licensed & Insured", "Satisfaction Guaranteed", "24/7 Support"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-[11px] font-display font-bold uppercase tracking-[0.24em] text-white/[0.72]">
                   <Icon name="star" className="h-3.5 w-3.5 text-[#ffdc00]" />
@@ -120,7 +164,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative flex items-end justify-center self-end lg:justify-end">
+          <div className="relative hidden items-end justify-center self-end lg:flex lg:justify-end">
             <div className="absolute left-1/2 top-1/2 h-[94%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffdc00]/10 blur-3xl" />
             <div className="relative w-full max-w-[52rem] lg:-mr-12">
               <img alt="5 Star Movers team" className="relative z-10 h-auto w-full scale-[1.18] object-contain lg:scale-[1.32]" src="/hero-pic.png" />
@@ -165,9 +209,9 @@ export default function Home() {
 
       <TrustBanner />
 
-      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-16 md:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
+          <div className="order-2 relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
             <Image
               src="/service-images/loading-local-1.jpeg"
               alt="5 Star Movers team handling a move in Minnesota"
@@ -177,15 +221,15 @@ export default function Home() {
             />
           </div>
 
-          <div className="max-w-3xl">
-            <p className="mb-4 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
-              <span className="accent-line h-px w-12" />
+          <div className="order-1 max-w-3xl text-center lg:text-left">
+            <p className="mb-4 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
+              <span className="accent-line hidden h-px w-12 sm:block" />
               Trusted Across Minnesota
             </p>
             <h2 className="font-display text-4xl font-extrabold leading-[1.02] text-white md:text-5xl">
               We&apos;re Your Trusted Movers in Minnesota
             </h2>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.7] text-white/[0.68]">
+            <p className="mt-6 max-w-3xl text-base leading-[1.65] text-white/[0.68]">
               Moving can be stressful, but with 5-Star Movers, it doesn&apos;t have to be. Our expert
               movers in Minnesota are here to make your transition seamless, whether you&apos;re moving
               down the street or across the state. We handle residential and commercial moves with care,
@@ -198,17 +242,17 @@ export default function Home() {
 
       <ServiceGridSection />
 
-      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-16 md:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
-          <div className="max-w-3xl">
-            <p className="mb-4 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
-              <span className="accent-line h-px w-12" />
+          <div className="order-1 max-w-3xl text-center lg:text-left">
+            <p className="mb-4 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
+              <span className="accent-line hidden h-px w-12 sm:block" />
               Twin Cities Coverage
             </p>
             <h2 className="font-display text-4xl font-extrabold leading-[1.02] text-white md:text-5xl">
               Explore All The Areas We Serve
             </h2>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.7] text-white/[0.68]">
+            <p className="mt-6 max-w-3xl text-base leading-[1.65] text-white/[0.68]">
               Browse our Minneapolis and Twin Cities coverage pages to see the communities we move in
               every day, with local area details, real city imagery, and direct links to each service
               area we support.
@@ -222,7 +266,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="relative aspect-[5/3] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
+          <div className="order-2 relative aspect-[5/3] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
             <Image
               src="/area-images/areas-collage.png"
               alt="Collage of Twin Cities areas served by 5 Star Movers"
@@ -234,7 +278,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="awards" className="border-t border-white/5 bg-[#121417] py-24">
+      <section id="awards" className="border-t border-white/5 bg-[#121417] py-16 md:py-20 lg:py-24">
         <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Recognition</p>
           <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">Award-Winning Moving Services You Can Trust</h2>
@@ -242,7 +286,7 @@ export default function Home() {
             We are proud to be recognized across the Twin Cities for consistent service quality, professional crews, and a moving experience people genuinely recommend.
           </p>
 
-          <div className="mt-14 flex flex-wrap items-center justify-center gap-5">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-5 md:mt-14">
             {awards.map((award) => (
               <div key={award.name} className="glass-panel flex h-28 min-w-40 items-center justify-center rounded-[1.4rem] border border-white/10 px-6">
                 <img
@@ -256,12 +300,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="difference" className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+      <section id="difference" className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-16 md:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <p className="mb-3 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
-                <span className="accent-line h-px w-12" />
+          <div className="mb-10 flex flex-col justify-between gap-8 md:mb-16 md:flex-row md:items-end">
+            <div className="max-w-2xl text-center md:text-left">
+              <p className="mb-3 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] md:justify-start">
+                <span className="accent-line hidden h-px w-12 sm:block" />
                 The Anchor Difference
               </p>
               <h2 className="font-display text-4xl font-extrabold leading-[1] text-white md:text-5xl">
@@ -293,9 +337,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="quote" className="relative overflow-hidden bg-[#121417] pt-14">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 md:px-8 lg:flex-row lg:items-stretch">
-          <div className="flex flex-1 flex-col justify-center pt-5 pb-14 text-center lg:pt-6 lg:pb-18 lg:text-left">
+      <section id="quote" className="relative overflow-hidden bg-[#121417] pt-10 md:pt-14">
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-4 md:gap-12 md:px-8 lg:flex-row lg:items-stretch">
+          <div className="flex flex-1 flex-col justify-center pt-4 pb-10 text-center md:pt-5 md:pb-14 lg:pt-6 lg:pb-18 lg:text-left">
             <p className="mb-4 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
               <span className="h-px w-10 bg-[#ffdc00]" />
               Start Your Journey
@@ -306,17 +350,17 @@ export default function Home() {
               Contact the Best
               <span className="block text-[#ffdc00]">Local Movers in the Twin Cities!</span>
             </h2>
-            <Link href="/quote" className="cta-sheen mt-8 inline-flex w-fit rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417]">
+            <Link href="/quote" className="cta-sheen mt-8 inline-flex w-fit self-center rounded-full px-8 py-4 text-center font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417] lg:self-start">
               Get Free Moving Quote
             </Link>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-white/[0.58] lg:justify-start">
+            <div className="mt-5 flex flex-col items-center justify-center gap-2 text-center text-base leading-[1.4] text-white/[0.58] sm:flex-row sm:flex-wrap sm:gap-3 sm:text-sm lg:justify-start lg:text-left">
               <span>Fast response within 2 hours</span>
-              <span className="h-1.5 w-1.5 rounded-full bg-[#ffdc00]" />
+              <span className="hidden h-1.5 w-1.5 rounded-full bg-[#ffdc00] sm:block" />
               <span>No obligation quote</span>
             </div>
           </div>
 
-          <div className="relative flex flex-1 items-end self-stretch lg:-mr-6">
+          <div className="relative -mt-2 flex flex-1 items-end self-stretch pt-0 md:mt-0 lg:-mr-6">
             <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-[#121417] to-transparent" />
             <img alt="Professional moving crew" className="mx-auto mt-auto block h-auto max-w-full translate-y-1 scale-[1.08] object-contain lg:scale-[1.14]" src="/hero-pic.png" />
           </div>

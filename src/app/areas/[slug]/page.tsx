@@ -52,17 +52,17 @@ export default async function AreaPage({ params }: PageProps) {
           <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#ffdc00]/10 blur-3xl" />
           <div className="grid-dot-pattern absolute inset-0 opacity-60" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div>
-              <p className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]"><span className="accent-line h-px w-12" />{area.heroEyebrow}</p>
+            <div className="text-center lg:text-left">
+              <p className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start"><span className="accent-line hidden h-px w-12 sm:block" />{area.heroEyebrow}</p>
               <h1 className="font-display text-4xl font-extrabold leading-[0.95] text-white sm:text-5xl lg:text-6xl">{area.heroTitle}<span className="mt-2 block text-[#ffdc00]">{area.heroAccent}</span></h1>
-              <p className="mt-6 max-w-2xl text-lg leading-[1.5] text-white/[0.68]">{area.heroDescription}</p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <p className="mt-6 max-w-2xl text-base leading-[1.6] text-white/[0.68] lg:text-lg">{area.heroDescription}</p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center lg:justify-start lg:mt-10">
                 <Link href="/quote" className="cta-sheen inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">Get Free Quote<Icon name="arrow" className="h-4 w-4" /></Link>
                 <a href="tel:6514619202" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-4 text-sm font-display font-bold uppercase tracking-[0.18em] text-white hover:border-[#ffdc00]/40 hover:text-[#ffdc00]"><Icon name="phone" className="h-4 w-4 text-[#ffdc00]" />(651) 461-9202</a>
               </div>
-              <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/5 pt-6">
+              <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4 border-t border-white/5 pt-6 lg:mt-10 lg:justify-start">
                 {area.heroPoints.map((item) => <div key={item} className="flex items-center gap-2 text-[11px] font-display font-bold uppercase tracking-[0.24em] text-white/[0.72]"><Icon name="star" className="h-3.5 w-3.5 text-[#ffdc00]" />{item}</div>)}
               </div>
             </div>
@@ -93,15 +93,15 @@ export default async function AreaPage({ params }: PageProps) {
 
       <TrustBanner />
 
-      <section className="border-b border-white/5 bg-[#111417] py-24">
+      <section className="border-b border-white/5 bg-[#111417] py-16 md:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-[#1b1f23]">
+          <div className="order-2 relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-[#1b1f23] lg:order-1">
             <RemoteCityImage src={area.cityImageUrl} fallbackSrc="/service-images/residential-1.jpeg" alt={area.cityImageAlt} className="h-full w-full object-cover" />
           </div>
-          <div>
+          <div className="order-1 text-center lg:order-2 lg:text-left">
             <p className="mb-4 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">About {area.city}</p>
             <h2 className="font-display text-4xl font-extrabold leading-[1.05] text-white md:text-5xl">{area.citySectionTitle}</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.5] text-white/[0.68]">{area.citySectionBody}</p>
+            <p className="mt-6 max-w-3xl text-base leading-[1.65] text-white/[0.68] md:text-lg">{area.citySectionBody}</p>
             <a href={area.cityImageSource} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex text-sm font-semibold text-[#ffdc00] hover:text-[#ffe75a]">
               View city image source
             </a>
@@ -109,26 +109,26 @@ export default async function AreaPage({ params }: PageProps) {
         </div>
       </section>
 
-      <section className="border-b border-white/5 bg-[#ffdc00] py-24 text-[#121417]">
+      <section className="border-b border-white/5 bg-[#ffdc00] py-16 text-black md:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
-            <h2 className="font-display text-4xl font-extrabold leading-[1.05] md:text-5xl">{area.sectionTwoTitle}</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.5] text-[#121417]/78">{area.sectionTwoBody}</p>
+          <div className="order-1 text-center lg:text-left">
+            <h2 className="font-display text-4xl font-extrabold leading-[1.05] text-black md:text-5xl">{area.sectionTwoTitle}</h2>
+            <p className="mt-6 max-w-3xl text-base leading-[1.65] text-black/80">{area.sectionTwoBody}</p>
           </div>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-black/8 bg-white shadow-[0_24px_60px_rgba(18,20,23,0.16)]">
+          <div className="order-2 relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-black/8 bg-white shadow-[0_24px_60px_rgba(18,20,23,0.16)]">
             <Image src={area.sectionTwoImage} alt={`${area.city} moving team`} fill className="object-cover" sizes="(min-width: 1024px) 38vw, 100vw" />
           </div>
         </div>
       </section>
 
-      <section className="border-b border-white/5 bg-[#f8f6ef] py-24 text-[#121417]">
+      <section className="border-b border-white/5 bg-[#f8f6ef] py-16 text-black md:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-black/5 bg-white shadow-[0_24px_60px_rgba(18,20,23,0.12)]">
+          <div className="order-2 relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-black/5 bg-white shadow-[0_24px_60px_rgba(18,20,23,0.12)] lg:order-1">
             <Image src={area.sectionThreeImage} alt={`${area.city} movers at work`} fill className="object-cover" sizes="(min-width: 1024px) 42vw, 100vw" />
           </div>
-          <div>
-            <h2 className="font-display text-4xl font-extrabold leading-[1.05] md:text-5xl">{area.sectionThreeTitle}</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.5] text-[#121417]/72">{area.sectionThreeBody}</p>
+          <div className="order-1 text-center lg:order-2 lg:text-left">
+            <h2 className="font-display text-4xl font-extrabold leading-[1.05] text-black md:text-5xl">{area.sectionThreeTitle}</h2>
+            <p className="mt-6 max-w-3xl text-base leading-[1.65] text-black/80">{area.sectionThreeBody}</p>
           </div>
         </div>
       </section>
