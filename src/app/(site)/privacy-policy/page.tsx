@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import { getSeoSettings, buildMetadata } from "@/lib/seo";
 
 const sections = [
   {
@@ -97,10 +98,15 @@ const sections = [
   },
 ];
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | 5 Star Movers",
-  description: "Privacy Policy for 5 Star Movers.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const seo = await getSeoSettings("/privacy-policy");
+  return buildMetadata({
+    fallbackTitle: "Privacy Policy | 5 Star Movers",
+    fallbackDescription: "Privacy Policy for 5 Star Movers.",
+    pagePath: "/privacy-policy",
+    seo,
+  });
+}
 
 export default function PrivacyPolicyPage() {
   return (

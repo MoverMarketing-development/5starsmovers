@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans, Poppins, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,9 +25,11 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "5 Star Movers | Premium Moving Services in Minnesota",
-  description:
-    "Editorial-style moving homepage for 5 Star Movers with premium service messaging, transparent pricing, and Minneapolis moving expertise.",
+  title: {
+    default: "5 Star Movers | Premium Moving Services in Minnesota",
+    template: "%s | 5 Star Movers Minnesota",
+  },
+  description: "Minnesota's most trusted movers. 5-star rated, upfront pricing, and expert crews.",
 };
 
 export default function RootLayout({
@@ -47,9 +48,8 @@ export default function RootLayout({
         workSans.variable
       )}
     >
-      <body suppressHydrationWarning className="min-h-full flex flex-col">
-        <Navbar />
-        <div className="flex-1 pt-17 md:pt-22">{children}</div>
+      <body suppressHydrationWarning className="min-h-full">
+        {children}
       </body>
     </html>
   );

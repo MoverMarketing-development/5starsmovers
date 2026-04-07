@@ -2,35 +2,62 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import TrustBanner from "@/components/TrustBanner";
-import { getBlogPost, getBlogPosts, formatDate } from "@/lib/rss";
+import { getPostBySlug, getPublishedPosts, formatDate } from "@/lib/posts";
+import { getSeoSettings, buildMetadata } from "@/lib/seo";
+import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 
 export const revalidate = 3600;
+export const dynamicParams = true;
 
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  const posts = await getBlogPosts();
-  return posts.map((p) => ({ slug: p.slug }));
+  // Only statically generate from Supabase — skip RSS at build time
+  try {
+    const posts = await getPublishedPosts();
+    // If posts come from RSS (no id UUID pattern), skip static generation
+    return posts
+      .filter((p) => p.id !== p.slug) // Supabase posts have UUID ids
+      .map((p) => ({ slug: p.slug }));
+  } catch {
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
+  const post = await getPostBySlug(slug);
   if (!post) return {};
-  return {
-    title: `${post.title} | 5 Star Movers Minnesota`,
-    description: post.description || undefined,
-    openGraph: post.image ? { images: [post.image] } : undefined,
-  };
+  const seo = await getSeoSettings(`/blog/${slug}`);
+  return buildMetadata({
+    fallbackTitle: `${post.title} | 5 Star Movers Minnesota`,
+    fallbackDescription: post.description || undefined,
+    fallbackImage: post.image_url || undefined,
+    pagePath: `/blog/${slug}`,
+    seo,
+  });
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug } = await params;
-  const post = await getBlogPost(slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
   return (
     <main className="bg-[#0f1114] min-h-screen text-white">
+      <ArticleJsonLd
+        title={post.title}
+        description={post.description}
+        url={`https://www.5starmoversmn.com/blog/${post.slug}`}
+        imageUrl={post.image_url || undefined}
+        publishedAt={post.published_at ?? post.created_at}
+        updatedAt={post.updated_at}
+      />
+      <BreadcrumbJsonLd items={[
+        { name: "Home", url: "https://www.5starmoversmn.com" },
+        { name: "Blog", url: "https://www.5starmoversmn.com/blog" },
+        { name: post.title, url: `https://www.5starmoversmn.com/blog/${post.slug}` },
+      ]} />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-white/5">
         <div className="absolute inset-0">
@@ -81,7 +108,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <span className="text-sm font-semibold text-white/70">5 Star Movers</span>
             </div>
             <span className="text-white/20">·</span>
-            <span className="text-sm text-white/40">{formatDate(post.pubDate)}</span>
+            <span className="text-sm text-white/40">{formatDate(post.published_at ?? post.created_at)}</span>
           </div>
         </div>
       </section>
@@ -89,12 +116,12 @@ export default async function BlogPostPage({ params }: PageProps) {
       <TrustBanner />
 
       {/* Cover image */}
-      {post.image && (
+      {post.image_url && (
         <div className="mx-auto max-w-5xl px-4 sm:px-6 -mt-1 pt-10">
           <div className="overflow-hidden rounded-2xl border border-white/8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={post.image}
+              src={post.image_url}
               alt={post.title}
               className="w-full object-cover max-h-[480px]"
             />
