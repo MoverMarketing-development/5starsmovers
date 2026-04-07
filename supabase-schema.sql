@@ -92,6 +92,43 @@ ALTER TABLE seo_settings ADD COLUMN IF NOT EXISTS canonical_url  TEXT;
 ALTER TABLE seo_settings ADD COLUMN IF NOT EXISTS noindex        BOOLEAN DEFAULT false;
 
 -- ============================================================
+-- Add author + meta_title to posts (migration v2)
+-- ============================================================
+
+ALTER TABLE posts ADD COLUMN IF NOT EXISTS author     TEXT;
+ALTER TABLE posts ADD COLUMN IF NOT EXISTS meta_title TEXT;
+
+-- ============================================================
+-- Add header_html to seo_settings (migration v3)
+-- ============================================================
+
+ALTER TABLE seo_settings ADD COLUMN IF NOT EXISTS header_html TEXT;
+
+-- ============================================================
+-- Storage bucket for blog images
+-- ============================================================
+
+INSERT INTO storage.buckets (id, name, public)
+VALUES ('blog-images', 'blog-images', true)
+ON CONFLICT (id) DO NOTHING;
+
+DROP POLICY IF EXISTS "Public read blog images"          ON storage.objects;
+DROP POLICY IF EXISTS "Authenticated upload blog images" ON storage.objects;
+DROP POLICY IF EXISTS "Authenticated delete blog images" ON storage.objects;
+
+CREATE POLICY "Public read blog images"
+  ON storage.objects FOR SELECT
+  USING (bucket_id = 'blog-images');
+
+CREATE POLICY "Authenticated upload blog images"
+  ON storage.objects FOR INSERT
+  WITH CHECK (bucket_id = 'blog-images' AND auth.role() = 'authenticated');
+
+CREATE POLICY "Authenticated delete blog images"
+  ON storage.objects FOR DELETE
+  USING (bucket_id = 'blog-images' AND auth.role() = 'authenticated');
+
+-- ============================================================
 -- Auto-update updated_at triggers
 -- ============================================================
 

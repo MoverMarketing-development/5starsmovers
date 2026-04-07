@@ -18,6 +18,7 @@ export async function saveSeoSettings(
       og_image: data.get("og_image") || null,
       canonical_url: data.get("canonical_url") || null,
       noindex: data.get("noindex") === "true",
+      header_html: data.get("header_html") || null,
       updated_at: new Date().toISOString(),
     },
     { onConflict: "page_path" }

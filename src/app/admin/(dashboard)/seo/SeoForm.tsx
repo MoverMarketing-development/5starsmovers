@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { saveSeoSettings } from "./actions";
+import ImageUpload from "@/components/admin/ImageUpload";
 
 interface DefaultValues {
   meta_title: string | null;
@@ -11,6 +12,7 @@ interface DefaultValues {
   og_image: string | null;
   canonical_url: string | null;
   noindex: boolean;
+  header_html: string | null;
 }
 
 interface SeoFormProps {
@@ -39,6 +41,8 @@ export default function SeoForm({ pagePath, pageLabel, defaultValues }: SeoFormP
   const [metaDesc, setMetaDesc] = useState(defaultValues?.meta_description ?? "");
   const [ogTitle, setOgTitle] = useState(defaultValues?.og_title ?? "");
   const [ogDesc, setOgDesc] = useState(defaultValues?.og_description ?? "");
+  const [ogImage, setOgImage] = useState(defaultValues?.og_image ?? "");
+  const [headerHtml, setHeaderHtml] = useState(defaultValues?.header_html ?? "");
   const [noindex, setNoindex] = useState(defaultValues?.noindex ?? false);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -50,6 +54,8 @@ export default function SeoForm({ pagePath, pageLabel, defaultValues }: SeoFormP
     formData.set("meta_description", metaDesc);
     formData.set("og_title", ogTitle);
     formData.set("og_description", ogDesc);
+    formData.set("og_image", ogImage);
+    formData.set("header_html", headerHtml);
     formData.set("noindex", noindex ? "true" : "false");
 
     startTransition(async () => {
@@ -185,14 +191,13 @@ export default function SeoForm({ pagePath, pageLabel, defaultValues }: SeoFormP
               </div>
 
               <div>
-                <span className="text-xs font-semibold text-white/40 block mb-1.5">OG Image URL</span>
-                <input
-                  name="og_image"
-                  defaultValue={defaultValues?.og_image ?? ""}
-                  placeholder="https://… (1200×630 recommended)"
-                  className={inputClass}
+                <ImageUpload
+                  value={ogImage}
+                  onChange={setOgImage}
+                  label="OG Image"
+                  hint="1200 × 630 px recommended"
                 />
-                <p className="mt-1 text-[11px] text-white/20">Shown when shared on Facebook, LinkedIn, iMessage, etc.</p>
+                <p className="mt-1.5 text-[11px] text-white/20">Shown when shared on Facebook, LinkedIn, iMessage, etc.</p>
               </div>
             </div>
           </div>
@@ -231,6 +236,36 @@ export default function SeoForm({ pagePath, pageLabel, defaultValues }: SeoFormP
                   <p className="text-[11px] text-white/30 mt-0.5">Tells Google not to index this page. Use for /quote, /careers, /privacy-policy.</p>
                 </div>
               </label>
+            </div>
+          </div>
+
+          {/* ── Header HTML ── */}
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-[#ffdc00] mb-4">Header HTML</p>
+            <div className="space-y-3">
+              <div className="rounded-lg bg-white/[0.02] border border-white/[0.06] px-4 py-3 text-[11px] text-white/40 leading-relaxed">
+                Enter your custom HTML or JavaScript for this page. It will be injected into{" "}
+                <code className="text-white/60 bg-white/[0.06] px-1 py-0.5 rounded">&lt;head&gt;</code>{" "}
+                and applied on desktop, tablet, and mobile.
+                <br />
+                Common uses: Google Tag Manager, custom tracking pixels, analytics scripts.
+              </div>
+              <textarea
+                value={headerHtml}
+                onChange={(e) => setHeaderHtml(e.target.value)}
+                rows={6}
+                spellCheck={false}
+                placeholder={`<!-- Example: Google Tag Manager -->\n<script>\n  (function(w,d,s,l,i){...})(window,document,'script','dataLayer','GTM-XXXXXX');\n</script>`}
+                className={inputClass + " resize-y font-mono text-xs"}
+              />
+              {headerHtml && (
+                <div className="flex items-center gap-1.5 text-[11px] text-green-400/80">
+                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  Custom HTML is active for this page
+                </div>
+              )}
             </div>
           </div>
 

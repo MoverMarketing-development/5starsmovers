@@ -192,6 +192,7 @@ export function ArticleJsonLd({
   imageUrl,
   publishedAt,
   updatedAt,
+  author,
 }: {
   title: string;
   description?: string;
@@ -199,6 +200,7 @@ export function ArticleJsonLd({
   imageUrl?: string;
   publishedAt: string;
   updatedAt?: string;
+  author?: string | null;
 }) {
   const schema = {
     "@context": "https://schema.org",
@@ -209,11 +211,9 @@ export function ArticleJsonLd({
     ...(imageUrl ? { image: imageUrl } : {}),
     datePublished: publishedAt,
     dateModified: updatedAt || publishedAt,
-    author: {
-      "@type": "Organization",
-      name: BUSINESS.name,
-      url: BUSINESS.url,
-    },
+    author: author
+      ? { "@type": "Person", name: author }
+      : { "@type": "Organization", name: BUSINESS.name, url: BUSINESS.url },
     publisher: {
       "@type": "Organization",
       name: BUSINESS.name,

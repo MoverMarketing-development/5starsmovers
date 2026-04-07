@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!post) return {};
   const seo = await getSeoSettings(`/blog/${slug}`);
   return buildMetadata({
-    fallbackTitle: `${post.title} | 5 Star Movers Minnesota`,
+    fallbackTitle: post.meta_title || `${post.title} | 5 Star Movers Minnesota`,
     fallbackDescription: post.description || undefined,
     fallbackImage: post.image_url || undefined,
     pagePath: `/blog/${slug}`,
@@ -52,6 +52,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         imageUrl={post.image_url || undefined}
         publishedAt={post.published_at ?? post.created_at}
         updatedAt={post.updated_at}
+        author={post.author}
       />
       <BreadcrumbJsonLd items={[
         { name: "Home", url: "https://www.5starmoversmn.com" },
@@ -105,7 +106,9 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <path d="m12 3 2.7 5.47 6.04.88-4.37 4.26 1.03 6.02L12 16.77 6.6 19.63l1.03-6.02L3.26 9.35l6.04-.88L12 3Z" />
                 </svg>
               </div>
-              <span className="text-sm font-semibold text-white/70">5 Star Movers</span>
+              <span className="text-sm font-semibold text-white/70">
+                {post.author || "5 Star Movers"}
+              </span>
             </div>
             <span className="text-white/20">·</span>
             <span className="text-sm text-white/40">{formatDate(post.published_at ?? post.created_at)}</span>

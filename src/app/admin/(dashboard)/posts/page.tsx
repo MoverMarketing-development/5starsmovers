@@ -44,6 +44,7 @@ export default async function AdminPostsPage() {
             <thead>
               <tr className="border-b border-white/[0.07] bg-white/[0.02]">
                 <th className="px-5 py-3 text-left text-xs font-semibold text-white/40 uppercase tracking-wider">Title</th>
+                <th className="px-5 py-3 text-left text-xs font-semibold text-white/40 uppercase tracking-wider hidden lg:table-cell">Author</th>
                 <th className="px-5 py-3 text-left text-xs font-semibold text-white/40 uppercase tracking-wider hidden sm:table-cell">Status</th>
                 <th className="px-5 py-3 text-left text-xs font-semibold text-white/40 uppercase tracking-wider hidden md:table-cell">Date</th>
                 <th className="px-5 py-3 text-right text-xs font-semibold text-white/40 uppercase tracking-wider">Actions</th>
@@ -55,6 +56,9 @@ export default async function AdminPostsPage() {
                   <td className="px-5 py-4">
                     <div className="font-medium text-white line-clamp-1">{post.title}</div>
                     <div className="text-xs text-white/30 mt-0.5">/blog/{post.slug}</div>
+                  </td>
+                  <td className="px-5 py-4 hidden lg:table-cell text-white/40 text-xs">
+                    {post.author || <span className="text-white/20">—</span>}
                   </td>
                   <td className="px-5 py-4 hidden sm:table-cell">
                     <span
@@ -74,6 +78,15 @@ export default async function AdminPostsPage() {
                   </td>
                   <td className="px-5 py-4 text-right">
                     <div className="flex items-center justify-end gap-2">
+                      <a
+                        href={`/blog/${post.slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg px-3 py-1.5 text-xs font-medium text-white/30 hover:bg-white/[0.06] hover:text-white/60 transition-colors"
+                        title="Preview post"
+                      >
+                        ↗
+                      </a>
                       <Link
                         href={`/admin/posts/${post.id}/edit`}
                         className="rounded-lg px-3 py-1.5 text-xs font-medium text-white/50 hover:bg-white/[0.06] hover:text-white transition-colors"

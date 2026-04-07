@@ -13,6 +13,8 @@ export interface Post {
   published_at: string | null;
   created_at: string;
   updated_at: string;
+  author?: string | null;
+  meta_title?: string | null;
 }
 
 /** Map an RSS BlogPost to our Post shape so pages work with both sources */
@@ -51,12 +53,23 @@ export async function getPublishedPosts(): Promise<Post[]> {
     .eq("status", "published")
     .order("published_at", { ascending: false });
 
-  // If Supabase is not set up yet or table is empty, fall back to RSS
-  if (error || !data || data.length === 0) {
-    const rssPosts = await getBlogPosts();
-    return rssPosts.map(rssToPost);
+  // Always fetch RSS posts and merge so they are never lost
+  let rssPosts: Post[] = [];
+  try {
+    const rss = await getBlogPosts();
+    rssPosts = rss.map(rssToPost);
+  } catch {
+    // RSS unavailable — continue with Supabase only
   }
-  return data;
+
+  if (error || !data || data.length === 0) {
+    return rssPosts;
+  }
+
+  // Supabase posts take priority; append RSS posts whose slug isn't already in Supabase
+  const supabaseSlugs = new Set(data.map((p) => p.slug));
+  const rssOnly = rssPosts.filter((p) => !supabaseSlugs.has(p.slug));
+  return [...data, ...rssOnly];
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {

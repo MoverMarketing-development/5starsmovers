@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import PostForm from "@/components/admin/PostForm";
 import { getPostById } from "@/lib/posts";
 import { createClient } from "@/lib/supabase/server";
+import { revalidatePath } from "next/cache";
+import { redirect } from "next/navigation";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -30,11 +32,15 @@ async function updatePost(id: string, data: FormData): Promise<{ error?: string 
       status,
       published_at: status === "published" ? new Date().toISOString() : null,
       updated_at: new Date().toISOString(),
+      author: data.get("author") || null,
+      meta_title: data.get("meta_title") || null,
     })
     .eq("id", id);
 
   if (error) return { error: error.message };
-  return {};
+  revalidatePath("/admin/posts");
+  revalidatePath("/blog");
+  redirect("/admin/posts");
 }
 
 export default async function EditPostPage({ params }: Props) {

@@ -9,6 +9,7 @@ export interface SeoRow {
   og_image: string | null;
   canonical_url: string | null;
   noindex: boolean;
+  header_html: string | null;
 }
 
 const BASE_URL = "https://www.5starmoversmn.com";
@@ -19,7 +20,7 @@ export async function getSeoSettings(pagePath: string): Promise<SeoRow | null> {
     const supabase = await createClient();
     const { data } = await supabase
       .from("seo_settings")
-      .select("meta_title,meta_description,og_title,og_description,og_image,canonical_url,noindex")
+      .select("meta_title,meta_description,og_title,og_description,og_image,canonical_url,noindex,header_html")
       .eq("page_path", pagePath)
       .single();
     return data ?? null;

@@ -72,7 +72,7 @@ export default async function SeoPage() {
   const supabase = await createClient();
   const { data: rows } = await supabase.from("seo_settings").select("*");
 
-  const seoMap: Record<string, { meta_title: string; meta_description: string; og_title: string; og_description: string; og_image: string; canonical_url: string; noindex: boolean }> = {};
+  const seoMap: Record<string, { meta_title: string; meta_description: string; og_title: string; og_description: string; og_image: string; canonical_url: string; noindex: boolean; header_html: string | null }> = {};
   for (const row of rows ?? []) {
     seoMap[row.page_path] = row;
   }

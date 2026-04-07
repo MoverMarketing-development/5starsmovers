@@ -2,6 +2,7 @@ import Link from "next/link";
 import PostForm from "@/components/admin/PostForm";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 async function createPost(data: FormData): Promise<{ error?: string }> {
   "use server";
@@ -24,10 +25,14 @@ async function createPost(data: FormData): Promise<{ error?: string }> {
     tags,
     status,
     published_at: status === "published" ? new Date().toISOString() : null,
+    author: data.get("author") || null,
+    meta_title: data.get("meta_title") || null,
   });
 
   if (error) return { error: error.message };
-  return {};
+  revalidatePath("/admin/posts");
+  revalidatePath("/blog");
+  redirect("/admin/posts");
 }
 
 export default function NewPostPage() {

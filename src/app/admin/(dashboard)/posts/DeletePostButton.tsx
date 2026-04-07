@@ -1,19 +1,20 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { createClient } from "@/lib/supabase/client";
 import { useState } from "react";
+import { deletePost } from "./actions";
 
 export default function DeletePostButton({ id }: { id: string }) {
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   async function handleDelete() {
     if (!confirm("Delete this post? This cannot be undone.")) return;
     setLoading(true);
-    const supabase = createClient();
-    await supabase.from("posts").delete().eq("id", id);
-    router.refresh();
+    const result = await deletePost(id);
+    if (result.error) {
+      alert("Error: " + result.error);
+      setLoading(false);
+    }
+    // On success, revalidatePath in the server action refreshes the list automatically
   }
 
   return (
