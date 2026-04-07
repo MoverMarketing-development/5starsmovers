@@ -146,6 +146,24 @@ const navItems = [
   { label: "Blog", homeHref: "/blog", fallbackHref: "/blog" },
 ];
 
+const aboutLinks = [
+  {
+    label: "FAQ's",
+    href: "/faqs",
+    description: "Answers to the most common moving questions.",
+  },
+  {
+    label: "Contact Us",
+    href: "/contact-us",
+    description: "Email, phone, and office details for 5 Star Movers.",
+  },
+  {
+    label: "Careers",
+    href: "/careers",
+    description: "Job application details and the careers form.",
+  },
+];
+
 const serviceGroups = [
   {
     title: "Moving Core",
@@ -167,10 +185,11 @@ const serviceGroups = [
 export default function Navbar() {
   const pathname = usePathname();
   const isHome = pathname === "/";
-  const [openMenu, setOpenMenu] = useState<"services" | "areas" | null>(null);
+  const [openMenu, setOpenMenu] = useState<"services" | "areas" | "about" | null>(null);
   const trustIndexRef = useRef<HTMLDivElement | null>(null);
   const servicesOpen = openMenu === "services";
   const areasOpen = openMenu === "areas";
+  const aboutOpen = openMenu === "about";
 
   useEffect(() => {
     trustIndexRef.current?.setAttribute(
@@ -251,6 +270,22 @@ export default function Navbar() {
               >
                 Areas
                 <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${areasOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+                </svg>
+              </Link>
+            </div>
+
+            <div
+              className="relative"
+              onMouseEnter={() => setOpenMenu("about")}
+            >
+              <Link
+                href="/about-us"
+                className={`inline-flex items-center gap-2 ${aboutOpen ? "text-white" : "text-white/70 hover:text-white"}`}
+                onClick={() => setOpenMenu(null)}
+              >
+                About Us
+                <svg className={`h-3.5 w-3.5 transition-transform duration-200 ${aboutOpen ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
                 </svg>
               </Link>
@@ -350,6 +385,57 @@ export default function Navbar() {
                       ))}
                     </div>
                   </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`absolute inset-x-0 top-full hidden transition-all duration-200 md:block ${
+            aboutOpen ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+          }`}
+          onMouseEnter={() => setOpenMenu("about")}
+          onMouseLeave={() => setOpenMenu(null)}
+        >
+          <div className="border-y border-[#2f353c] bg-[#1b2027] shadow-[0_24px_80px_rgba(0,0,0,0.38)]">
+            <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
+              <div className="mb-5 flex items-end justify-between gap-6 border-b border-white/8 pb-5">
+                <div>
+                  <div className="font-label text-[11px] font-bold uppercase tracking-[0.32em] text-[#ffdc00]">
+                    About 5 Star Movers
+                  </div>
+                  <h3 className="mt-3 font-display text-2xl font-extrabold text-white">
+                    Learn more about the company
+                  </h3>
+                </div>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                {aboutLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="group/item rounded-[1.4rem] border border-[#303844] bg-[#20262e] p-5 transition-colors hover:bg-[#2a313b]"
+                    onClick={() => setOpenMenu(null)}
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <div className="font-display text-lg font-extrabold text-white">
+                          {item.label}
+                        </div>
+                        <p className="mt-2 max-w-sm text-sm leading-[1.6] text-white/[0.56]">
+                          {item.description}
+                        </p>
+                      </div>
+                      <span className="pt-1 text-[#ffdc00] opacity-0 transition-opacity group-hover/item:opacity-100">
+                        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.8">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14" />
+                          <path strokeLinecap="round" strokeLinejoin="round" d="m13 6 6 6-6 6" />
+                        </svg>
+                      </span>
+                    </div>
+                  </Link>
                 ))}
               </div>
             </div>

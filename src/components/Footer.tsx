@@ -21,13 +21,13 @@ const footerColumns = [
   {
     title: "Help & FAQs",
     links: [
-      { label: "Get a Quote", href: "/quote" },
-      { label: "Reviews", href: "/#awards" },
-      { label: "Why Choose Us", href: "/#difference" },
-      { label: "Moving Supplies", href: "/services/moving-supplies" },
-      { label: "Packing Services", href: "/services/packing-services" },
-      { label: "Contact Us", href: "tel:6514619202" },
+      { label: "FAQ's", href: "/faqs" },
     ],
+    cta: {
+      label: "Moving Checklist",
+      href: "https://irp.cdn-website.com/21612567/files/uploaded/5+STAR+MOVERS+-+CHECKLIST+%282%29.pdf",
+      description: "Download the printable PDF before your move.",
+    },
   },
 ];
 
@@ -99,6 +99,26 @@ export default function Footer() {
                   );
                 })}
               </ul>
+
+              {"cta" in column && column.cta ? (
+                <div className="mt-6 rounded-[1.35rem] border border-white/10 bg-[#121417] p-4">
+                  <p className="font-label text-[10px] font-bold uppercase tracking-[0.28em] text-[#ffdc00]">
+                    Download Guide
+                  </p>
+                  <p className="mt-2 text-sm leading-[1.5] text-white/58">
+                    {column.cta.description}
+                  </p>
+                  <a
+                    href={column.cta.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                    className="cta-sheen mt-4 inline-flex items-center justify-center rounded-full px-4 py-2.5 font-display text-xs font-extrabold uppercase tracking-[0.18em] text-[#121417]"
+                  >
+                    {column.cta.label}
+                  </a>
+                </div>
+              ) : null}
             </div>
           ))}
 
@@ -126,7 +146,10 @@ export default function Footer() {
 
         <div className="flex flex-col gap-6 pt-6 lg:flex-row lg:items-center lg:justify-between">
           <p className="text-sm leading-[1.5] text-white/52">
-            Copyright {new Date().getFullYear()} 5 Star Movers. All rights reserved.
+            Copyright {new Date().getFullYear()} 5 Star Movers. All rights reserved.{" "}
+            <Link href="/privacy-policy" className="text-white/72 transition-colors hover:text-[#ffdc00]">
+              Privacy Policy
+            </Link>
           </p>
 
           <div className="flex items-center gap-3">
