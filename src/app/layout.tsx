@@ -47,7 +47,7 @@ export default function RootLayout({
         workSans.variable
       )}
     >
-      <body className="min-h-full flex flex-col">
+      <body suppressHydrationWarning className="min-h-full flex flex-col">
         <Navbar />
         <div className="flex-1 pt-20 md:pt-22">{children}</div>
       </body>
