@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import MovingSuppliesSection from "@/components/MovingSuppliesSection";
 import RemoteCityImage from "@/components/RemoteCityImage";
 import ServiceGridSection from "@/components/ServiceGridSection";
+import TrustBanner from "@/components/TrustBanner";
 import { areaPageMap, areaPages } from "@/lib/area-pages";
 
 type PageProps = {
@@ -89,6 +90,8 @@ export default async function AreaPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <TrustBanner />
 
       <section className="border-b border-white/5 bg-[#111417] py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">

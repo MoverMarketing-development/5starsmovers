@@ -1,4 +1,5 @@
 import { StarIcon, PhoneCheckIcon, CheckmarkCircle01Icon, DeliveryTruck01Icon } from "@hugeicons/core-free-icons";
+import Link from "next/link";
 import { Icon } from "@/components/ui/Icon";
 import { Button } from "@/components/ui/button";
 
@@ -46,10 +47,11 @@ export default function Hero() {
 
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <Button
+                asChild
                 size="lg"
                 className="bg-[#e24436] text-white hover:bg-[#e24436]/90 font-bold text-base rounded-full px-8 h-13 shadow-lg shadow-[#e24436]/25 transition-all hover:scale-105"
               >
-                Request a Free Quote
+                <Link href="/quote">Request a Free Quote</Link>
               </Button>
               <a
                 href="tel:6512431993"

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import TrustBanner from "@/components/TrustBanner";
 import { getBlogPosts, formatDate } from "@/lib/rss";
 
 export const metadata: Metadata = {
@@ -38,6 +39,8 @@ export default async function BlogPage() {
           </p>
         </div>
       </section>
+
+      <TrustBanner />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-16">
         {/* Featured post */}

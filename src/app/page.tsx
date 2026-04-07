@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import ServiceGridSection from "@/components/ServiceGridSection";
+import TrustBanner from "@/components/TrustBanner";
 
 const awards = [
   { name: "Best Pros In Town", src: "/awards/badge1.png" },
@@ -160,6 +161,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <TrustBanner />
 
       <ServiceGridSection />
 
