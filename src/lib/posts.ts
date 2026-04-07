@@ -46,30 +46,44 @@ export async function getPosts(): Promise<Post[]> {
 }
 
 export async function getPublishedPosts(): Promise<Post[]> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("posts")
-    .select("*")
-    .eq("status", "published")
-    .order("published_at", { ascending: false });
+  // Run Supabase + RSS in parallel; RSS has a 5s timeout so it never hangs
+  const rssWithTimeout = Promise.race([
+    getBlogPosts(),
+    new Promise<never>((_, reject) =>
+      setTimeout(() => reject(new Error("RSS timeout")), 5000)
+    ),
+  ]);
 
-  // Always fetch RSS posts and merge so they are never lost
-  let rssPosts: Post[] = [];
-  try {
-    const rss = await getBlogPosts();
-    rssPosts = rss.map(rssToPost);
-  } catch {
-    // RSS unavailable — continue with Supabase only
-  }
+  const [supabaseResult, rssResult] = await Promise.allSettled([
+    (async () => {
+      const supabase = await createClient();
+      return supabase
+        .from("posts")
+        .select("*")
+        .eq("status", "published")
+        .order("published_at", { ascending: false });
+    })(),
+    rssWithTimeout,
+  ]);
 
-  if (error || !data || data.length === 0) {
+  const supabaseData =
+    supabaseResult.status === "fulfilled" && !supabaseResult.value.error
+      ? (supabaseResult.value.data as Post[])
+      : [];
+
+  const rssPosts: Post[] =
+    rssResult.status === "fulfilled"
+      ? (rssResult.value as Awaited<ReturnType<typeof getBlogPosts>>).map(rssToPost)
+      : [];
+
+  if (!supabaseData || supabaseData.length === 0) {
     return rssPosts;
   }
 
-  // Supabase posts take priority; append RSS posts whose slug isn't already in Supabase
-  const supabaseSlugs = new Set(data.map((p) => p.slug));
+  // Supabase posts take priority; append RSS posts not already in Supabase
+  const supabaseSlugs = new Set(supabaseData.map((p) => p.slug));
   const rssOnly = rssPosts.filter((p) => !supabaseSlugs.has(p.slug));
-  return [...data, ...rssOnly];
+  return [...supabaseData, ...rssOnly];
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {

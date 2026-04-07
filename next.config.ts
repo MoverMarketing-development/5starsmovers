@@ -69,22 +69,12 @@ const nextConfig: NextConfig = {
 
   images: {
     formats: ["image/avif", "image/webp"],
+    // Allow any HTTPS image — needed for blog posts and RSS imports
+    // whose cover images can come from any external CDN or upload source.
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "www.5starmoversmn.com",
-      },
-      {
-        protocol: "https",
-        hostname: "5starmoversmn.com",
-      },
-      {
-        protocol: "https",
-        hostname: "commons.wikimedia.org",
-      },
-      {
-        protocol: "https",
-        hostname: "*.supabase.co",
+        hostname: "**",
       },
     ],
   },
