@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans, Work_Sans } from "next/font/google";
+import { Inter, Plus_Jakarta_Sans, Poppins, Work_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
@@ -12,6 +12,12 @@ const inter = Inter({
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-display",
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["700", "800", "900"],
 });
 
 const workSans = Work_Sans({
@@ -37,6 +43,7 @@ export default function RootLayout({
         "h-full dark antialiased font-sans",
         inter.variable,
         plusJakartaSans.variable,
+        poppins.variable,
         workSans.variable
       )}
     >

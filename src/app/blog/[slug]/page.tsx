@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import TrustBanner from "@/components/TrustBanner";
 import { getBlogPost, getBlogPosts, formatDate } from "@/lib/rss";
 
 export const revalidate = 3600;
@@ -84,6 +85,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <TrustBanner />
 
       {/* Cover image */}
       {post.image && (

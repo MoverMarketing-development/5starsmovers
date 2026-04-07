@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import MovingSuppliesSection from "@/components/MovingSuppliesSection";
+import TrustBanner from "@/components/TrustBanner";
 import { servicePageMap, servicePages } from "@/lib/service-pages";
 
 type PageProps = {
@@ -117,6 +118,7 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+      <TrustBanner />
       <section className="border-b border-white/5 bg-[#111417] py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-[#1b1f23]">

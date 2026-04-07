@@ -264,7 +264,7 @@ export default function Navbar() {
               onMouseEnter={() => setOpenMenu("areas")}
             >
               <Link
-                href={`/areas/${areaPages[0].slug}`}
+                href="/areas"
                 className={`inline-flex items-center gap-2 ${areasOpen ? "text-white" : "text-white/70 hover:text-white"}`}
                 onClick={() => setOpenMenu(null)}
               >
@@ -461,11 +461,11 @@ export default function Navbar() {
                   </h3>
                 </div>
                 <Link
-                  href={`/areas/${areaPages[0].slug}`}
+                  href="/areas"
                   className="text-sm font-semibold text-[#ffdc00] hover:text-[#ffe75a]"
                   onClick={() => setOpenMenu(null)}
                 >
-                  Open first area page
+                  Open areas page
                 </Link>
               </div>
 
