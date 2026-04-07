@@ -704,8 +704,10 @@ export default function QuoteWizard() {
 
       <div
         className={[
-          "relative mx-auto grid max-w-7xl gap-8 px-4 py-14 md:px-8 lg:py-20",
-          submitted ? "lg:max-w-3xl" : "lg:grid-cols-[0.9fr_1.1fr]",
+          "relative mx-auto grid max-w-7xl gap-8 px-4 md:px-8",
+          submitted
+            ? "h-[calc(100svh-8rem)] items-center overflow-hidden py-0 lg:max-w-3xl"
+            : "py-14 lg:grid-cols-[0.9fr_1.1fr] lg:py-20",
         ].join(" ")}
       >
         {!submitted ? (
@@ -801,7 +803,7 @@ export default function QuoteWizard() {
 
         <div className="glass-panel ambient-shadow rounded-[2rem] border border-white/10 p-6 md:p-8 lg:p-10">
           {submitted ? (
-            <div className="flex min-h-[560px] flex-col items-center justify-center text-center">
+            <div className="flex flex-col items-center justify-center py-6 text-center md:py-8">
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[#ffdc00] text-[#121417] shadow-[0_20px_50px_rgba(255,220,0,0.26)]">
                 <svg className="h-9 w-9" fill="none" stroke="currentColor" strokeWidth="2.4" viewBox="0 0 24 24">
                   <path d="m5 13 4 4L19 7" />

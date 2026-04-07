@@ -187,6 +187,7 @@ export default function Navbar() {
   const isHome = pathname === "/";
   const [openMenu, setOpenMenu] = useState<"services" | "areas" | "about" | null>(null);
   const trustIndexRef = useRef<HTMLDivElement | null>(null);
+  const previousPathnameRef = useRef(pathname);
   const servicesOpen = openMenu === "services";
   const areasOpen = openMenu === "areas";
   const aboutOpen = openMenu === "about";
@@ -197,6 +198,30 @@ export default function Navbar() {
       "https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281",
     );
   }, []);
+
+  useEffect(() => {
+    if (previousPathnameRef.current === pathname) {
+      return;
+    }
+
+    previousPathnameRef.current = pathname;
+
+    if (window.innerWidth < 1024) {
+      return;
+    }
+
+    const scrollToTop = () => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    scrollToTop();
+
+    const frame = window.requestAnimationFrame(scrollToTop);
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [pathname]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">

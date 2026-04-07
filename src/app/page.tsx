@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import ServiceGridSection from "@/components/ServiceGridSection";
@@ -164,7 +165,74 @@ export default function Home() {
 
       <TrustBanner />
 
+      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
+            <Image
+              src="/service-images/loading-local-1.jpeg"
+              alt="5 Star Movers team handling a move in Minnesota"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
+          </div>
+
+          <div className="max-w-3xl">
+            <p className="mb-4 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+              <span className="accent-line h-px w-12" />
+              Trusted Across Minnesota
+            </p>
+            <h2 className="font-display text-4xl font-extrabold leading-[1.02] text-white md:text-5xl">
+              We&apos;re Your Trusted Movers in Minnesota
+            </h2>
+            <p className="mt-6 max-w-3xl text-lg leading-[1.7] text-white/[0.68]">
+              Moving can be stressful, but with 5-Star Movers, it doesn&apos;t have to be. Our expert
+              movers in Minnesota are here to make your transition seamless, whether you&apos;re moving
+              down the street or across the state. We handle residential and commercial moves with care,
+              efficiency, upfront pricing, and the kind of customer service that keeps the whole process
+              feeling clear and under control.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <ServiceGridSection />
+
+      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+        <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-center">
+          <div className="max-w-3xl">
+            <p className="mb-4 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+              <span className="accent-line h-px w-12" />
+              Twin Cities Coverage
+            </p>
+            <h2 className="font-display text-4xl font-extrabold leading-[1.02] text-white md:text-5xl">
+              Explore All The Areas We Serve
+            </h2>
+            <p className="mt-6 max-w-3xl text-lg leading-[1.7] text-white/[0.68]">
+              Browse our Minneapolis and Twin Cities coverage pages to see the communities we move in
+              every day, with local area details, real city imagery, and direct links to each service
+              area we support.
+            </p>
+            <Link
+              href="/areas"
+              className="cta-sheen mt-8 inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]"
+            >
+              Explore Areas
+              <Icon name="arrow" className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="relative aspect-[5/3] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-[0_24px_60px_rgba(0,0,0,0.24)]">
+            <Image
+              src="/area-images/areas-collage.png"
+              alt="Collage of Twin Cities areas served by 5 Star Movers"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
+          </div>
+        </div>
+      </section>
 
       <section id="awards" className="border-t border-white/5 bg-[#121417] py-24">
         <div className="mx-auto max-w-6xl px-4 text-center md:px-8">

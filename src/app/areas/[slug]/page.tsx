@@ -74,15 +74,15 @@ export default async function AreaPage({ params }: PageProps) {
               <form action="/quote" method="get" className="mt-6 grid gap-4">
                 <label className="block">
                   <span className="font-label text-[11px] font-bold uppercase tracking-[0.24em] text-white/58">Moving From</span>
-                  <input type="text" name="fromAddress" required placeholder="Current pickup address" className="mt-3 w-full rounded-[1.1rem] border border-white/10 bg-white/[0.04] px-4 py-4 text-base text-white placeholder:text-white/28 outline-none transition-all duration-300 focus:border-[#ffdc00]/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(255,220,0,0.08)]" />
+                  <input type="text" name="fromAddress" required autoComplete="street-address" placeholder="Current pickup address" className="quote-input mt-3 w-full rounded-[1.1rem] border border-white/10 bg-white/[0.04] px-4 py-4 text-base text-white placeholder:text-white/28 outline-none transition-all duration-300 focus:border-[#ffdc00]/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(255,220,0,0.08)]" />
                 </label>
 
                 <label className="block">
                   <span className="font-label text-[11px] font-bold uppercase tracking-[0.24em] text-white/58">Moving To</span>
-                  <input type="text" name="toAddress" required placeholder={`Destination in ${area.city}`} className="mt-3 w-full rounded-[1.1rem] border border-white/10 bg-white/[0.04] px-4 py-4 text-base text-white placeholder:text-white/28 outline-none transition-all duration-300 focus:border-[#ffdc00]/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(255,220,0,0.08)]" />
+                  <input type="text" name="toAddress" required autoComplete="street-address" placeholder={`Destination in ${area.city}`} className="quote-input mt-3 w-full rounded-[1.1rem] border border-white/10 bg-white/[0.04] px-4 py-4 text-base text-white placeholder:text-white/28 outline-none transition-all duration-300 focus:border-[#ffdc00]/55 focus:bg-white/[0.06] focus:shadow-[0_0_0_4px_rgba(255,220,0,0.08)]" />
                 </label>
 
-                <button type="submit" className="cta-sheen mt-2 inline-flex h-[58px] items-center justify-center rounded-full px-7 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">
+                <button type="submit" className="cta-sheen mt-2 inline-flex h-[58px] cursor-pointer items-center justify-center rounded-full px-7 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">
                   Get Quote
                 </button>
               </form>
