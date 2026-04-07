@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Footer from "@/components/Footer";
 import ServiceGridSection from "@/components/ServiceGridSection";
 import TrustBanner from "@/components/TrustBanner";
@@ -136,7 +137,15 @@ export default function Home() {
           <div className="relative flex items-end justify-center self-end lg:justify-end">
             <div className="absolute left-1/2 top-1/2 h-[94%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffdc00]/10 blur-3xl" />
             <div className="relative w-full max-w-[52rem] lg:-mr-12">
-              <img alt="5 Star Movers team" className="relative z-10 h-auto w-full scale-[1.18] object-contain lg:scale-[1.32]" src="/hero-pic.png" />
+              <Image
+                src="/hero-pic.png"
+                alt="5 Star Movers team"
+                width={1120}
+                height={980}
+                preload
+                sizes="(max-width: 1023px) 100vw, 50vw"
+                className="relative z-10 h-auto w-full scale-[1.18] object-contain lg:scale-[1.32]"
+              />
 
               <div className="ambient-shadow glass-panel absolute -right-12 top-[calc(20%+35px)] z-30 rounded-2xl border border-white/10 px-3 py-3 lg:-right-20">
                 <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Our Reviews</p>
@@ -191,11 +200,15 @@ export default function Home() {
           <div className="mt-14 flex flex-wrap items-center justify-center gap-5">
             {awards.map((award) => (
               <div key={award.name} className="glass-panel flex h-28 min-w-40 items-center justify-center rounded-[1.4rem] border border-white/10 px-6">
-                <img
-                  alt={award.name}
-                  className="max-h-20 w-auto object-contain"
-                  src={award.src}
-                />
+                <div className="relative h-20 w-full">
+                  <Image
+                    src={award.src}
+                    alt={award.name}
+                    fill
+                    sizes="160px"
+                    className="object-contain"
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -264,7 +277,14 @@ export default function Home() {
 
           <div className="relative flex flex-1 items-end self-stretch lg:-mr-6">
             <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-[#121417] to-transparent" />
-            <img alt="Professional moving crew" className="mx-auto mt-auto block h-auto max-w-full translate-y-1 scale-[1.08] object-contain lg:scale-[1.14]" src="/hero-pic.png" />
+            <Image
+              src="/hero-pic.png"
+              alt="Professional moving crew"
+              width={1120}
+              height={980}
+              sizes="(max-width: 1023px) 100vw, 50vw"
+              className="mx-auto mt-auto block h-auto max-w-full translate-y-1 scale-[1.08] object-contain lg:scale-[1.14]"
+            />
           </div>
         </div>
       </section>

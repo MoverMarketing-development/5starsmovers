@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import Image from "next/image";
 import TrustBanner from "@/components/TrustBanner";
 import { getPublishedPosts, formatDate } from "@/lib/posts";
 import { getSeoSettings, buildMetadata } from "@/lib/seo";
@@ -61,10 +62,11 @@ export default async function BlogPage() {
               {/* Image */}
               <div className="relative aspect-[16/9] overflow-hidden lg:aspect-auto lg:min-h-[420px]">
                 {featured.image_url ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <Image
                     src={featured.image_url}
                     alt={featured.title}
+                    fill
+                    sizes="(max-width: 1023px) 100vw, 50vw"
                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 ) : (
@@ -123,10 +125,11 @@ export default async function BlogPage() {
                   {/* Thumbnail */}
                   <div className="relative aspect-[16/9] overflow-hidden">
                     {post.image_url ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
+                      <Image
                         src={post.image_url}
                         alt={post.title}
+                        fill
+                        sizes="(max-width: 639px) 100vw, (max-width: 1023px) 50vw, 33vw"
                         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     ) : (

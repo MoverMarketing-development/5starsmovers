@@ -24,7 +24,6 @@ export default function RemoteCityImage({
       alt={alt}
       width={1600}
       height={1000}
-      unoptimized
       className={className}
       onError={() => {
         if (currentSrc !== fallbackSrc) {
