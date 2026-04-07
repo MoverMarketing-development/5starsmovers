@@ -32,6 +32,7 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   const res = await fetch(RSS_URL, {
     next: { revalidate: 3600 },
   });
+  if (!res.ok) return [];
   const xml = await res.text();
 
   const parserOptions: ConstructorParameters<typeof XMLParser>[0] = {
