@@ -74,28 +74,28 @@ export default async function ServicePage({ params }: PageProps) {
           <div className="absolute right-0 top-0 h-80 w-80 rounded-full bg-[#ffdc00]/10 blur-3xl" />
           <div className="grid-dot-pattern absolute inset-0 opacity-60" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-20 md:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-20 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div>
-              <p className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]"><span className="accent-line h-px w-12" />{service.heroEyebrow}</p>
+            <div className="text-center lg:text-left">
+              <p className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start"><span className="accent-line hidden h-px w-12 sm:block" />{service.heroEyebrow}</p>
               <h1 className="font-display text-4xl font-extrabold leading-[0.95] text-white sm:text-5xl lg:text-6xl">{service.heroTitle}<span className="mt-2 block text-[#ffdc00]">{service.heroAccent}</span></h1>
-              <p className="mt-6 max-w-2xl text-lg leading-[1.5] text-white/[0.68]">{service.heroDescription}</p>
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/[0.68] lg:mx-0 lg:text-lg">{service.heroDescription}</p>
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center lg:mt-10 lg:justify-start">
                 <Link href="/quote" className="cta-sheen inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">Get Free Quote<Icon name="arrow" className="h-4 w-4" /></Link>
                 <a href="tel:6514619202" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-6 py-4 text-sm font-display font-bold uppercase tracking-[0.18em] text-white hover:border-[#ffdc00]/40 hover:text-[#ffdc00]"><Icon name="phone" className="h-4 w-4 text-[#ffdc00]" />(651) 461-9202</a>
               </div>
-              <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/5 pt-6">
+              <div className="mt-8 flex flex-wrap justify-center gap-x-8 gap-y-4 border-t border-white/5 pt-6 lg:mt-10 lg:justify-start">
                 {service.heroPoints.map((item) => <div key={item} className="flex items-center gap-2 text-[11px] font-display font-bold uppercase tracking-[0.24em] text-white/[0.72]"><Icon name="star" className="h-3.5 w-3.5 text-[#ffdc00]" />{item}</div>)}
               </div>
             </div>
-            <div className="glass-panel ambient-shadow rounded-[2rem] border border-white/10 p-6 lg:p-7">
+            <div className="glass-panel ambient-shadow rounded-[2rem] border border-white/10 p-6 text-center lg:p-7 lg:text-left">
               <p className="font-label text-[11px] font-bold uppercase tracking-[0.3em] text-[#ffdc00]">
                 Quick Quote Start
               </p>
               <h2 className="mt-4 font-display text-3xl font-extrabold leading-[1] text-white">
                 Start with your route
               </h2>
-              <p className="mt-4 text-sm leading-[1.5] text-white/58">
+              <p className="mt-4 text-base leading-[1.6] text-white/58">
                 Enter where you are moving from and to. We will carry both addresses into the full quote form automatically.
               </p>
 
@@ -138,9 +138,9 @@ export default async function ServicePage({ params }: PageProps) {
         </div>
       </section>
       <TrustBanner />
-      <section className="border-b border-white/5 bg-[#111417] py-24">
+      <section className="border-b border-white/5 bg-[#111417] py-16 md:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-[#1b1f23]">
+          <div className="order-2 relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-white/10 bg-[#1b1f23] lg:order-1">
 
             <Image
               src={service.sectionOneImage}
@@ -150,21 +150,21 @@ export default async function ServicePage({ params }: PageProps) {
               sizes="(min-width: 1024px) 42vw, 100vw"
             />
           </div>
-          <div>
+          <div className="order-1 text-center lg:order-2 lg:text-left">
             <p className="mb-4 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Service Overview</p>
             <h2 className="font-display text-4xl font-extrabold leading-[1.05] text-white md:text-5xl">{service.sectionOneTitle}</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.5] text-white/[0.68]">{service.sectionOneBody}</p>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.65] text-white/[0.68] lg:mx-0 lg:text-lg">{service.sectionOneBody}</p>
           </div>
         </div>
       </section>
-      <section className="border-b border-white/5 bg-[#f4f0e8] py-24 text-[#121417]">
+      <section className="border-b border-white/5 bg-[#f4f0e8] py-16 text-[#121417] md:py-20 lg:py-24">
         <div className="mx-auto grid max-w-7xl gap-12 px-4 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div>
+          <div className="order-1 text-center lg:text-left">
             <p className="mb-4 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#00685e]">Built For This Service</p>
             <h2 className="font-display text-4xl font-extrabold leading-[1.05] md:text-5xl">{service.sectionTwoTitle}</h2>
-            <p className="mt-6 max-w-3xl text-lg leading-[1.5] text-[#121417]/72">{service.sectionTwoBody}</p>
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.65] text-[#121417]/72 lg:mx-0">{service.sectionTwoBody}</p>
           </div>
-          <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-black/5 bg-white shadow-[0_24px_60px_rgba(18,20,23,0.12)]">
+          <div className="order-2 relative aspect-[5/4] overflow-hidden rounded-[2rem] border border-black/5 bg-white shadow-[0_24px_60px_rgba(18,20,23,0.12)]">
 
             <Image
               src={service.sectionTwoImage}
@@ -176,17 +176,17 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
-      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+      <section className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-16 md:py-20 lg:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div className="max-w-3xl">
-              <p className="mb-3 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]"><span className="accent-line h-px w-12" />Why Choose Us</p>
+          <div className="mb-10 flex flex-col justify-between gap-8 text-center md:mb-12 md:flex-row md:items-end md:text-left lg:mb-16">
+            <div className="mx-auto max-w-3xl md:mx-0">
+              <p className="mb-3 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] md:justify-start"><span className="accent-line hidden h-px w-12 sm:block" />Why Choose Us</p>
               <h2 className="font-display text-4xl font-extrabold leading-[1] text-white md:text-5xl">{service.whyChooseTitle}</h2>
             </div>
             <p className="hidden max-w-sm border-l border-[#ffdc00]/20 pl-6 text-sm leading-[1.5] text-white/[0.55] md:block">{service.whyChooseIntro}</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            {service.whyChooseCards.map((card) => <article key={card.number} className="group relative overflow-hidden rounded-[1.35rem] border border-white/[0.08] bg-white/[0.04] p-8 backdrop-blur-sm"><span className="absolute -right-4 -top-6 font-display text-8xl font-black italic text-white/5 transition-colors duration-300 group-hover:text-[#ffdc00]/12">{card.number}</span><div className="relative z-10"><div className="mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417]"><Icon name="star" className="h-5 w-5" /></div><h3 className="font-display text-2xl font-extrabold text-white">{card.title}</h3><p className="mt-4 text-sm leading-[1.5] text-white/[0.58]">{card.description}</p></div><div className="absolute bottom-0 left-0 h-1 w-0 bg-[#ffdc00] transition-all duration-500 group-hover:w-full" /></article>)}
+          <div className="grid gap-6 text-center md:grid-cols-3 md:text-left">
+            {service.whyChooseCards.map((card) => <article key={card.number} className="group relative overflow-hidden rounded-[1.35rem] border border-white/[0.08] bg-white/[0.04] p-8 backdrop-blur-sm"><span className="absolute -right-4 -top-6 font-display text-8xl font-black italic text-white/5 transition-colors duration-300 group-hover:text-[#ffdc00]/12">{card.number}</span><div className="relative z-10"><div className="mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417] md:mx-0"><Icon name="star" className="h-5 w-5" /></div><h3 className="font-display text-2xl font-extrabold text-white">{card.title}</h3><p className="mt-4 text-base leading-[1.6] text-white/[0.58]">{card.description}</p></div><div className="absolute bottom-0 left-0 h-1 w-0 bg-[#ffdc00] transition-all duration-500 group-hover:w-full" /></article>)}
           </div>
         </div>
       </section>
