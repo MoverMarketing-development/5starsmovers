@@ -76,11 +76,7 @@ export async function getPublishedPosts(): Promise<Post[]> {
       ? (rssResult.value as Awaited<ReturnType<typeof getBlogPosts>>).map(rssToPost)
       : [];
 
-  if (!supabaseData || supabaseData.length === 0) {
-    return rssPosts;
-  }
-
-  // Supabase posts take priority; append RSS posts not already in Supabase
+  // Supabase published posts take priority; append RSS posts not already in Supabase
   const supabaseSlugs = new Set(supabaseData.map((p) => p.slug));
   const rssOnly = rssPosts.filter((p) => !supabaseSlugs.has(p.slug));
   return [...supabaseData, ...rssOnly];

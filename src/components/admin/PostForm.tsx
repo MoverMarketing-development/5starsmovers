@@ -44,7 +44,7 @@ export default function PostForm({ post, action }: PostFormProps) {
 
   // Content state
   const [content, setContent] = useState(post?.content ?? "");
-  const [status, setStatus] = useState<"draft" | "published">(post?.status ?? "draft");
+  const [status, setStatus] = useState<"draft" | "published">(post?.status ?? "published");
 
   // Tracked for char counters
   const [title, setTitle] = useState(post?.title ?? "");
