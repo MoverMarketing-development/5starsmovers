@@ -152,16 +152,18 @@ export default function Home() {
               />
 
               <div className="ambient-shadow glass-panel absolute -right-12 top-[calc(20%+35px)] z-30 hidden rounded-2xl border border-white/10 px-3 py-3 sm:flex lg:-right-20">
-                <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Our Reviews</p>
-                <div className="mt-2 flex items-center gap-2">
-                  <div className="flex -space-x-2">
-                    {[...Array(3)].map((_, index) => (
-                      <div key={index} className="flex h-8 w-8 items-center justify-center rounded-full border border-[#121417] bg-[#ffdc00]">
-                        <Icon name="star" className="h-3.5 w-3.5 text-[#121417]" />
-                      </div>
-                    ))}
+                <div>
+                  <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Our Reviews</p>
+                  <div className="mt-2 flex items-center gap-2">
+                    <div className="flex -space-x-2">
+                      {[...Array(3)].map((_, index) => (
+                        <div key={index} className="flex h-8 w-8 items-center justify-center rounded-full border border-[#121417] bg-[#ffdc00]">
+                          <Icon name="star" className="h-3.5 w-3.5 text-[#121417]" />
+                        </div>
+                      ))}
+                    </div>
+                    <span className="text-xs font-bold text-white">+123k happy clients</span>
                   </div>
-                  <span className="text-xs font-bold text-white">+123k happy clients</span>
                 </div>
               </div>
 
@@ -202,7 +204,7 @@ export default function Home() {
         {/* Top border with gradient */}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#006e63]/60 to-transparent" />
 
-        <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8 lg:text-left">
+        <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Recognition</p>
           <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">
             Award-Winning Moving Services
@@ -210,11 +212,11 @@ export default function Home() {
               You Can Trust
             </span>
           </h2>
-          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.6] text-white/[0.55] lg:mx-0">
+          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.6] text-white/[0.55]">
             We are proud to be recognized across the Twin Cities for consistent service quality, professional crews, and a moving experience people genuinely recommend.
           </p>
 
-          <div className="mt-14 flex flex-wrap items-center justify-center gap-5 lg:justify-start">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-5">
             {awards.map((award) => (
               <div key={award.name} className="group relative flex h-28 min-w-40 items-center justify-center overflow-hidden rounded-[1.4rem] border border-white/8 bg-white/[0.03] px-6 transition-all duration-300 hover:border-[#006e63]/50 hover:bg-[#006e63]/8">
                 <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(ellipse_at_center,#006e6310_0%,transparent_70%)]" />
@@ -242,7 +244,9 @@ export default function Home() {
                 The Anchor Difference
               </p>
               <h2 className="font-display text-4xl font-extrabold leading-[1] text-white md:text-5xl">
-                Why Leading Families Choose <span className="text-[#ffdc00]">5-Star Movers</span>
+                Why Leading Families
+                <br />
+                Choose <span className="text-[#ffdc00]">5-Star Movers</span>
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-[1.6] text-white/[0.55]">

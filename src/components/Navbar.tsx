@@ -188,18 +188,10 @@ export default function Navbar() {
   const [openMenu, setOpenMenu] = useState<"services" | "areas" | "about" | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<"services" | "areas" | "about" | null>(null);
-  const trustIndexRef = useRef<HTMLDivElement | null>(null);
   const previousPathnameRef = useRef(pathname);
   const servicesOpen = openMenu === "services";
   const areasOpen = openMenu === "areas";
   const aboutOpen = openMenu === "about";
-
-  useEffect(() => {
-    trustIndexRef.current?.setAttribute(
-      "src",
-      "https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281",
-    );
-  }, []);
 
   useEffect(() => {
     if (previousPathnameRef.current === pathname) {
@@ -248,13 +240,12 @@ export default function Navbar() {
           <div className="flex min-h-8 items-center justify-center">
             <Script
               id="trustindex-widget-loader"
-              src="https://cdn.trustindex.io/loader.js"
+              src="https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281"
               strategy="afterInteractive"
+              async
+              defer
             />
-            <div
-              ref={trustIndexRef}
-              className="trustindex-widget mx-auto"
-            />
+            <div className="trustindex-widget mx-auto" />
           </div>
           <a
             href="tel:6514619202"
