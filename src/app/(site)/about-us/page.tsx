@@ -32,12 +32,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function AboutUsPage() {
   return (
-    <main className="bg-background text-white">
+    <main className="overflow-x-hidden bg-background text-white">
       <section className="relative overflow-hidden border-b border-white/5 bg-[#121417]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,220,0,0.12),transparent_32%),radial-gradient(circle_at_bottom_left,rgba(0,104,94,0.22),transparent_28%)]" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 md:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:py-28">
-          <div className="max-w-3xl">
-            <p className="flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 py-14 text-center md:px-8 md:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:gap-10">
+          <div className="mx-auto max-w-3xl">
+            <p className="flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
               <span className="h-px w-12 bg-[#ffdc00]" />
               ABOUT US
             </p>
@@ -45,34 +45,34 @@ export default function AboutUsPage() {
               About 5-Star Movers:
               <span className="block text-[#ffdc00]">Your Trusted Moving Experts</span>
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-[1.6] text-white/72">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/72">
               Get to know us: At 5-Star Movers, we&apos;re dedicated to making your move smooth, efficient, and stress-free.
             </p>
-            <p className="mt-6 max-w-3xl text-base leading-[1.7] text-white/68">
+            <p className="mx-auto mt-6 max-w-3xl text-base leading-[1.6] text-white/68">
               Voted #1 by Forbes Magazine for Minneapolis &amp; St. Paul, 5-Star Movers is your go-to local moving expert. With years of trusted service and countless satisfied customers, we guarantee a smooth, hassle-free move. Contact us today for a free, no-obligation quote and discover the 5-Star difference that sets us apart from the rest!
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-center">
               <Link
                 href="/quote"
-                className="cta-sheen inline-flex items-center justify-center rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417]"
+                className="cta-sheen inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-display text-sm font-extrabold uppercase tracking-[0.16em] text-[#121417] sm:w-auto sm:px-8 sm:tracking-[0.2em]"
               >
                 Get Free Moving Quote
               </Link>
               <a
                 href="tel:6512431993"
-                className="inline-flex items-center justify-center rounded-full border border-white/10 px-8 py-4 font-display text-sm font-bold uppercase tracking-[0.16em] text-white/78 hover:border-[#ffdc00]/40 hover:text-white"
+                className="inline-flex w-full items-center justify-center rounded-full border border-white/10 px-6 py-4 text-center font-display text-sm font-bold uppercase tracking-[0.14em] text-white/78 hover:border-[#ffdc00]/40 hover:text-white sm:w-auto sm:px-8 sm:tracking-[0.16em]"
               >
                 CALL (651) 243-1993
               </a>
             </div>
           </div>
 
-          <div className="grid gap-4 self-end">
+          <div className="grid gap-4 self-center">
             {trustHighlights.map((item, index) => (
               <article
                 key={item}
-                className="glass-panel ambient-shadow rounded-[1.5rem] border border-white/10 p-6"
+                className="glass-panel ambient-shadow rounded-[1.5rem] border border-white/10 p-6 text-center"
               >
                 <p className="font-label text-[11px] font-bold uppercase tracking-[0.3em] text-[#ffdc00]">
                   0{index + 1}
@@ -86,10 +86,10 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#016d63] py-24">
+      <section className="relative overflow-hidden bg-[#016d63] py-14 md:py-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,220,0,0.16),transparent_26%),radial-gradient(circle_at_bottom_right,rgba(0,0,0,0.3),transparent_34%),linear-gradient(135deg,rgba(1,109,99,0.92)_0%,rgba(0,82,74,0.98)_55%,rgba(7,30,28,1)_100%)]" />
         <div className="absolute inset-0 opacity-25 [background-image:radial-gradient(circle,rgba(255,220,0,0.28)_1.2px,transparent_1.2px)] [background-size:34px_34px]" />
-        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 md:px-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="relative mx-auto grid max-w-7xl gap-8 px-4 text-center md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
             <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
               Our Mission and Values
@@ -102,7 +102,7 @@ export default function AboutUsPage() {
             {valueStatements.map((statement) => (
               <div
                 key={statement}
-                className="rounded-[1.4rem] border border-white/12 bg-black/10 p-7 text-base leading-[1.75] text-white/80 backdrop-blur-[2px]"
+                className="rounded-[1.4rem] border border-white/12 bg-black/10 p-6 text-base leading-[1.6] text-white/80 backdrop-blur-[2px] md:p-7"
               >
                 {statement}
               </div>
@@ -111,9 +111,9 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="border-y border-white/5 bg-[#121417] py-24">
+      <section className="border-y border-white/5 bg-[#121417] py-14 md:py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="max-w-3xl">
+          <div className="mx-auto max-w-3xl text-center">
             <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
               Dedicated to Excellence in Moving Services
             </p>
@@ -122,12 +122,12 @@ export default function AboutUsPage() {
             </h2>
           </div>
 
-          <div className="mt-12 grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          <div className="mt-10 grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
             <div className="order-2 space-y-6 lg:order-1">
               {excellenceStatements.map((statement) => (
                 <p
                   key={statement}
-                  className="max-w-2xl text-lg leading-[1.85] text-white/72"
+                  className="mx-auto max-w-2xl text-center text-base leading-[1.6] text-white/72"
                 >
                   {statement}
                 </p>
@@ -149,7 +149,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#121417] py-24">
+      <section className="relative overflow-hidden bg-[#121417] py-14 md:py-16">
         <div className="absolute inset-x-0 top-0 h-px bg-white/8" />
         <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
@@ -162,7 +162,7 @@ export default function AboutUsPage() {
           <div className="mt-10">
             <Link
               href="/quote"
-              className="cta-sheen inline-flex rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417]"
+              className="cta-sheen inline-flex w-full items-center justify-center rounded-full px-6 py-4 text-center font-display text-sm font-extrabold uppercase tracking-[0.16em] text-[#121417] sm:w-auto sm:px-8 sm:tracking-[0.2em]"
             >
               GET FREE MOVING QUOTE
             </Link>

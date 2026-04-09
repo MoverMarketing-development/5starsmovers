@@ -105,7 +105,7 @@ export default function RichEditor({ value, onChange, placeholder }: RichEditorP
           1.
         </ToolbarButton>
         <ToolbarButton title="Blockquote" onClick={() => editor.chain().focus().toggleBlockquote().run()} active={editor.isActive("blockquote")}>
-          "
+          &quot;
         </ToolbarButton>
         <div className="mx-1.5 h-4 w-px bg-white/10" />
         <ToolbarButton title="Link" onClick={setLink} active={editor.isActive("link")}>

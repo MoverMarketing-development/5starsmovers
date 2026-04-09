@@ -239,7 +239,7 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="sticky inset-x-0 top-0 z-50">
       <div className="hidden border-b border-white/5 bg-[#121417] px-4 py-2 text-[13px] md:block">
         <div className="mx-auto grid max-w-7xl items-center gap-4 md:grid-cols-[1fr_auto_1fr] md:px-8">
           <p className="hidden justify-self-start text-white/[0.65] md:block">

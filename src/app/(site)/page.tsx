@@ -92,13 +92,13 @@ export default function Home() {
     <main className="bg-background text-white">
       <LocalBusinessJsonLd />
       <section id="home" className="relative overflow-hidden">
-        <div className="mx-auto grid min-h-[600px] max-w-7xl items-end gap-6 px-4 pb-12 md:px-8 sm:min-h-[820px] lg:grid-cols-[1fr_1fr] lg:gap-4">
-          <div className="pt-0 pb-0">
-            <div className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+        <div className="mx-auto grid min-h-[calc(100svh-4.75rem)] max-w-7xl items-center gap-8 px-4 pt-8 sm:min-h-[calc(100svh-4.75rem)] sm:px-6 md:px-8 md:pt-10 lg:min-h-[calc(100svh-6.5rem)] lg:grid-cols-[1fr_1fr] lg:gap-8">
+          <div className="pb-0 text-center">
+            <div className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
               <span className="h-px w-10 bg-[#ffdc00]" />
               Moving with Precision
             </div>
-            <h1 className="font-display text-4xl font-extrabold leading-[1] tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="mx-auto max-w-[12ch] font-display text-4xl font-extrabold leading-[1] tracking-tight text-white sm:max-w-none sm:text-5xl lg:text-6xl">
               Seamless Moving
               <br />
               For Your Home
@@ -106,14 +106,20 @@ export default function Home() {
               & Office
               <span className="block text-[#ffdc00]">Boosting Your Comfort</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg leading-[1.5] text-white/[0.68]">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/[0.68]">
               We do more than move boxes. We anchor your transition with white-glove service, transparent planning, and premium execution from Minneapolis to the rest of Minnesota.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Link href="/quote" className="cta-sheen inline-flex items-center justify-center gap-2 rounded-md px-7 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417]">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-center">
+              <Link href="/quote" className="cta-sheen inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-md px-7 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] sm:w-auto sm:max-w-none">
                 Book Your Move Now
               </Link>
+              <a
+                href="tel:6512431993"
+                className="inline-flex w-full max-w-sm items-center justify-center rounded-full border border-white/10 px-7 py-4 text-center font-display text-sm font-bold uppercase tracking-[0.14em] text-white/78 hover:border-[#ffdc00]/40 hover:text-white sm:hidden"
+              >
+                Call (651) 243-1993
+              </a>
               <a href="#difference" className="group inline-flex items-center gap-3 text-sm font-display font-bold text-white transition-all duration-300 hover:text-[#ffdc00]">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#ffdc00] bg-transparent text-[#ffdc00] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#ffdc00] group-hover:text-[#121417] group-hover:shadow-[0_12px_28px_rgba(255,220,0,0.2)]">
                   <Icon name="arrow" className="h-4 w-4" />
@@ -122,7 +128,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/5 pt-6">
+            <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-x-8 gap-y-4 border-t border-white/5 pt-6">
               {["Licensed & Insured", "Satisfaction Guaranteed", "24/7 Support"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-[11px] font-display font-bold uppercase tracking-[0.24em] text-white/[0.72]">
                   <Icon name="star" className="h-3.5 w-3.5 text-[#ffdc00]" />
@@ -132,9 +138,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative flex items-end justify-center self-end lg:justify-end">
+          <div className="relative flex items-end justify-center self-end">
             <div className="absolute left-1/2 top-1/2 h-[94%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffdc00]/10 blur-3xl" />
-            <div className="relative w-full max-w-[52rem] lg:-mr-12">
+            <div className="relative w-full max-w-[52rem]">
               <Image
                 src="/hero-pic.png"
                 alt="5 Star Movers team"
@@ -142,7 +148,7 @@ export default function Home() {
                 height={980}
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
-                className="relative z-10 h-auto w-full scale-[1.18] object-contain lg:scale-[1.32]"
+                className="relative z-10 mx-auto h-auto w-full max-w-[38rem] object-contain sm:max-w-[44rem] lg:max-w-none lg:scale-[1.18]"
               />
 
               <div className="ambient-shadow glass-panel absolute -right-12 top-[calc(20%+35px)] z-30 hidden rounded-2xl border border-white/10 px-3 py-3 sm:flex lg:-right-20">
@@ -187,7 +193,7 @@ export default function Home() {
 
       <ServiceGridSection />
 
-      <section id="awards" className="relative overflow-hidden py-24">
+      <section id="awards" className="relative overflow-hidden py-14 md:py-16">
         {/* Background: dark base + green radial glow center + gold top-right accent */}
         <div className="absolute inset-0 bg-[#0d1210]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#0d5c5520_0%,transparent_70%)]" />
@@ -204,7 +210,7 @@ export default function Home() {
               You Can Trust
             </span>
           </h2>
-          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.5] text-white/[0.55]">
+          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.6] text-white/[0.55]">
             We are proud to be recognized across the Twin Cities for consistent service quality, professional crews, and a moving experience people genuinely recommend.
           </p>
 
@@ -227,11 +233,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="difference" className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-24">
+      <section id="difference" className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-14 md:py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-            <div className="max-w-2xl">
-              <p className="mb-3 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+          <div className="mb-12 flex flex-col items-center gap-6 text-center">
+            <div className="max-w-3xl">
+              <p className="mb-3 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
                 <span className="accent-line h-px w-12" />
                 The Anchor Difference
               </p>
@@ -239,23 +245,23 @@ export default function Home() {
                 Why Leading Families Choose <span className="text-[#ffdc00]">5-Star Movers</span>
               </h2>
             </div>
-            <p className="hidden max-w-xs border-l border-[#ffdc00]/20 pl-6 text-sm leading-[1.5] text-white/[0.55] md:block">
+            <p className="max-w-2xl text-base leading-[1.6] text-white/[0.55]">
               Architectural precision in every transition. We do not just move objects; we secure your next chapter.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             {trustCards.map((card) => (
-              <article key={card.number} className="group relative overflow-hidden rounded-[1.35rem] border border-white/[0.08] bg-white/[0.04] p-8 backdrop-blur-sm">
+              <article key={card.number} className="group relative overflow-hidden rounded-[1.35rem] border border-white/[0.08] bg-white/[0.04] p-8 text-center backdrop-blur-sm">
                 <span className="absolute -right-4 -top-6 font-display text-8xl font-black italic text-white/5 transition-colors duration-300 group-hover:text-[#ffdc00]/12">
                   {card.number}
                 </span>
                 <div className="relative z-10">
-                  <div className="mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417]">
+                  <div className="mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417]">
                     <Icon name="star" className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-2xl font-extrabold text-white">{card.title}</h3>
-                  <p className="mt-4 text-sm leading-[1.5] text-white/[0.58]">{card.description}</p>
+                  <p className="mt-4 text-base leading-[1.6] text-white/[0.58]">{card.description}</p>
                 </div>
                 <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#ffdc00] transition-all duration-500 group-hover:w-full" />
               </article>
@@ -269,8 +275,8 @@ export default function Home() {
           <div className="grid items-stretch lg:grid-cols-2">
 
             {/* Left: Content */}
-            <div className="flex flex-col justify-center py-16 lg:py-24 lg:pr-16">
-              <p className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#0d5c55]">
+            <div className="flex flex-col justify-center py-14 text-center lg:py-16 lg:pr-16">
+              <p className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#0d5c55]">
                 <span className="h-px w-10 bg-[#0d5c55]" />
                 Start Your Journey
               </p>
@@ -280,12 +286,12 @@ export default function Home() {
                   Twin Cities&apos; Best.
                 </span>
               </h2>
-              <p className="mt-5 max-w-sm text-base leading-relaxed text-[#143d39]/60">
+              <p className="mx-auto mt-5 max-w-xl text-base leading-[1.6] text-[#143d39]/60">
                 Local crews, upfront pricing, and 5-star service — from your first call to the last box.
               </p>
 
               {/* Stats */}
-              <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
+              <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                 <div>
                   <p className="font-display text-2xl font-black text-[#143d39] sm:text-3xl">2,500+</p>
                   <p className="mt-0.5 text-xs font-semibold text-[#143d39]/50">5-Star Reviews</p>
@@ -303,7 +309,7 @@ export default function Home() {
               </div>
 
               {/* CTAs */}
-              <div className="mt-9 flex flex-wrap items-center gap-4">
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
                 <Link
                   href="/quote"
                   className="cta-sheen inline-flex rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417]"

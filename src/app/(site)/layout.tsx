@@ -14,7 +14,7 @@ export default function SiteLayout({
       <VisitorTracker />
       <CookieBanner />
       <Navbar />
-      <div className="flex-1 pt-20 md:pt-22">{children}</div>
+      <div className="flex-1">{children}</div>
     </div>
   );
 }
