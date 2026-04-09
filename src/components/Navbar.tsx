@@ -535,7 +535,7 @@ export default function Navbar() {
                   className="text-sm font-semibold text-[#ffdc00] hover:text-[#ffe75a]"
                   onClick={() => setOpenMenu(null)}
                 >
-                  View home section
+                  View Home Section
                 </Link>
               </div>
 
@@ -662,7 +662,7 @@ export default function Navbar() {
                   className="text-sm font-semibold text-[#ffdc00] hover:text-[#ffe75a]"
                   onClick={() => setOpenMenu(null)}
                 >
-                  Open areas page
+                  Open Areas Page
                 </Link>
               </div>
 
