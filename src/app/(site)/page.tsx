@@ -92,13 +92,13 @@ export default function Home() {
     <main className="bg-background text-white">
       <LocalBusinessJsonLd />
       <section id="home" className="relative overflow-hidden">
-        <div className="mx-auto grid min-h-[calc(100svh-4.75rem)] max-w-7xl items-center gap-8 px-4 pt-8 sm:min-h-[calc(100svh-4.75rem)] sm:px-6 md:px-8 md:pt-10 lg:min-h-[calc(100svh-6.5rem)] lg:grid-cols-[1fr_1fr] lg:gap-8">
-          <div className="pb-0 text-center">
-            <div className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+        <div className="mx-auto grid min-h-[calc(100svh-4.75rem)] max-w-7xl items-center gap-8 px-4 pt-8 sm:min-h-[calc(100svh-4.75rem)] sm:px-6 md:px-8 md:pt-10 lg:min-h-[calc(100svh-6.5rem)] lg:grid-cols-[1fr_1fr] lg:items-end lg:gap-4 lg:pt-0 lg:pb-10 lg:-mt-28">
+          <div className="pb-0 text-center lg:-translate-y-4 lg:text-left">
+            <div className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
               <span className="h-px w-10 bg-[#ffdc00]" />
               Moving with Precision
             </div>
-            <h1 className="mx-auto max-w-[12ch] font-display text-4xl font-extrabold leading-[1] tracking-tight text-white sm:max-w-none sm:text-5xl lg:text-6xl">
+            <h1 className="mx-auto max-w-[12ch] font-display text-4xl font-extrabold leading-[1] tracking-tight text-white sm:max-w-none sm:text-5xl lg:mx-0 lg:text-6xl">
               Seamless Moving
               <br />
               For Your Home
@@ -106,11 +106,11 @@ export default function Home() {
               & Office
               <span className="block text-[#ffdc00]">Boosting Your Comfort</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/[0.68]">
+            <p className="mx-auto mt-6 max-w-2xl text-base leading-[1.6] text-white/[0.68] lg:mx-0 lg:max-w-xl">
               We do more than move boxes. We anchor your transition with white-glove service, transparent planning, and premium execution from Minneapolis to the rest of Minnesota.
             </p>
 
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-center">
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-center lg:justify-start">
               <Link href="/quote" className="cta-sheen inline-flex w-full max-w-sm items-center justify-center gap-2 rounded-md px-7 py-4 font-display text-sm font-extrabold uppercase tracking-[0.18em] text-[#121417] sm:w-auto sm:max-w-none">
                 Book Your Move Now
               </Link>
@@ -128,7 +128,7 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-x-8 gap-y-4 border-t border-white/5 pt-6">
+            <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-x-8 gap-y-4 border-t border-white/5 pt-6 lg:mx-0 lg:max-w-none lg:justify-start">
               {["Licensed & Insured", "Satisfaction Guaranteed", "24/7 Support"].map((item) => (
                 <div key={item} className="flex items-center gap-2 text-[11px] font-display font-bold uppercase tracking-[0.24em] text-white/[0.72]">
                   <Icon name="star" className="h-3.5 w-3.5 text-[#ffdc00]" />
@@ -138,9 +138,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative flex items-end justify-center self-end">
+          <div className="relative flex items-end justify-center self-end lg:-translate-y-[70px] lg:justify-end">
             <div className="absolute left-1/2 top-1/2 h-[94%] w-[94%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffdc00]/10 blur-3xl" />
-            <div className="relative w-full max-w-[52rem]">
+            <div className="relative w-full max-w-[52rem] lg:-mr-12 lg:-mb-0.5">
               <Image
                 src="/hero-pic.png"
                 alt="5 Star Movers team"
@@ -148,7 +148,7 @@ export default function Home() {
                 height={980}
                 preload
                 sizes="(max-width: 1023px) 100vw, 50vw"
-                className="relative z-10 mx-auto h-auto w-full max-w-[38rem] object-contain sm:max-w-[44rem] lg:max-w-none lg:scale-[1.18]"
+                className="relative z-10 mx-auto h-auto w-full max-w-[38rem] object-contain sm:max-w-[44rem] lg:max-w-none lg:translate-y-2 lg:scale-[1.38]"
               />
 
               <div className="ambient-shadow glass-panel absolute -right-12 top-[calc(20%+35px)] z-30 hidden rounded-2xl border border-white/10 px-3 py-3 sm:flex lg:-right-20">
@@ -202,7 +202,7 @@ export default function Home() {
         {/* Top border with gradient */}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#006e63]/60 to-transparent" />
 
-        <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8">
+        <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8 lg:text-left">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Recognition</p>
           <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">
             Award-Winning Moving Services
@@ -210,11 +210,11 @@ export default function Home() {
               You Can Trust
             </span>
           </h2>
-          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.6] text-white/[0.55]">
+          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.6] text-white/[0.55] lg:mx-0">
             We are proud to be recognized across the Twin Cities for consistent service quality, professional crews, and a moving experience people genuinely recommend.
           </p>
 
-          <div className="mt-14 flex flex-wrap items-center justify-center gap-5">
+          <div className="mt-14 flex flex-wrap items-center justify-center gap-5 lg:justify-start">
             {awards.map((award) => (
               <div key={award.name} className="group relative flex h-28 min-w-40 items-center justify-center overflow-hidden rounded-[1.4rem] border border-white/8 bg-white/[0.03] px-6 transition-all duration-300 hover:border-[#006e63]/50 hover:bg-[#006e63]/8">
                 <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(ellipse_at_center,#006e6310_0%,transparent_70%)]" />
@@ -235,9 +235,9 @@ export default function Home() {
 
       <section id="difference" className="grid-dot-pattern relative overflow-hidden bg-[#1a1d21] py-14 md:py-16">
         <div className="mx-auto max-w-7xl px-4 md:px-8">
-          <div className="mb-12 flex flex-col items-center gap-6 text-center">
+          <div className="mb-12 flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
             <div className="max-w-3xl">
-              <p className="mb-3 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
+              <p className="mb-3 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
                 <span className="accent-line h-px w-12" />
                 The Anchor Difference
               </p>
@@ -252,12 +252,12 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {trustCards.map((card) => (
-              <article key={card.number} className="group relative overflow-hidden rounded-[1.35rem] border border-white/[0.08] bg-white/[0.04] p-8 text-center backdrop-blur-sm">
+              <article key={card.number} className="group relative overflow-hidden rounded-[1.35rem] border border-white/[0.08] bg-white/[0.04] p-8 text-center backdrop-blur-sm lg:text-left">
                 <span className="absolute -right-4 -top-6 font-display text-8xl font-black italic text-white/5 transition-colors duration-300 group-hover:text-[#ffdc00]/12">
                   {card.number}
                 </span>
                 <div className="relative z-10">
-                  <div className="mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417]">
+                  <div className="mx-auto mb-7 flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-[#121417] text-[#ffdc00] transition-colors group-hover:bg-[#ffdc00] group-hover:text-[#121417] lg:mx-0">
                     <Icon name="star" className="h-5 w-5" />
                   </div>
                   <h3 className="font-display text-2xl font-extrabold text-white">{card.title}</h3>
@@ -275,7 +275,7 @@ export default function Home() {
           <div className="grid items-stretch lg:grid-cols-2">
 
             {/* Left: Content */}
-            <div className="flex flex-col justify-center py-14 text-center lg:py-16 lg:pr-16">
+            <div className="flex flex-col justify-center py-14 text-center lg:items-center lg:py-16 lg:pr-16 lg:text-center">
               <p className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#0d5c55]">
                 <span className="h-px w-10 bg-[#0d5c55]" />
                 Start Your Journey

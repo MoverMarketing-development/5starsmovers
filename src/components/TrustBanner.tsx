@@ -22,7 +22,7 @@ export default function TrustBanner() {
   return (
     <section className="border-y border-black/6 bg-[#f8f6ef] text-[#143d39]">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-7 sm:px-6 md:px-8 lg:grid-cols-4 lg:gap-10 lg:py-8">
-        <div className="flex items-center justify-center text-center">
+        <div className="flex items-center justify-center text-center lg:justify-start lg:text-left">
           <p className="max-w-[16rem] font-display text-2xl font-extrabold leading-[1.08] tracking-tight">
             Minnesota&apos;s Most
             <br />
@@ -30,8 +30,8 @@ export default function TrustBanner() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center">
-          <div className="flex items-center justify-center gap-2">
+        <div className="flex flex-col items-center justify-center text-center lg:items-start lg:justify-start lg:text-left">
+          <div className="flex items-center justify-center gap-2 lg:justify-start">
             <span className="font-poppins text-3xl font-black leading-none sm:text-[40px]">5.0</span>
             <StarRow />
           </div>
@@ -40,7 +40,7 @@ export default function TrustBanner() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-center justify-center text-center lg:items-start lg:justify-start lg:text-left">
           <Image
             src="/brand/forbes-logo.png"
             alt="Forbes"
@@ -53,7 +53,7 @@ export default function TrustBanner() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center text-center">
+        <div className="flex flex-col items-center justify-center text-center lg:items-start lg:justify-start lg:text-left">
           <Image
             src="/brand/usa-today-logo.png"
             alt="USA Today"
