@@ -37,30 +37,6 @@ const securityHeaders = [
       "interest-cohort=()",   // opt out of Google FLoC
     ].join(", "),
   },
-  // Content-Security-Policy
-  // Notes:
-  //  - Next.js App Router requires 'unsafe-inline' for its hydration scripts.
-  //  - Google Fonts requires fonts.googleapis.com + fonts.gstatic.com.
-  //  - Supabase API + Storage: *.supabase.co
-  //  - img-src 'https:' permits any HTTPS image (cover images from external CDNs).
-  {
-    key: "Content-Security-Policy",
-    value: [
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: blob: https:",
-      "media-src 'self'",
-      "connect-src 'self' https://*.supabase.co wss://*.supabase.co",
-      "frame-src 'none'",
-      "frame-ancestors 'self'",
-      "object-src 'none'",
-      "base-uri 'self'",
-      "form-action 'self'",
-      "upgrade-insecure-requests",
-    ].join("; "),
-  },
 ];
 
 const nextConfig: NextConfig = {

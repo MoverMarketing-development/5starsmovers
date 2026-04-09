@@ -3,10 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
+import dynamic from "next/dynamic";
 import { usePathname } from "next/navigation";
 import { areaGroups, areaPages } from "@/lib/area-pages";
 import { servicePages } from "@/lib/service-pages";
+
+const TrustIndexWidget = dynamic(() => import("@/components/TrustIndexWidget"), {
+  ssr: false,
+});
 
 type IconName =
   | "phone"
@@ -238,14 +242,7 @@ export default function Navbar() {
             Premium Moving Services in Minnesota
           </p>
           <div className="flex min-h-8 items-center justify-center">
-            <Script
-              id="trustindex-widget-loader"
-              src="https://cdn.trustindex.io/loader.js?26de95268d12962a4e96fbdb281"
-              strategy="afterInteractive"
-              async
-              defer
-            />
-            <div className="trustindex-widget mx-auto" />
+            <TrustIndexWidget />
           </div>
           <a
             href="tel:6514619202"
