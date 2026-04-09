@@ -33,7 +33,7 @@ export default async function BlogPage() {
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.35em] text-[#ffd700]">
             5 Star Movers — Resources
           </p>
-          <h1 className="font-display text-5xl font-extrabold leading-tight text-white md:text-6xl lg:text-7xl">
+          <h1 className="font-display text-3xl font-extrabold leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
             Moving Tips &{" "}
             <span className="text-[#ffd700]">Neighborhood</span>
             <br />
@@ -76,7 +76,7 @@ export default async function BlogPage() {
               </div>
 
               {/* Content */}
-              <div className="flex flex-col justify-center p-8 lg:p-10">
+              <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-10">
                 <div className="mb-4 flex flex-wrap gap-2">
                   {featured.tags.slice(0, 2).map((tag) => (
                     <span

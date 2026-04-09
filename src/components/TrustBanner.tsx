@@ -32,7 +32,7 @@ export default function TrustBanner() {
 
         <div className="flex flex-col items-center justify-center text-center">
           <div className="flex items-center justify-center gap-2">
-            <span className="font-poppins text-[40px] font-black leading-none">5.0</span>
+            <span className="font-poppins text-3xl font-black leading-none sm:text-[40px]">5.0</span>
             <StarRow />
           </div>
           <p className="mt-2 text-sm font-semibold text-[#143d39]/78">

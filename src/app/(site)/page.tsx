@@ -85,8 +85,6 @@ function Icon({ name, className }: { name: IconName; className?: string }) {
     case "truck":
       return <svg {...shared}><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7z" /><path d="M7 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" /></svg>;
   }
-
-  return null;
 }
 
 export default function Home() {
@@ -94,7 +92,7 @@ export default function Home() {
     <main className="bg-background text-white">
       <LocalBusinessJsonLd />
       <section id="home" className="relative overflow-hidden">
-        <div className="mx-auto grid min-h-[820px] max-w-7xl items-end gap-6 px-4 pb-12 md:px-8 lg:grid-cols-[1fr_1fr] lg:gap-4">
+        <div className="mx-auto grid min-h-[600px] max-w-7xl items-end gap-6 px-4 pb-12 md:px-8 sm:min-h-[820px] lg:grid-cols-[1fr_1fr] lg:gap-4">
           <div className="pt-0 pb-0">
             <div className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">
               <span className="h-px w-10 bg-[#ffdc00]" />
@@ -147,7 +145,7 @@ export default function Home() {
                 className="relative z-10 h-auto w-full scale-[1.18] object-contain lg:scale-[1.32]"
               />
 
-              <div className="ambient-shadow glass-panel absolute -right-12 top-[calc(20%+35px)] z-30 rounded-2xl border border-white/10 px-3 py-3 lg:-right-20">
+              <div className="ambient-shadow glass-panel absolute -right-12 top-[calc(20%+35px)] z-30 hidden rounded-2xl border border-white/10 px-3 py-3 sm:flex lg:-right-20">
                 <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Our Reviews</p>
                 <div className="mt-2 flex items-center gap-2">
                   <div className="flex -space-x-2">
@@ -161,7 +159,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="ambient-shadow glass-panel absolute -left-14 top-[56%] z-30 flex items-center gap-3 rounded-2xl border border-white/10 px-3 py-3 lg:-left-20">
+              <div className="ambient-shadow glass-panel absolute -left-14 top-[56%] z-30 hidden items-center gap-3 rounded-2xl border border-white/10 px-3 py-3 sm:flex lg:-left-20">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ffdc00] text-[#121417]">
                   <Icon name="truck" className="h-4 w-4" />
                 </div>
@@ -171,7 +169,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="ambient-shadow glass-panel absolute left-[calc(34%+40px)] top-[calc(82%+20px)] z-30 flex items-center gap-3 rounded-2xl border border-white/10 px-3 py-3 lg:left-[calc(30%+40px)]">
+              <div className="ambient-shadow glass-panel absolute left-[calc(34%+40px)] top-[calc(82%+20px)] z-30 hidden items-center gap-3 rounded-2xl border border-white/10 px-3 py-3 sm:flex lg:left-[calc(30%+40px)]">
                 <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#ffdc00] text-[#121417]">
                   <Icon name="shield" className="h-4 w-4" />
                 </div>
@@ -189,17 +187,31 @@ export default function Home() {
 
       <ServiceGridSection />
 
-      <section id="awards" className="border-t border-white/5 bg-[#121417] py-24">
-        <div className="mx-auto max-w-6xl px-4 text-center md:px-8">
+      <section id="awards" className="relative overflow-hidden py-24">
+        {/* Background: dark base + green radial glow center + gold top-right accent */}
+        <div className="absolute inset-0 bg-[#0d1210]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_0%,#0d5c5520_0%,transparent_70%)]" />
+        <div className="absolute -right-32 -top-32 h-96 w-96 rounded-full bg-[#ffdc00]/6 blur-3xl" />
+        <div className="absolute -left-32 bottom-0 h-64 w-64 rounded-full bg-[#006e63]/15 blur-3xl" />
+        {/* Top border with gradient */}
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#006e63]/60 to-transparent" />
+
+        <div className="relative mx-auto max-w-6xl px-4 text-center md:px-8">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Recognition</p>
-          <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">Award-Winning Moving Services You Can Trust</h2>
-          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.5] text-white/[0.62]">
+          <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">
+            Award-Winning Moving Services
+            <span className="block bg-gradient-to-r from-[#006e63] via-[#00a896] to-[#006e63] bg-clip-text text-transparent">
+              You Can Trust
+            </span>
+          </h2>
+          <p className="mx-auto mt-6 max-w-4xl text-base leading-[1.5] text-white/[0.55]">
             We are proud to be recognized across the Twin Cities for consistent service quality, professional crews, and a moving experience people genuinely recommend.
           </p>
 
           <div className="mt-14 flex flex-wrap items-center justify-center gap-5">
             {awards.map((award) => (
-              <div key={award.name} className="glass-panel flex h-28 min-w-40 items-center justify-center rounded-[1.4rem] border border-white/10 px-6">
+              <div key={award.name} className="group relative flex h-28 min-w-40 items-center justify-center overflow-hidden rounded-[1.4rem] border border-white/8 bg-white/[0.03] px-6 transition-all duration-300 hover:border-[#006e63]/50 hover:bg-[#006e63]/8">
+                <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 bg-[radial-gradient(ellipse_at_center,#006e6310_0%,transparent_70%)]" />
                 <div className="relative h-20 w-full">
                   <Image
                     src={award.src}
@@ -252,39 +264,88 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="quote" className="relative overflow-hidden bg-[#121417] pt-14">
-        <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4 md:px-8 lg:flex-row lg:items-stretch">
-          <div className="flex flex-1 flex-col justify-center pt-5 pb-14 text-center lg:pt-6 lg:pb-18 lg:text-left">
-            <p className="mb-4 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00] lg:justify-start">
-              <span className="h-px w-10 bg-[#ffdc00]" />
-              Start Your Journey
-            </p>
-            <h2 className="font-display text-4xl font-extrabold leading-[1] text-white md:text-5xl lg:text-6xl">
-              Ready to Move?
-              <br />
-              Contact the Best
-              <span className="block text-[#ffdc00]">Local Movers in the Twin Cities!</span>
-            </h2>
-            <Link href="/quote" className="cta-sheen mt-8 inline-flex w-fit rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417]">
-              Get Free Moving Quote
-            </Link>
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm text-white/[0.58] lg:justify-start">
-              <span>Fast response within 2 hours</span>
-              <span className="h-1.5 w-1.5 rounded-full bg-[#ffdc00]" />
-              <span>No obligation quote</span>
-            </div>
-          </div>
+      <section id="quote" className="relative overflow-hidden bg-[#f8f6ef]">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
+          <div className="grid items-stretch lg:grid-cols-2">
 
-          <div className="relative flex flex-1 items-end self-stretch lg:-mr-6">
-            <div className="absolute bottom-0 left-0 h-40 w-full bg-gradient-to-t from-[#121417] to-transparent" />
-            <Image
-              src="/hero-pic.png"
-              alt="Professional moving crew"
-              width={1120}
-              height={980}
-              sizes="(max-width: 1023px) 100vw, 50vw"
-              className="mx-auto mt-auto block h-auto max-w-full translate-y-1 scale-[1.08] object-contain lg:scale-[1.14]"
-            />
+            {/* Left: Content */}
+            <div className="flex flex-col justify-center py-16 lg:py-24 lg:pr-16">
+              <p className="mb-5 flex items-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#0d5c55]">
+                <span className="h-px w-10 bg-[#0d5c55]" />
+                Start Your Journey
+              </p>
+              <h2 className="font-display text-4xl font-extrabold leading-[1.05] text-[#143d39] md:text-5xl lg:text-[3.5rem]">
+                Ready to Move?
+                <span className="mt-1 block text-[#ffdc00] [text-shadow:0_2px_0_#c9a800]">
+                  Twin Cities&apos; Best.
+                </span>
+              </h2>
+              <p className="mt-5 max-w-sm text-base leading-relaxed text-[#143d39]/60">
+                Local crews, upfront pricing, and 5-star service — from your first call to the last box.
+              </p>
+
+              {/* Stats */}
+              <div className="mt-8 flex flex-wrap items-center gap-4 sm:gap-6">
+                <div>
+                  <p className="font-display text-2xl font-black text-[#143d39] sm:text-3xl">2,500+</p>
+                  <p className="mt-0.5 text-xs font-semibold text-[#143d39]/50">5-Star Reviews</p>
+                </div>
+                <div className="h-10 w-px bg-[#143d39]/15" />
+                <div>
+                  <p className="font-display text-2xl font-black text-[#143d39] sm:text-3xl">10+</p>
+                  <p className="mt-0.5 text-xs font-semibold text-[#143d39]/50">Years in Business</p>
+                </div>
+                <div className="h-10 w-px bg-[#143d39]/15" />
+                <div>
+                  <p className="font-display text-2xl font-black text-[#143d39] sm:text-3xl">&lt; 2h</p>
+                  <p className="mt-0.5 text-xs font-semibold text-[#143d39]/50">Response Time</p>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="mt-9 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/quote"
+                  className="cta-sheen inline-flex rounded-full px-8 py-4 font-display text-sm font-extrabold uppercase tracking-[0.2em] text-[#121417]"
+                >
+                  Get Free Moving Quote
+                </Link>
+                <div className="flex items-center gap-2 text-xs text-[#143d39]/50">
+                  <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                  No obligation
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Image */}
+            <div className="relative hidden min-h-[480px] overflow-hidden lg:block">
+              <Image
+                src="/about-us/men-doing-commercial.jpeg"
+                alt="5 Star Movers professional crew"
+                fill
+                sizes="50vw"
+                className="object-cover object-center"
+              />
+              {/* Left fade into cream */}
+              <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#f8f6ef] to-transparent" />
+              {/* Subtle overlay */}
+              <div className="absolute inset-0 bg-[#143d39]/10" />
+              {/* Badge */}
+              <div className="absolute bottom-8 left-8 flex items-center gap-3 rounded-2xl bg-white/90 px-5 py-4 shadow-lg backdrop-blur-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[#ffdc00]">
+                  <svg className="h-5 w-5 text-[#121417]" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="m12 2.8 2.83 5.73 6.32.92-4.57 4.45 1.08 6.29L12 17.19l-5.66 2.98 1.08-6.29-4.57-4.45 6.32-.92L12 2.8Z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-sm font-extrabold text-[#143d39]">5.0 / 5.0</p>
+                  <p className="text-xs text-[#143d39]/55">Google Reviews</p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

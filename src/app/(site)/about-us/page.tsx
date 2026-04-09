@@ -41,7 +41,7 @@ export default function AboutUsPage() {
               <span className="h-px w-12 bg-[#ffdc00]" />
               ABOUT US
             </p>
-            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1] text-white md:text-6xl">
+            <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1] text-white sm:text-5xl md:text-6xl">
               About 5-Star Movers:
               <span className="block text-[#ffdc00]">Your Trusted Moving Experts</span>
             </h1>
