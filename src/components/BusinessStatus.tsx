@@ -16,12 +16,12 @@ function getBusinessOpenState(now: Date) {
   const minute = Number(parts.find((part) => part.type === "minute")?.value ?? "0");
   const minutesIntoDay = hour * 60 + minute;
 
-  if (["Mon", "Tue", "Wed", "Thu", "Fri"].includes(weekday)) {
-    return minutesIntoDay >= 8 * 60 && minutesIntoDay < 18 * 60;
+  if (["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].includes(weekday)) {
+    return minutesIntoDay >= 8 * 60 && minutesIntoDay < 18 * 60 + 30;
   }
 
-  if (weekday === "Sat") {
-    return minutesIntoDay >= 8 * 60 && minutesIntoDay < 12 * 60;
+  if (weekday === "Sun") {
+    return minutesIntoDay >= 9 * 60 && minutesIntoDay < 17 * 60;
   }
 
   return false;
@@ -47,7 +47,7 @@ export default function BusinessStatus() {
           isOpen ? "animate-pulse bg-emerald-400" : "bg-red-400",
         ].join(" ")}
       />
-      <span className={`text-sm font-semibold ${isOpen ? "text-emerald-300" : "text-red-300"}`}>
+      <span className={`text-sm font-extrabold uppercase tracking-[0.12em] ${isOpen ? "text-white" : "text-red-200"}`}>
         {isOpen ? "Open Now" : "Closed Now"}
       </span>
     </div>

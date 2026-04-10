@@ -5,260 +5,88 @@
 ▲ Next.js 16.2.2 (Turbopack)
 - Local:         http://localhost:3000
 - Network:       http://192.168.1.78:3000
-✓ Ready in 442ms
+✓ Ready in 687ms
 Creating turbopack project {
   dir: 'C:\\Users\\pablo\\OneDrive\\Documentos\\GitHub\\5starsmovers',
   testMode: true
 }
 
- GET / 200 in 542ms (next.js: 176ms, application-code: 366ms)
-✓ Compiled in 430ms
-✓ Compiled in 157ms
- GET / 200 in 706ms (next.js: 157ms, application-code: 549ms)
- GET / 200 in 517ms (next.js: 17ms, application-code: 500ms)
- GET / 200 in 407ms (next.js: 9ms, application-code: 398ms)
- GET / 200 in 408ms (next.js: 85ms, application-code: 323ms)
- GET / 200 in 408ms (next.js: 154ms, application-code: 254ms)
- GET / 200 in 393ms (next.js: 4ms, application-code: 389ms)
- GET / 200 in 301ms (next.js: 5ms, application-code: 296ms)
- GET / 200 in 223ms (next.js: 8ms, application-code: 216ms)
- GET / 200 in 158ms (next.js: 7ms, application-code: 151ms)
- GET / 200 in 157ms (next.js: 70ms, application-code: 87ms)
-✓ Compiled in 165ms
- GET / 200 in 465ms (next.js: 68ms, application-code: 397ms)
- GET / 200 in 82ms (next.js: 8ms, application-code: 74ms)
- GET / 200 in 498ms (next.js: 155ms, application-code: 343ms)
- GET / 200 in 132ms (next.js: 61ms, application-code: 71ms)
-✓ Compiled in 93ms
- GET / 200 in 595ms (next.js: 66ms, application-code: 529ms)
- GET /services/residential-moving 200 in 1188ms (next.js: 1119ms, generate-params: 419ms, application-code: 68ms)
- GET /quote 200 in 77ms (next.js: 49ms, application-code: 28ms)
- GET /services/residential-moving 200 in 61ms (next.js: 9ms, generate-params: 6ms, application-code: 52ms)
-✓ Compiled in 137ms
-✓ Compiled in 68ms
-✓ Compiled in 129ms
-✓ Compiled in 115ms
-✓ Compiled in 114ms
-✓ Compiled in 115ms
-✓ Compiled in 122ms
-✓ Compiled in 112ms
-✓ Compiled in 116ms
-✓ Compiled in 118ms
-✓ Compiled in 106ms
-✓ Compiled in 106ms
-✓ Compiled in 68ms
- GET / 200 in 134ms (next.js: 54ms, application-code: 81ms)
-✓ Compiled in 140ms
- GET / 200 in 368ms (next.js: 59ms, application-code: 309ms)
- GET / 200 in 241ms (next.js: 4ms, application-code: 237ms)
- GET / 200 in 145ms (next.js: 4ms, application-code: 140ms)
- GET / 200 in 146ms (next.js: 60ms, application-code: 86ms)
-✓ Compiled in 68ms
- GET / 200 in 73ms (next.js: 64ms, application-code: 9ms)
- GET / 200 in 55ms (next.js: 3ms, application-code: 52ms)
- GET / 200 in 63ms (next.js: 3ms, application-code: 60ms)
- GET /services/long-distance-moving 200 in 97ms (next.js: 47ms, generate-params: 6ms, application-code: 50ms)
- GET /services/residential-moving 200 in 46ms (next.js: 9ms, generate-params: 5ms, application-code: 38ms)
- GET /services/specialty-moving 200 in 58ms (next.js: 12ms, generate-params: 8ms, application-code: 46ms)
- GET /services/senior-moving 200 in 57ms (next.js: 11ms, generate-params: 7ms, application-code: 46ms)
- GET /services/residential-moving 200 in 57ms (next.js: 8ms, generate-params: 5ms, application-code: 49ms)
-✓ Compiled in 72ms
- GET /services/storage 200 in 130ms (next.js: 70ms, generate-params: 9ms, application-code: 60ms)
- GET /services/apartment-moving 200 in 61ms (next.js: 11ms, generate-params: 7ms, application-code: 50ms)
- GET /services/residential-moving 200 in 57ms (next.js: 13ms, generate-params: 9ms, application-code: 44ms)
- GET / 200 in 100ms (next.js: 39ms, application-code: 62ms)
- GET /services/packing-services 200 in 50ms (next.js: 9ms, generate-params: 5ms, application-code: 41ms)
- GET / 200 in 89ms (next.js: 3ms, application-code: 86ms)
- GET /services/storage 200 in 51ms (next.js: 12ms, generate-params: 8ms, application-code: 39ms)
- GET /services/storage 200 in 20ms (next.js: 10ms, generate-params: 7ms, application-code: 10ms)
- GET /services/storage 200 in 52ms (next.js: 4ms, generate-params: 43µs, application-code: 49ms)
- GET /services/specialty-moving 200 in 55ms (next.js: 11ms, generate-params: 8ms, application-code: 43ms)
- GET /services/moving-supplies 200 in 74ms (next.js: 10ms, generate-params: 7ms, application-code: 64ms)
- GET /quote 200 in 86ms (next.js: 51ms, application-code: 35ms)
- GET /services/long-distance-moving 200 in 68ms (next.js: 12ms, generate-params: 7ms, application-code: 56ms)
- GET /services/storage 200 in 61ms (next.js: 10ms, generate-params: 7ms, application-code: 51ms)
- GET /services/storage 200 in 139ms (next.js: 74ms, generate-params: 8ms, application-code: 64ms)
- GET /services/senior-moving 200 in 64ms (next.js: 13ms, generate-params: 9ms, application-code: 51ms)
- GET /services/senior-moving 200 in 227ms (next.js: 73ms, generate-params: 9ms, application-code: 154ms)
- GET /services/senior-moving 200 in 87ms (next.js: 5ms, generate-params: 47µs, application-code: 82ms)
-✓ Compiled in 229ms
- GET /services/senior-moving 200 in 332ms (next.js: 82ms, generate-params: 6ms, application-code: 250ms)
- GET /services/senior-moving 200 in 191ms (next.js: 5ms, generate-params: 39µs, application-code: 185ms)
- GET /services/senior-moving 200 in 122ms (next.js: 55ms, generate-params: 36µs, application-code: 67ms)
- GET /services/senior-moving 200 in 125ms (next.js: 6ms, generate-params: 27µs, application-code: 119ms)
- GET /services/senior-moving 200 in 231ms (next.js: 77ms, generate-params: 11ms, application-code: 154ms)
- GET /services/senior-moving 200 in 86ms (next.js: 6ms, generate-params: 81µs, application-code: 80ms)
- GET /services/residential-moving 200 in 57ms (next.js: 11ms, generate-params: 8ms, application-code: 46ms)
- GET /services/storage 200 in 45ms (next.js: 9ms, generate-params: 7ms, application-code: 36ms)
- GET /services/residential-moving 200 in 62ms (next.js: 13ms, generate-params: 9ms, application-code: 50ms)
- GET /services/long-distance-moving 200 in 56ms (next.js: 11ms, generate-params: 8ms, application-code: 44ms)
- GET /services/long-distance-moving 200 in 163ms (next.js: 79ms, generate-params: 8ms, application-code: 84ms)
- GET /services/long-distance-moving 200 in 403ms (next.js: 14ms, generate-params: 9ms, application-code: 390ms)
- GET /services/long-distance-moving 200 in 240ms (next.js: 139ms, generate-params: 9ms, application-code: 101ms)
- GET /services/senior-moving 200 in 63ms (next.js: 11ms, generate-params: 7ms, application-code: 53ms)
- GET / 200 in 191ms (next.js: 101ms, application-code: 89ms)
- GET /services/residential-moving 200 in 60ms (next.js: 10ms, generate-params: 7ms, application-code: 49ms)
- GET / 200 in 76ms (next.js: 3ms, application-code: 73ms)
- GET / 200 in 79ms (next.js: 3ms, application-code: 76ms)
- GET / 200 in 79ms (next.js: 4ms, application-code: 75ms)
- GET /quote 200 in 138ms (next.js: 95ms, application-code: 43ms)
-✓ Compiled in 85ms
- GET /services/residential-moving 200 in 63ms (next.js: 12ms, generate-params: 8ms, application-code: 51ms)
- GET / 200 in 96ms (next.js: 5ms, application-code: 91ms)
- GET /services/residential-moving 200 in 53ms (next.js: 9ms, generate-params: 6ms, application-code: 43ms)
- GET /quote 200 in 141ms (next.js: 97ms, application-code: 45ms)
- GET / 200 in 69ms (next.js: 3ms, application-code: 66ms)
- GET /services/senior-moving 200 in 73ms (next.js: 11ms, generate-params: 8ms, application-code: 62ms)
- GET / 200 in 71ms (next.js: 4ms, application-code: 67ms)
- GET /services/storage 200 in 64ms (next.js: 11ms, generate-params: 7ms, application-code: 53ms)
-✓ Compiled in 361ms
- GET /services/storage 200 in 588ms (next.js: 117ms, generate-params: 88µs, application-code: 471ms)
- GET /services/storage 200 in 1282ms (next.js: 193ms, generate-params: 8ms, application-code: 1088ms)
- GET /services/storage 200 in 69ms (next.js: 6ms, generate-params: 32µs, application-code: 64ms)
- GET /services/storage 200 in 164ms (next.js: 17ms, generate-params: 52µs, application-code: 147ms)
- GET /services/storage 200 in 894ms (next.js: 535ms, generate-params: 36µs, application-code: 358ms)
- GET /services/storage 200 in 327ms (next.js: 13ms, generate-params: 9ms, application-code: 313ms)
-✓ Compiled in 69ms
-✓ Compiled in 64ms
- GET / 200 in 163ms (next.js: 80ms, application-code: 83ms)
- GET /services/residential-moving 200 in 164ms (next.js: 103ms, generate-params: 10ms, application-code: 61ms)
- GET /services/senior-moving 200 in 67ms (next.js: 11ms, generate-params: 8ms, application-code: 56ms)
- GET /services/senior-moving 200 in 307ms (next.js: 100ms, generate-params: 6ms, application-code: 207ms)
- GET /services/senior-moving 200 in 111ms (next.js: 6ms, generate-params: 47µs, application-code: 105ms)
- GET / 200 in 78ms (next.js: 16ms, application-code: 62ms)
- GET /services/residential-moving 200 in 55ms (next.js: 11ms, generate-params: 7ms, application-code: 44ms)
- GET /services/residential-moving 200 in 185ms (next.js: 103ms, generate-params: 7ms, application-code: 82ms)
- GET /services/residential-moving 200 in 181ms (next.js: 107ms, generate-params: 6ms, application-code: 74ms)
- GET /quote?fromAddress=5&toAddress=666 200 in 284ms (next.js: 80ms, application-code: 203ms)
- GET / 200 in 77ms (next.js: 4ms, application-code: 74ms)
- GET /services/packing-services 200 in 55ms (next.js: 10ms, generate-params: 7ms, application-code: 45ms)
-✓ Compiled in 115ms
- GET /services/senior-moving 200 in 186ms (next.js: 108ms, generate-params: 7ms, application-code: 78ms)
-✓ Compiled in 122ms
- GET / 200 in 712ms (next.js: 113ms, application-code: 599ms)
-✓ Compiled in 115ms
- GET /quote 200 in 150ms (next.js: 104ms, application-code: 47ms)
-✓ Compiled in 124ms
-✓ Compiled in 120ms
- GET / 200 in 64ms (next.js: 3ms, application-code: 61ms)
-✓ Compiled in 67ms
-✓ Compiled in 66ms
-✓ Compiled in 88ms
-✓ Compiled in 70ms
-✓ Compiled in 74ms
-✓ Compiled in 72ms
- GET / 200 in 375ms (next.js: 84ms, application-code: 291ms)
- GET /quote 200 in 94ms (next.js: 63ms, application-code: 31ms)
-✓ Compiled in 76ms
-✓ Compiled in 186ms
- GET /quote 200 in 279ms (next.js: 90ms, application-code: 190ms)
- GET /quote 200 in 83ms (next.js: 4ms, application-code: 80ms)
- GET /quote 200 in 18ms (next.js: 4ms, application-code: 14ms)
- GET /quote 200 in 27ms (next.js: 3ms, application-code: 24ms)
- GET / 200 in 57ms (next.js: 3ms, application-code: 54ms)
-✓ Compiled in 418ms
- GET / 200 in 1061ms (next.js: 318ms, application-code: 743ms)
- GET / 200 in 738ms (next.js: 4ms, application-code: 734ms)
- GET / 200 in 738ms (next.js: 8ms, application-code: 730ms)
- GET / 200 in 738ms (next.js: 123ms, application-code: 614ms)
- GET / 200 in 739ms (next.js: 210ms, application-code: 529ms)
- GET / 200 in 656ms (next.js: 8ms, application-code: 648ms)
- GET / 200 in 554ms (next.js: 5ms, application-code: 548ms)
- GET / 200 in 517ms (next.js: 6ms, application-code: 511ms)
- GET / 200 in 419ms (next.js: 85ms, application-code: 335ms)
- GET / 200 in 490ms (next.js: 5ms, application-code: 485ms)
- GET / 200 in 341ms (next.js: 10ms, application-code: 332ms)
- GET / 200 in 346ms (next.js: 6ms, application-code: 340ms)
- GET / 200 in 259ms (next.js: 5ms, application-code: 254ms)
- GET / 200 in 181ms (next.js: 4ms, application-code: 177ms)
- GET / 200 in 106ms (next.js: 5ms, application-code: 101ms)
- GET / 200 in 262ms (next.js: 3ms, application-code: 259ms)
- GET /quote 200 in 172ms (next.js: 127ms, application-code: 45ms)
- GET / 200 in 74ms (next.js: 4ms, application-code: 70ms)
- GET /services/packing-services 200 in 223ms (next.js: 145ms, generate-params: 9ms, application-code: 78ms)
- GET / 200 in 86ms (next.js: 3ms, application-code: 82ms)
- GET /services/senior-moving 200 in 58ms (next.js: 11ms, generate-params: 8ms, application-code: 47ms)
- GET / 200 in 101ms (next.js: 4ms, application-code: 97ms)
-✓ Compiled in 128ms
- GET / 200 in 441ms (next.js: 132ms, application-code: 309ms)
- GET / 200 in 174ms (next.js: 4ms, application-code: 170ms)
+ GET / 200 in 1186ms (next.js: 217ms, application-code: 970ms)
+ GET /api/seo/header-html?path=%2F 200 in 137ms (next.js: 115ms, application-code: 22ms)
+ GET /quote 200 in 90ms (next.js: 57ms, application-code: 33ms)
+ GET /api/seo/header-html?path=%2Fquote 200 in 22ms (next.js: 5ms, application-code: 17ms)
+ GET / 200 in 64ms (next.js: 4ms, application-code: 61ms)
+ GET /api/seo/header-html?path=%2F 200 in 17ms (next.js: 3ms, application-code: 14ms)
+✓ Compiled in 818ms
+ GET / 500 in 327ms (next.js: 175ms, application-code: 153ms)
+ GET / 500 in 35ms (next.js: 12ms, application-code: 23ms)
+ GET / 500 in 29ms (next.js: 14ms, application-code: 15ms)
+ GET / 500 in 37ms (next.js: 20ms, application-code: 17ms)
+ GET / 200 in 2.9s (next.js: 192ms, application-code: 2.7s)
+ GET / 200 in 319ms (next.js: 77ms, application-code: 242ms)
+ GET /api/seo/header-html?path=%2F 200 in 85ms (next.js: 71ms, application-code: 13ms)
+ GET / 200 in 215ms (next.js: 110ms, application-code: 105ms)
+ GET / 200 in 244ms (next.js: 130ms, application-code: 114ms)
+ GET / 200 in 239ms (next.js: 118ms, application-code: 120ms)
+ GET / 200 in 732ms (next.js: 3ms, application-code: 729ms)
+ GET / 200 in 301ms (next.js: 147ms, application-code: 154ms)
+ GET / 200 in 231ms (next.js: 109ms, application-code: 122ms)
+ GET /areas 200 in 219ms (next.js: 61ms, application-code: 158ms)
+ GET /api/seo/header-html?path=%2Fareas 200 in 29ms (next.js: 5ms, application-code: 24ms)
+ GET / 200 in 113ms (next.js: 4ms, application-code: 110ms)
+ GET /api/seo/header-html?path=%2F 200 in 13ms (next.js: 5ms, application-code: 8ms)
+✓ Compiled in 209ms
+ GET / 200 in 681ms (next.js: 117ms, application-code: 564ms)
+ GET / 200 in 444ms (next.js: 4ms, application-code: 440ms)
+ GET / 200 in 331ms (next.js: 5ms, application-code: 326ms)
+ GET / 200 in 332ms (next.js: 66ms, application-code: 265ms)
+ GET / 200 in 332ms (next.js: 141ms, application-code: 191ms)
+ GET / 200 in 117ms (next.js: 3ms, application-code: 113ms)
+ GET / 200 in 306ms (next.js: 111ms, application-code: 195ms)
  GET / 200 in 88ms (next.js: 4ms, application-code: 84ms)
-✓ Compiled in 146ms
-✓ Compiled in 180ms
- GET / 200 in 656ms (next.js: 178ms, application-code: 478ms)
- GET / 200 in 314ms (next.js: 10ms, application-code: 303ms)
- GET / 200 in 171ms (next.js: 5ms, application-code: 166ms)
- GET / 200 in 172ms (next.js: 76ms, application-code: 95ms)
- GET /services/senior-moving 200 in 75ms (next.js: 34ms, generate-params: 7ms, application-code: 41ms)
- GET / 200 in 69ms (next.js: 5ms, application-code: 63ms)
- GET / 500 in 520ms (next.js: 266ms, application-code: 254ms)
- GET / 500 in 31ms (next.js: 11ms, application-code: 19ms)
- GET / 500 in 40ms (next.js: 26ms, application-code: 13ms)
- GET / 500 in 29ms (next.js: 11ms, application-code: 18ms)
- GET / 200 in 1094ms (next.js: 140ms, application-code: 954ms)
-✓ Compiled in 147ms
- GET / 200 in 520ms (next.js: 123ms, application-code: 397ms)
- GET / 200 in 271ms (next.js: 5ms, application-code: 266ms)
- GET / 200 in 179ms (next.js: 6ms, application-code: 174ms)
- GET / 200 in 179ms (next.js: 85ms, application-code: 94ms)
- GET / 200 in 249ms (next.js: 131ms, application-code: 118ms)
-✓ Compiled in 130ms
-✓ Compiled in 149ms
- GET / 200 in 777ms (next.js: 202ms, application-code: 575ms)
- GET / 200 in 472ms (next.js: 5ms, application-code: 467ms)
- GET / 200 in 448ms (next.js: 5ms, application-code: 443ms)
- GET / 200 in 453ms (next.js: 83ms, application-code: 371ms)
- GET / 200 in 454ms (next.js: 149ms, application-code: 304ms)
- GET / 200 in 408ms (next.js: 5ms, application-code: 403ms)
- GET / 200 in 386ms (next.js: 11ms, application-code: 375ms)
- GET / 200 in 323ms (next.js: 4ms, application-code: 319ms)
- GET / 200 in 397ms (next.js: 3ms, application-code: 394ms)
- GET / 200 in 347ms (next.js: 4ms, application-code: 343ms)
- GET / 200 in 349ms (next.js: 56ms, application-code: 293ms)
- GET / 200 in 457ms (next.js: 3ms, application-code: 454ms)
- GET / 200 in 401ms (next.js: 5ms, application-code: 397ms)
- GET / 200 in 336ms (next.js: 4ms, application-code: 331ms)
- GET / 200 in 250ms (next.js: 3ms, application-code: 247ms)
- GET / 200 in 250ms (next.js: 81ms, application-code: 169ms)
- GET / 200 in 173ms (next.js: 93ms, application-code: 81ms)
- GET / 200 in 615ms (next.js: 127ms, application-code: 488ms)
- GET / 200 in 378ms (next.js: 4ms, application-code: 374ms)
- GET / 200 in 381ms (next.js: 5ms, application-code: 376ms)
- GET / 200 in 381ms (next.js: 142ms, application-code: 239ms)
- GET / 200 in 383ms (next.js: 73ms, application-code: 309ms)
- GET / 200 in 383ms (next.js: 212ms, application-code: 170ms)
- GET / 200 in 80ms (next.js: 5ms, application-code: 75ms)
+ GET / 200 in 353ms (next.js: 120ms, application-code: 233ms)
+ GET / 200 in 119ms (next.js: 4ms, application-code: 115ms)
+✓ Compiled in 93ms
+ GET / 200 in 629ms (next.js: 107ms, application-code: 522ms)
+ GET / 200 in 404ms (next.js: 3ms, application-code: 400ms)
+ GET / 200 in 375ms (next.js: 141ms, application-code: 233ms)
+ GET / 200 in 379ms (next.js: 77ms, application-code: 301ms)
+ GET / 200 in 381ms (next.js: 9ms, application-code: 372ms)
+ GET / 200 in 379ms (next.js: 208ms, application-code: 171ms)
+✓ Compiled in 197ms
+✓ Compiled in 152ms
+ GET / 200 in 627ms (next.js: 112ms, application-code: 516ms)
+ GET / 200 in 394ms (next.js: 3ms, application-code: 391ms)
+ GET / 200 in 311ms (next.js: 6ms, application-code: 305ms)
+ GET / 200 in 312ms (next.js: 134ms, application-code: 178ms)
+ GET / 200 in 314ms (next.js: 80ms, application-code: 234ms)
+ GET / 200 in 118ms (next.js: 3ms, application-code: 115ms)
+ GET / 200 in 871ms (next.js: 3ms, application-code: 868ms)
+✓ Compiled in 75ms
+ GET / 200 in 462ms (next.js: 135ms, application-code: 326ms)
+ GET /areas/minneapolis 200 in 591ms (next.js: 496ms, generate-params: 429ms, application-code: 95ms)
+ GET /api/seo/header-html?path=%2Fareas%2Fminneapolis 200 in 153ms (next.js: 129ms, application-code: 25ms)
+ GET /services/junk-removal 200 in 579ms (next.js: 480ms, generate-params: 423ms, application-code: 98ms)
+ GET /api/seo/header-html?path=%2Fservices%2Fjunk-removal 200 in 14ms (next.js: 4ms, application-code: 10ms)
+✓ Compiled in 191ms
+✓ Compiled in 176ms
+ GET / 200 in 601ms (next.js: 177ms, application-code: 425ms)
+ GET / 200 in 91ms (next.js: 4ms, application-code: 87ms)
+ GET /api/seo/header-html?path=%2F 200 in 11ms (next.js: 4ms, application-code: 7ms)
+✓ Compiled in 199ms
+✓ Compiled in 233ms
+ GET / 200 in 622ms (next.js: 187ms, application-code: 435ms)
+✓ Compiled in 231ms
+✓ Compiled in 199ms
+✓ Compiled in 185ms
 ✓ Compiled in 76ms
-✓ Compiled in 134ms
- GET / 200 in 1289ms (next.js: 128ms, application-code: 1162ms)
- GET / 200 in 225ms (next.js: 113ms, application-code: 112ms)
- GET / 200 in 1523ms (next.js: 1218ms, application-code: 306ms)
- GET / 200 in 56ms (next.js: 4ms, application-code: 52ms)
- GET / 200 in 244ms (next.js: 4ms, application-code: 240ms)
-✓ Compiled in 102ms
- GET / 200 in 239ms (next.js: 130ms, application-code: 109ms)
- GET /areas/apple-valley 200 in 1375ms (next.js: 1288ms, generate-params: 436ms, application-code: 87ms)
- GET /areas/minneapolis 200 in 84ms (next.js: 11ms, generate-params: 7ms, application-code: 74ms)
- GET / 200 in 93ms (next.js: 4ms, application-code: 89ms)
- GET /areas/plymouth 200 in 98ms (next.js: 12ms, generate-params: 8ms, application-code: 86ms)
- GET /services/residential-moving 200 in 245ms (next.js: 146ms, generate-params: 8ms, application-code: 99ms)
- GET /areas/st-paul 200 in 105ms (next.js: 11ms, generate-params: 7ms, application-code: 94ms)
- GET /areas/bloomington 200 in 101ms (next.js: 9ms, generate-params: 6ms, application-code: 92ms)
- GET /areas/maple-grove 200 in 91ms (next.js: 10ms, generate-params: 7ms, application-code: 81ms)
-✓ Compiled in 111ms
- GET /areas/maple-grove 404 in 845ms (next.js: 674ms, application-code: 170ms)
- GET /areas/maple-grove 404 in 1233ms (next.js: 878ms, application-code: 355ms)
- GET /areas/maple-grove 404 in 132ms (next.js: 89ms, application-code: 43ms)
- GET /areas/maple-grove 404 in 135ms (next.js: 51ms, application-code: 83ms)
- GET /areas/maple-grove 404 in 137ms (next.js: 18ms, application-code: 119ms)
- GET /areas/maple-grove 404 in 252ms (next.js: 7ms, application-code: 245ms)
- GET /areas/maple-grove 404 in 298ms (next.js: 38ms, application-code: 260ms)
-✓ Compiled in 273ms
- GET /areas/maple-grove 404 in 193ms (next.js: 101ms, application-code: 92ms)
- GET /areas/maple-grove 404 in 351ms (next.js: 9ms, application-code: 342ms)
- GET /areas/maple-grove 404 in 294ms (next.js: 132ms, application-code: 162ms)
- GET /areas/maple-grove 404 in 181ms (next.js: 84ms, application-code: 96ms)
- GET /areas/maple-grove 404 in 294ms (next.js: 162ms, application-code: 132ms)
- GET /areas/maple-grove 404 in 57ms (next.js: 9ms, application-code: 48ms)
- GET /areas/maple-grove 404 in 356ms (next.js: 10ms, application-code: 346ms)
-✓ Compiled in 74ms
+ GET / 200 in 493ms (next.js: 147ms, application-code: 346ms)
+ GET /api/seo/header-html?path=%2F 200 in 28ms (next.js: 13ms, application-code: 15ms)
+✓ Compiled in 80ms
+✓ Compiled in 86ms
+✓ Compiled in 97ms
+✓ Compiled in 75ms
+ GET / 200 in 525ms (next.js: 152ms, application-code: 374ms)
+ GET /api/seo/header-html?path=%2F 200 in 26ms (next.js: 7ms, application-code: 19ms)
+✓ Compiled in 179ms
+✓ Compiled in 196ms

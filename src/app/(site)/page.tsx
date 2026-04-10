@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import ServiceGridSection from "@/components/ServiceGridSection";
+import ScrollTruckSection from "@/components/ScrollTruckSection";
 import TrustBanner from "@/components/TrustBanner";
 import { getSeoSettings, buildMetadata } from "@/lib/seo";
 import { LocalBusinessJsonLd } from "@/components/JsonLd";
@@ -194,6 +195,8 @@ export default function Home() {
       <TrustBanner />
 
       <ServiceGridSection />
+
+      <ScrollTruckSection />
 
       <section id="awards" className="relative overflow-hidden py-14 md:py-16">
         {/* Background: dark base + green radial glow center + gold top-right accent */}
