@@ -271,6 +271,7 @@ export default function Navbar() {
               width={192}
               height={48}
               className="h-10 w-auto transition-transform duration-300 group-hover:scale-[1.03] md:h-12"
+              style={{ width: "auto" }}
             />
           </Link>
 

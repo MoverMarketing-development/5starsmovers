@@ -22,6 +22,7 @@ export default function ScrollTruckSection() {
     }
 
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const desktopQuery = window.matchMedia("(min-width: 1024px)");
     let target = 0;
     let current = 0;
     let frame = 0;
@@ -51,6 +52,11 @@ export default function ScrollTruckSection() {
     };
 
     const update = () => {
+      if (!desktopQuery.matches) {
+        truck.style.transform = "";
+        return;
+      }
+
       if (mediaQuery.matches) {
         truck.style.transform = "translate3d(18%, 0, 0)";
         return;
@@ -68,11 +74,13 @@ export default function ScrollTruckSection() {
     window.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
     mediaQuery.addEventListener("change", update);
+    desktopQuery.addEventListener("change", update);
 
     return () => {
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
       mediaQuery.removeEventListener("change", update);
+      desktopQuery.removeEventListener("change", update);
 
       if (frame) {
         window.cancelAnimationFrame(frame);
@@ -84,18 +92,18 @@ export default function ScrollTruckSection() {
     <section
       ref={sectionRef}
       aria-label="Book a faster move"
-      className="relative overflow-hidden bg-[#f8f6ef] py-6 sm:py-8 lg:py-10"
+      className="relative overflow-hidden bg-[#f8f6ef] py-12 sm:py-14 md:py-16 lg:py-10"
     >
-      <div className="relative flex min-h-[155px] items-center overflow-hidden bg-[#f8f6ef] sm:min-h-[180px] lg:min-h-[205px]">
-        <div className="relative z-10 mx-auto w-full max-w-7xl overflow-hidden px-4 sm:px-6 md:px-8">
-          <p className="whitespace-nowrap text-center font-display text-[0.62rem] font-black uppercase leading-none text-black sm:text-lg md:text-[1.7rem] lg:text-[2.35rem] xl:text-[2.9rem]">
+      <div className="relative flex items-center overflow-hidden bg-[#f8f6ef] lg:min-h-[205px]">
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 lg:overflow-hidden">
+          <p className="mx-auto max-w-4xl text-center font-display text-4xl font-black uppercase leading-[0.95] text-black sm:text-5xl md:text-6xl lg:max-w-none lg:whitespace-nowrap lg:text-[2.35rem] xl:text-[2.9rem]">
             {copy}
           </p>
         </div>
 
         <div
           ref={truckRef}
-          className="pointer-events-none absolute left-0 top-[54%] z-20 w-[54vw] max-w-none will-change-transform sm:w-[34vw] lg:w-[24vw]"
+          className="pointer-events-none absolute left-0 top-[54%] z-20 hidden w-[24vw] max-w-none will-change-transform lg:block"
         >
           <div className="relative -translate-y-1/2">
             <div
