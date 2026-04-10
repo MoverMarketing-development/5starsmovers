@@ -12,13 +12,9 @@ export const dynamicParams = true;
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  // Only statically generate from Supabase — skip RSS at build time
   try {
     const posts = await getPublishedPosts();
-    // If posts come from RSS (no id UUID pattern), skip static generation
-    return posts
-      .filter((p) => p.id !== p.slug) // Supabase posts have UUID ids
-      .map((p) => ({ slug: p.slug }));
+    return posts.map((post) => ({ slug: post.slug }));
   } catch {
     return [];
   }
@@ -28,6 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const post = await getPostBySlug(slug);
   if (!post) return {};
+
   const seo = await getSeoSettings(`/blog/${slug}`);
   return buildMetadata({
     fallbackTitle: post.meta_title || `${post.title} | 5 Star Movers Minnesota`,
@@ -54,28 +51,32 @@ export default async function BlogPostPage({ params }: PageProps) {
         updatedAt={post.updated_at}
         author={post.author}
       />
-      <BreadcrumbJsonLd items={[
-        { name: "Home", url: "https://www.5starmoversmn.com" },
-        { name: "Blog", url: "https://www.5starmoversmn.com/blog" },
-        { name: post.title, url: `https://www.5starmoversmn.com/blog/${post.slug}` },
-      ]} />
-      {/* Hero */}
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: "https://www.5starmoversmn.com" },
+          { name: "Blog", url: "https://www.5starmoversmn.com/blog" },
+          { name: post.title, url: `https://www.5starmoversmn.com/blog/${post.slug}` },
+        ]}
+      />
+
       <section className="relative overflow-hidden border-b border-white/5">
         <div className="absolute inset-0">
           <div className="absolute -left-32 top-0 h-96 w-96 rounded-full bg-[#006e63]/10 blur-3xl" />
           <div className="absolute right-0 top-0 h-64 w-64 rounded-full bg-[#ffd700]/6 blur-3xl" />
         </div>
-        <div className="relative mx-auto max-w-4xl px-4 sm:px-6 py-16 md:py-20">
-          {/* Breadcrumb */}
+        <div className="relative mx-auto max-w-4xl px-4 py-16 sm:px-6 md:py-20">
           <nav className="mb-8 flex items-center gap-2 text-sm text-white/40">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/" className="transition-colors hover:text-white">
+              Home
+            </Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-white transition-colors">Blog</Link>
+            <Link href="/blog" className="transition-colors hover:text-white">
+              Blog
+            </Link>
             <span>/</span>
-            <span className="text-white/70 line-clamp-1">{post.title}</span>
+            <span className="line-clamp-1 text-white/70">{post.title}</span>
           </nav>
 
-          {/* Tags */}
           {post.tags.length > 0 && (
             <div className="mb-5 flex flex-wrap gap-2">
               {post.tags.slice(0, 3).map((tag) => (
@@ -94,7 +95,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           </h1>
 
           {post.description && (
-            <p className="mt-5 text-lg leading-relaxed text-white/60 max-w-3xl">
+            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-white/60">
               {post.description}
             </p>
           )}
@@ -111,67 +112,67 @@ export default async function BlogPostPage({ params }: PageProps) {
               </span>
             </div>
             <span className="text-white/20">·</span>
-            <span className="text-sm text-white/40">{formatDate(post.published_at ?? post.created_at)}</span>
+            <span className="text-sm text-white/40">
+              {formatDate(post.published_at ?? post.created_at)}
+            </span>
           </div>
         </div>
       </section>
 
       <TrustBanner />
 
-      {/* Cover image */}
       {post.image_url && (
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 -mt-1 pt-10">
+        <div className="mx-auto -mt-1 max-w-5xl px-4 pt-10 sm:px-6">
           <div className="overflow-hidden rounded-2xl border border-white/8">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={post.image_url}
               alt={post.title}
-              className="w-full object-cover max-h-[480px]"
+              className="max-h-[480px] w-full object-cover"
             />
           </div>
         </div>
       )}
 
-      {/* Article content */}
-      <article className="mx-auto max-w-3xl px-4 sm:px-6 py-14">
-        <div
-          className="prose-blog"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+      <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+        <div className="prose-blog" dangerouslySetInnerHTML={{ __html: post.content }} />
       </article>
 
-      {/* CTA */}
       <section className="border-t border-white/5 bg-[#0c0f11] py-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="mb-3 text-xs font-bold uppercase tracking-[0.35em] text-[#ffd700]">
             Ready to Move?
           </p>
           <h2 className="font-display text-3xl font-extrabold text-white md:text-4xl">
-            Let Minnesota&apos;s 5-Star Crew{" "}
-            <span className="text-[#ffd700]">Handle It.</span>
+            Let Minnesota&apos;s 5-Star Crew <span className="text-[#ffd700]">Handle It.</span>
           </h2>
-          <p className="mt-4 text-white/55 max-w-xl mx-auto">
-            Free quote, upfront pricing, and expert movers — every time.
+          <p className="mx-auto mt-4 max-w-xl text-white/55">
+            Free quote, upfront pricing, and expert movers every time.
           </p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href="/quote"
-              className="inline-flex items-center justify-center rounded-full bg-[#e24436] px-8 py-4 font-bold text-white hover:bg-[#e24436]/90 transition-all hover:scale-105"
+              className="inline-flex items-center justify-center rounded-full bg-[#e24436] px-8 py-4 font-bold text-white transition-all hover:scale-105 hover:bg-[#e24436]/90"
             >
               Get a Free Quote
             </Link>
             <a
               href="tel:6512431993"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 font-semibold text-white hover:border-white/40 transition-all"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 font-semibold text-white transition-all hover:border-white/40"
             >
               <svg className="h-4 w-4 text-[#ffd700]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 4h4l1 4-2 2a16 16 0 0 0 6 6l2-2 4 1v4c0 1-1 2-2 2C10.82 21 3 13.18 3 6c0-1 1-2 2-2Z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 4h4l1 4-2 2a16 16 0 0 0 6 6l2-2 4 1v4c0 1-1 2-2 2C10.82 21 3 13.18 3 6c0-1 1-2 2-2Z"
+                />
               </svg>
               (651) 243-1993
             </a>
           </div>
           <div className="mt-8">
-            <Link href="/blog" className="text-sm text-white/40 hover:text-white transition-colors">
+            <Link href="/blog" className="text-sm text-white/40 transition-colors hover:text-white">
               ← Back to all articles
             </Link>
           </div>

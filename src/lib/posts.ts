@@ -69,6 +69,10 @@ export async function getPublishedPosts(): Promise<Post[]> {
 
   const [supabaseResult, rssResult] = await Promise.allSettled([
     (async () => {
+      if (!hasSupabaseEnv()) {
+        return { data: [], error: null };
+      }
+
       const supabase = await createClient();
       return supabase
         .from("posts")

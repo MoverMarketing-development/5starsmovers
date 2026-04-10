@@ -80,3 +80,9 @@ Creating turbopack project {
  HEAD /blog/twin-city-moving-guide-2021-updated 200 in 159ms (next.js: 11ms, application-code: 148ms)
  HEAD /blog/top-5-best-neighborhoods-to-live-in-minneapolis 200 in 168ms (next.js: 4ms, application-code: 164ms)
  HEAD /blog/9-reasons-to-consider-using-a-residential-local-moving-company 200 in 163ms (next.js: 3ms, application-code: 160ms)
+ GET /blog 200 in 450ms (next.js: 161ms, application-code: 289ms)
+ GET /blog 200 in 135ms (next.js: 4ms, application-code: 131ms)
+ GET /blog 200 in 405ms (next.js: 136ms, application-code: 269ms)
+ GET /blog 200 in 124ms (next.js: 5ms, application-code: 119ms)
+✓ Compiled in 98ms
+ GET /blog 200 in 98ms (next.js: 3ms, application-code: 95ms)
