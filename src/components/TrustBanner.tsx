@@ -46,7 +46,14 @@ export default function TrustBanner() {
             alt="Forbes"
             width={2400}
             height={628}
-            className="h-11 w-auto"
+            className="hidden h-11 w-auto md:block"
+          />
+          <Image
+            src="/brand/forbes-logo-mobile.png"
+            alt="Forbes"
+            width={294}
+            height={77}
+            className="h-11 w-auto md:hidden"
           />
           <p className="mt-2 text-sm font-semibold text-[#143d39]/78">
             Rates Us #1 in Moving Services
@@ -59,7 +66,14 @@ export default function TrustBanner() {
             alt="USA Today"
             width={3840}
             height={575}
-            className="h-9 w-auto"
+            className="hidden h-9 w-auto md:block"
+          />
+          <Image
+            src="/brand/usa-today-logo-mobile.png"
+            alt="USA Today"
+            width={421}
+            height={63}
+            className="h-9 w-auto md:hidden"
           />
           <p className="mt-2 text-sm font-semibold text-[#143d39]/78">
             5/5 Star Rating

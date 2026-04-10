@@ -283,35 +283,35 @@ export default function Home() {
 
             {/* Left: Content */}
             <div className="flex flex-col justify-center py-14 text-center lg:items-center lg:py-16 lg:pr-16 lg:text-center">
-              <p className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-[#0d5c55]">
-                <span className="h-px w-10 bg-[#0d5c55]" />
+              <p className="mb-5 flex items-center justify-center gap-3 font-label text-xs font-bold uppercase tracking-[0.35em] text-black">
+                <span className="h-px w-10 bg-black" />
                 Start Your Journey
               </p>
-              <h2 className="font-display text-4xl font-extrabold leading-[1.05] text-[#143d39] md:text-5xl lg:text-[3.5rem]">
+              <h2 className="font-display text-4xl font-extrabold leading-[1.05] text-black md:text-5xl lg:text-[3.5rem]">
                 Ready to Move?
-                <span className="mt-1 block text-[#ffdc00] [text-shadow:0_2px_0_#c9a800]">
+                <span className="mt-1 block text-black">
                   Twin Cities&apos; Best.
                 </span>
               </h2>
-              <p className="mx-auto mt-5 max-w-xl text-base leading-[1.6] text-[#143d39]/60">
+              <p className="mx-auto mt-5 max-w-xl text-base leading-[1.6] text-black/70">
                 Local crews, upfront pricing, and 5-star service — from your first call to the last box.
               </p>
 
               {/* Stats */}
               <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
                 <div>
-                  <p className="font-display text-2xl font-black text-[#143d39] sm:text-3xl">2,500+</p>
-                  <p className="mt-0.5 text-xs font-semibold text-[#143d39]/50">5-Star Reviews</p>
+                  <p className="font-display text-2xl font-black text-black sm:text-3xl">2,500+</p>
+                  <p className="mt-0.5 text-xs font-semibold text-black/60">5-Star Reviews</p>
                 </div>
-                <div className="h-10 w-px bg-[#143d39]/15" />
+                <div className="h-10 w-px bg-black/20" />
                 <div>
-                  <p className="font-display text-2xl font-black text-[#143d39] sm:text-3xl">10+</p>
-                  <p className="mt-0.5 text-xs font-semibold text-[#143d39]/50">Years in Business</p>
+                  <p className="font-display text-2xl font-black text-black sm:text-3xl">10+</p>
+                  <p className="mt-0.5 text-xs font-semibold text-black/60">Years in Business</p>
                 </div>
-                <div className="h-10 w-px bg-[#143d39]/15" />
+                <div className="h-10 w-px bg-black/20" />
                 <div>
-                  <p className="font-display text-2xl font-black text-[#143d39] sm:text-3xl">&lt; 2h</p>
-                  <p className="mt-0.5 text-xs font-semibold text-[#143d39]/50">Response Time</p>
+                  <p className="font-display text-2xl font-black text-black sm:text-3xl">&lt; 2h</p>
+                  <p className="mt-0.5 text-xs font-semibold text-black/60">Response Time</p>
                 </div>
               </div>
 
@@ -323,7 +323,7 @@ export default function Home() {
                 >
                   Get Free Moving Quote
                 </Link>
-                <div className="flex items-center gap-2 text-xs text-[#143d39]/50">
+                <div className="flex items-center gap-2 text-xs text-black/60">
                   <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                   </svg>
