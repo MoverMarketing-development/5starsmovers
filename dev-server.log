@@ -15,3 +15,12 @@ Creating turbopack project {
  GET / 200 in 286ms (next.js: 9ms, application-code: 277ms)
  GET /api/seo/header-html?path=%2F 200 in 618ms (next.js: 588ms, application-code: 30ms)
  GET / 200 in 213ms (next.js: 78ms, application-code: 135ms)
+ GET / 200 in 398ms (next.js: 7ms, application-code: 391ms)
+✓ Compiled in 207ms
+ GET / 200 in 519ms (next.js: 373ms, application-code: 146ms)
+ GET / 200 in 754ms (next.js: 106ms, application-code: 648ms)
+ GET / 200 in 555ms (next.js: 8ms, application-code: 546ms)
+ GET /api/seo/header-html?path=%2F 200 in 64ms (next.js: 52ms, application-code: 12ms)
+✓ Compiled in 86ms
+ GET / 200 in 533ms (next.js: 97ms, application-code: 437ms)
+ GET /api/seo/header-html?path=%2F 200 in 20ms (next.js: 4ms, application-code: 15ms)
