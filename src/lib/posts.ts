@@ -34,15 +34,28 @@ function rssToPost(p: Awaited<ReturnType<typeof getBlogPosts>>[number]): Post {
   };
 }
 
-export async function getPosts(): Promise<Post[]> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("posts")
-    .select("*")
-    .order("created_at", { ascending: false });
+function hasSupabaseEnv(): boolean {
+  return Boolean(
+    process.env.NEXT_PUBLIC_SUPABASE_URL &&
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  );
+}
 
-  if (error || !data || data.length === 0) return [];
-  return data;
+export async function getPosts(): Promise<Post[]> {
+  if (!hasSupabaseEnv()) return [];
+
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from("posts")
+      .select("*")
+      .order("created_at", { ascending: false });
+
+    if (error || !data || data.length === 0) return [];
+    return data;
+  } catch {
+    return [];
+  }
 }
 
 export async function getPublishedPosts(): Promise<Post[]> {
@@ -83,32 +96,44 @@ export async function getPublishedPosts(): Promise<Post[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("posts")
-    .select("*")
-    .eq("slug", slug)
-    .eq("status", "published")
-    .single();
+  if (hasSupabaseEnv()) {
+    try {
+      const supabase = await createClient();
+      const { data, error } = await supabase
+        .from("posts")
+        .select("*")
+        .eq("slug", slug)
+        .eq("status", "published")
+        .single();
 
-  // Fall back to RSS if not found in Supabase
-  if (error || !data) {
-    const rssPost = await getBlogPost(slug);
-    return rssPost ? rssToPost(rssPost) : null;
+      if (!error && data) {
+        return data;
+      }
+    } catch {
+      // RSS is the fallback source when Supabase is unavailable in local/dev.
+    }
   }
-  return data;
+
+  const rssPost = await getBlogPost(slug);
+  return rssPost ? rssToPost(rssPost) : null;
 }
 
 export async function getPostById(id: string): Promise<Post | null> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("posts")
-    .select("*")
-    .eq("id", id)
-    .single();
+  if (!hasSupabaseEnv()) return null;
 
-  if (error) return null;
-  return data;
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from("posts")
+      .select("*")
+      .eq("id", id)
+      .single();
+
+    if (error) return null;
+    return data;
+  } catch {
+    return null;
+  }
 }
 
 export function formatDate(dateString: string): string {

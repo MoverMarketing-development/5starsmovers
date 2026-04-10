@@ -154,7 +154,6 @@ export default function Home() {
 
               <div className="ambient-shadow glass-panel absolute -right-12 top-[calc(20%+35px)] z-30 hidden rounded-2xl border border-white/10 px-3 py-3 sm:flex lg:-right-20">
                 <div>
-                  <p className="font-label text-[10px] uppercase tracking-[0.25em] text-white/[0.55]">Our Reviews</p>
                   <div className="mt-2 flex items-center gap-2">
                     <div className="flex -space-x-2">
                       {[...Array(3)].map((_, index) => (
@@ -163,7 +162,10 @@ export default function Home() {
                         </div>
                       ))}
                     </div>
-                    <span className="text-xs font-bold text-white">+123k happy clients</span>
+                    <div className="flex flex-col justify-center">
+                      <p className="text-base font-bold leading-none text-white">2,500+</p>
+                      <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/[0.6]">Happy Clients</p>
+                    </div>
                   </div>
                 </div>
               </div>

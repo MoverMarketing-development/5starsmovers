@@ -38,7 +38,7 @@ function Icon({ name, className }: { name: IconName; className?: string }) {
 
 export default function ServiceGridSection() {
   return (
-    <section id="services" className="border-t border-white/5 bg-[#121417] py-14 md:py-16">
+    <section id="services" className="border-t border-white/5 bg-[#121417] py-14 leading-[1.3] md:py-16">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="mb-10 text-center md:mb-12 lg:mb-14 lg:text-left">
           <p className="font-label text-xs font-bold uppercase tracking-[0.35em] text-[#ffdc00]">Our Service</p>
@@ -52,14 +52,18 @@ export default function ServiceGridSection() {
             <Link
               key={service.slug}
               href={`/services/${service.slug}`}
-              className="ambient-shadow group rounded-[1.5rem] border border-white/[0.06] bg-[#1e2124] p-6 text-center transition-transform duration-300 hover:-translate-y-1 hover:border-[#ffdc00]/25 lg:text-left"
+              className="ambient-shadow group flex min-h-[19.5rem] flex-col rounded-[1.5rem] border border-white/[0.06] bg-[#1e2124] p-6 text-center transition-transform duration-300 hover:-translate-y-1 hover:border-[#ffdc00]/25 lg:text-left"
             >
               <div className="mx-auto mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-[#ffdc00]/10 text-[#ffdc00] lg:mx-0">
                 <Icon name={service.icon} className="h-5 w-5" />
               </div>
-              <h3 className="font-display text-lg font-extrabold text-white">{service.title}</h3>
-              <p className="mt-3 text-base leading-[1.6] text-white/[0.58]">{service.description}</p>
-              <div className="mt-6 flex items-center justify-center gap-2 font-label text-[11px] font-bold uppercase tracking-[0.24em] text-[#ffdc00] lg:justify-start">
+              <h3 className="mx-auto whitespace-nowrap font-display text-lg font-extrabold text-white lg:mx-0">
+                {service.title}
+              </h3>
+              <p className="mx-auto mt-3 max-w-[30ch] text-pretty text-base leading-[1.45] text-white/[0.58] lg:mx-0">
+                {service.description}
+              </p>
+              <div className="mt-auto pt-6 flex items-center justify-center gap-2 font-label text-[11px] font-bold uppercase tracking-[0.24em] text-[#ffdc00] lg:justify-start">
                 Learn more
                 <Icon name="arrow" className="h-3.5 w-3.5" />
               </div>

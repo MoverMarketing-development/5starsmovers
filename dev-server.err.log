@@ -3,3 +3,76 @@
 [browser] Image with src "/about-us/men-doing-commercial.jpeg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[browser] Image with src "/logo.webp" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+⨯ Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at createClient (src\lib\supabase\server.ts:7:28)
+    at async getPostBySlug (src\lib\posts.ts:86:20)
+    at async Module.generateMetadata (src\app\(site)\blog\[slug]\page.tsx:29:16)
+   5 |   const cookieStore = await cookies();
+   6 |
+>  7 |   return createServerClient(
+     |                            ^
+   8 |     process.env.NEXT_PUBLIC_SUPABASE_URL!,
+   9 |     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  10 |     { {
+  digest: '4272450338'
+}
+⨯ Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at createClient (src\lib\supabase\server.ts:7:28)
+    at async getPostBySlug (src\lib\posts.ts:86:20)
+    at async BlogPostPage (src\app\(site)\blog\[slug]\page.tsx:43:16)
+   5 |   const cookieStore = await cookies();
+   6 |
+>  7 |   return createServerClient(
+     |                            ^
+   8 |     process.env.NEXT_PUBLIC_SUPABASE_URL!,
+   9 |     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  10 |     { {
+  digest: '2966335217'
+}
+⨯ Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at createClient (src\lib\supabase\server.ts:7:28)
+    at async getPostBySlug (src\lib\posts.ts:86:20)
+    at async Module.generateMetadata (src\app\(site)\blog\[slug]\page.tsx:29:16)
+   5 |   const cookieStore = await cookies();
+   6 |
+>  7 |   return createServerClient(
+     |                            ^
+   8 |     process.env.NEXT_PUBLIC_SUPABASE_URL!,
+   9 |     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  10 |     { {
+  digest: '4272450338'
+}
+⨯ Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at createClient (src\lib\supabase\server.ts:7:28)
+    at async getPostBySlug (src\lib\posts.ts:86:20)
+    at async BlogPostPage (src\app\(site)\blog\[slug]\page.tsx:43:16)
+   5 |   const cookieStore = await cookies();
+   6 |
+>  7 |   return createServerClient(
+     |                            ^
+   8 |     process.env.NEXT_PUBLIC_SUPABASE_URL!,
+   9 |     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  10 |     { {
+  digest: '2966335217'
+}
