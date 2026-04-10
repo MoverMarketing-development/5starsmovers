@@ -76,3 +76,9 @@ https://supabase.com/dashboard/project/_/settings/api
   10 |     { {
   digest: '2966335217'
 }
+⨯ Error: The router state header was sent but could not be parsed.
+    at ignore-listed frames
+⨯ Error: The router state header was sent but could not be parsed.
+    at ignore-listed frames {
+  page: '/blog/why-you-need-a-local-long-distance-moving-company'
+}
